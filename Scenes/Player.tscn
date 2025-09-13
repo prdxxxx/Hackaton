@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwq4uacj2n3u3"]
+[gd_scene load_steps=8 format=3 uid="uid://cwq4uacj2n3u3"]
 
 [ext_resource type="Script" uid="uid://drpr2sj068ufl" path="res://Scripts/Player.gd" id="1_nw1s3"]
 [ext_resource type="Script" uid="uid://bdk30xg51phfq" path="res://Scripts/camera_3d.gd" id="2_gntrk"]
 [ext_resource type="Texture2D" uid="uid://dc5w17hraxg3q" path="res://Assets/2D Assets/E(mega design).png" id="2_kyqiw"]
+[ext_resource type="AudioStream" uid="uid://dtyjecbh5dxev" path="res://Assets/SFX/footstep.mp3" id="4_dewec"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_twhws"]
 radius = 0.214682
@@ -48,3 +49,9 @@ texture = ExtResource("2_kyqiw")
 centered = false
 
 [node name="PlayerAudio" type="Node3D" parent="."]
+
+[node name="Footstep" type="AudioStreamPlayer" parent="PlayerAudio"]
+stream = ExtResource("4_dewec")
+volume_db = -20.0
+
+[node name="GroundCheck" type="RayCast3D" parent="PlayerAudio"]
