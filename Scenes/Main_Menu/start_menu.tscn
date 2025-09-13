@@ -5,8 +5,8 @@
 [ext_resource type="FontFile" uid="uid://bchsii8yr4w2i" path="res://Assets/Fonts/Orbitron-VariableFont_wght.ttf" id="3_6nn5l"]
 [ext_resource type="PackedScene" uid="uid://b51vsm7lxuuj0" path="res://Scenes/Main_Menu/Settings/Scenes/settings_menu.tscn" id="3_vpdu5"]
 [ext_resource type="PackedScene" uid="uid://b08d2atfoec2l" path="res://Scenes/Main_Menu/Credits/credits_menu.tscn" id="4_v2mkm"]
-[ext_resource type="AudioStream" uid="uid://vxoitbosc183" path="res://Assets/Music/Hollow Knight OST - Abyss.mp3" id="5_7esrr"]
 [ext_resource type="PackedScene" uid="uid://wqhyxohyxh14" path="res://Scenes/Main_Menu/start_game_options.tscn" id="6_si545"]
+[ext_resource type="AudioStream" uid="uid://dcoopim4ephui" path="res://Assets/Music/MainMenu mus.mp3" id="7_si545"]
 
 [node name="MainMenu" type="CanvasLayer"]
 
@@ -94,7 +94,8 @@ visible = false
 visible = false
 
 [node name="MainOST" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_7esrr")
+stream = ExtResource("7_si545")
+volume_db = -20.0
 autoplay = true
 
 [connection signal="start_game_exit" from="Start_game_options" to="Menu" method="_on_start_game_options_start_game_exit"]

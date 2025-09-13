@@ -46,3 +46,5 @@ position = Vector2(894, 484)
 scale = Vector2(0.6, 0.586)
 texture = ExtResource("2_kyqiw")
 centered = false
+
+[node name="PlayerAudio" type="Node3D" parent="."]
