@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds6qw1e2bkw5y"]
+
+[ext_resource type="Script" uid="uid://nkbiubxy8722" path="res://Scenes/Main_Menu/Settings/Scripts/sensitivity_slider.gd" id="1_plkhk"]
+
+[node name="Sensitivity_slider" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_plkhk")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 1309.0
+offset_bottom = 55.0
+
+[node name="Sensitivity" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(300, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Sensitivity"
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Sensitivity_Slider" type="HSlider" parent="HBoxContainer"]
+custom_minimum_size = Vector2(535, 32)
+layout_mode = 2
+size_flags_vertical = 4
+min_value = 0.1
+max_value = 4.0
+step = 0.1
+value = 2.0
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Sensitivity_num" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(430, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "2.0"
+horizontal_alignment = 1
+
+[connection signal="value_changed" from="HBoxContainer/Sensitivity_Slider" to="." method="_on_sensitivity_slider_value_changed"]

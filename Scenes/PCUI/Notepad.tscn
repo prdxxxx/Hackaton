@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://da0je3bmb4hp0"]
+
+[ext_resource type="Script" uid="uid://c3u65e2wof57u" path="res://Scenes/PCUI/Notepad.gd" id="1_ak02h"]
+[ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="2_n2ip8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n2ip8"]
+bg_color = Color(0.991164, 0.991164, 0.991164, 1)
+
+[node name="Notepad" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1220.0
+offset_bottom = -380.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ak02h")
+
+[node name="WindowBase" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_n2ip8")
+
+[node name="Panel" type="Panel" parent="WindowBase"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_n2ip8")
+
+[node name="TextEdit" type="TextEdit" parent="WindowBase/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+
+[node name="Button" type="Button" parent="WindowBase/Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -20.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "X"
+
+[connection signal="text_changed" from="WindowBase/Panel/TextEdit" to="." method="_on_text_edit_text_changed"]
+[connection signal="pressed" from="WindowBase/Panel/Button" to="." method="_on_button_pressed"]

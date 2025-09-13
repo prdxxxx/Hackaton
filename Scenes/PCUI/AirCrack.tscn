@@ -1,0 +1,114 @@
+[gd_scene load_steps=5 format=3 uid="uid://dny70op66t4mj"]
+
+[ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="1_gtarn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gtarn"]
+bg_color = Color(0.105882, 0.14902, 0.156863, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0aelj"]
+bg_color = Color(0.0646965, 0.0646965, 0.0646965, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.169245, 0.169245, 0.169245, 1)
+border_blend = true
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3d2w8"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchor_right = 0.646
+anchor_bottom = 0.623
+offset_right = -0.320068
+offset_bottom = 0.159973
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Node" type="Node" parent="."]
+
+[node name="WindowBase" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gtarn")
+
+[node name="Panel" type="Panel" parent="WindowBase"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="PanelContainer" parent="WindowBase"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gtarn")
+
+[node name="MarginContainer" type="MarginContainer" parent="WindowBase/BG"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Rows" type="VBoxContainer" parent="WindowBase/BG/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="GameInfo" type="PanelContainer" parent="WindowBase/BG/MarginContainer/Rows"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_0aelj")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="WindowBase/BG/MarginContainer/Rows/GameInfo"]
+layout_mode = 2
+
+[node name="HistoryRows" type="VBoxContainer" parent="WindowBase/BG/MarginContainer/Rows/GameInfo/ScrollContainer"]
+layout_mode = 2
+
+[node name="InputArea" type="PanelContainer" parent="WindowBase/BG/MarginContainer/Rows"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_3d2w8")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/BG/MarginContainer/Rows/InputArea"]
+layout_mode = 2
+
+[node name="Input" type="LineEdit" parent="WindowBase/BG/MarginContainer/Rows/InputArea/HBoxContainer"]
+z_index = 1000
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Enter a command..."
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/BG"]
+show_behind_parent = true
+layout_mode = 2
+
+[node name="Button" type="Button" parent="WindowBase/BG/PanelContainer"]
+top_level = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "X"

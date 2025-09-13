@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://bcpw8l6frx651"]
+
+[ext_resource type="Script" uid="uid://bis2kgpadpvhm" path="res://Scenes/PCUI/pcui.gd" id="1_yina7"]
+[ext_resource type="Texture2D" uid="uid://csnco3b2sh3eo" path="res://Assets/2D Assets/RockYou/logotxt.png" id="2_bxve3"]
+[ext_resource type="PackedScene" uid="uid://brb2acniqq2i8" path="res://Scenes/PCUI/cmd.tscn" id="3_bxve3"]
+[ext_resource type="Texture2D" uid="uid://b51veipknpxrw" path="res://Scenes/PCUI/background.png" id="4_lkbei"]
+[ext_resource type="Texture2D" uid="uid://v643wpg8naa4" path="res://Scenes/PCUI/powerButton.jpeg" id="5_mlvvv"]
+
+[node name="PCUI" type="CanvasLayer"]
+
+[node name="PCUI" type="Control" parent="."]
+top_level = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yina7")
+
+[node name="TextureRect" type="TextureRect" parent="PCUI"]
+z_index = -1
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("4_lkbei")
+
+[node name="ButtonsCont" type="MarginContainer" parent="PCUI"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = -1
+offset_left = 96.0
+offset_top = 100.0
+offset_right = 172.0
+offset_bottom = 448.0
+
+[node name="ButtonsContAl" type="VBoxContainer" parent="PCUI/ButtonsCont"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="CMD" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+layout_mode = 2
+toggle_mode = true
+icon = ExtResource("2_bxve3")
+
+[node name="Button" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+layout_mode = 2
+
+[node name="CMD" parent="PCUI" instance=ExtResource("3_bxve3")]
+visible = false
+layout_mode = 1
+
+[node name="powerButton" type="Button" parent="PCUI"]
+layout_mode = 2
+offset_left = 1865.0
+offset_top = 1.0
+offset_right = 1905.0
+offset_bottom = 41.0
+scale = Vector2(0.8, 0.8)
+icon = ExtResource("5_mlvvv")
+icon_alignment = 1
+
+[connection signal="pressed" from="PCUI/ButtonsCont/ButtonsContAl/CMD" to="PCUI" method="_on_cmd_pressed"]
+[connection signal="pressed" from="PCUI/ButtonsCont/ButtonsContAl/Button" to="PCUI" method="_on_button_pressed"]
+[connection signal="pressed" from="PCUI/powerButton" to="PCUI" method="_on_power_button_pressed"]

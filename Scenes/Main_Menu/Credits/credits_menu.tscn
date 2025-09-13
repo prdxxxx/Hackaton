@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://b08d2atfoec2l"]
+
+[ext_resource type="Script" uid="uid://b0aeyhiaq2m3b" path="res://Scenes/Main_Menu/Credits/credits_menu.gd" id="1_tgbea"]
+[ext_resource type="PackedScene" uid="uid://gegirfonhi02" path="res://Scenes/Main_Menu/Credits/credits_tab_container.tscn" id="2_8n0c7"]
+
+[sub_resource type="SystemFont" id="SystemFont_t5rx0"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tgbea")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Credits" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = SubResource("SystemFont_t5rx0")
+theme_override_font_sizes/font_size = 52
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Credits_Tab_Container" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_8n0c7")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 40
+text = "Exit"

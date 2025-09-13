@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://duqms65j7wkse"]
+
+[ext_resource type="PackedScene" uid="uid://y8pwo46pu2sb" path="res://Assets/3D Assets/Layout concinai/chair.glb" id="1_2eefj"]
+[ext_resource type="Script" uid="uid://bch53jj8npweo" path="res://Scripts/chair.gd" id="2_mwskg"]
+[ext_resource type="PackedScene" uid="uid://cwq4uacj2n3u3" path="res://Scenes/Player.tscn" id="3_rpuy2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kfgu2"]
+size = Vector3(0.463646, 0.219238, 1.11108)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ka8pp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rlmby"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="chair" parent="." groups=["Interaction"] instance=ExtResource("1_2eefj")]
+transform = Transform3D(1, 0, 0, 0, 0.713586, 0, 0, 0, 1, 0.720588, -1.90541, 0.631851)
+script = ExtResource("2_mwskg")
+
+[node name="Cube_038" parent="chair" index="0" groups=["Interaction"]]
+
+[node name="Area3D" type="Area3D" parent="chair/Cube_038" index="0" groups=["Interaction"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="chair/Cube_038/Area3D" groups=["Interaction"]]
+transform = Transform3D(100, 0, -5.54792e-11, 0, 100.004, 0, 1.45519e-11, 0, 99.9974, -0.189606, 17.0003, 10.6566)
+shape = SubResource("BoxShape3D_kfgu2")
+
+[node name="Player" parent="." instance=ExtResource("3_rpuy2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.36375, 0.831017, -1.24413)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(10.7754, 0, 0, 0, 1, 0, 0, 0, 7.21223, 3.29179, -0.890368, 0.631833)
+mesh = SubResource("BoxMesh_ka8pp")
+skeleton = NodePath("../chair")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_rlmby")
+
+[connection signal="body_entered" from="chair/Cube_038/Area3D" to="chair" method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="chair/Cube_038/Area3D" to="chair" method="_on_area_3d_body_exited"]
+
+[editable path="chair"]

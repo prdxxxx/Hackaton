@@ -1,0 +1,376 @@
+[gd_scene load_steps=63 format=3 uid="uid://cen4j3rbwlj4u"]
+
+[ext_resource type="PackedScene" uid="uid://cwq4uacj2n3u3" path="res://Scenes/Player.tscn" id="1_5cjrv"]
+[ext_resource type="PackedScene" uid="uid://b0ha4ubwc1i0k" path="res://Assets/3D Assets/Layout concinai/chair.glb" id="4_b5aes"]
+[ext_resource type="Script" uid="uid://cd5v0f2vavajt" path="res://Scenes/looking_at_monitor.gd" id="5_0ao37"]
+[ext_resource type="PackedScene" uid="uid://dseni4k4lehup" path="res://Assets/3D Assets/Layout concinai/Ceiling.glb" id="7_ivbkn"]
+[ext_resource type="PackedScene" uid="uid://b0ha4ubwc1i0k" path="res://Assets/3D Assets/Layout concinai/Chair.glb" id="8_0fglf"]
+[ext_resource type="PackedScene" uid="uid://bu07dr4yvg3h1" path="res://Assets/3D Assets/Layout concinai/All.glb" id="9_kn06e"]
+[ext_resource type="PackedScene" uid="uid://cn7jl48qt4ibi" path="res://Assets/3D Assets/Layout concinai/Crt Monitor.glb" id="9_qtjmb"]
+[ext_resource type="PackedScene" uid="uid://btt6ujt5dkf3b" path="res://Assets/3D Assets/Layout concinai/monitor.glb" id="10_33kev"]
+[ext_resource type="PackedScene" uid="uid://dve3hp6nlib2n" path="res://Assets/3D Assets/Layout concinai/Door bell.glb" id="10_wi82k"]
+[ext_resource type="PackedScene" uid="uid://d2ilp87eseqsf" path="res://Assets/3D Assets/Layout concinai/Drop.glb" id="11_l7i8q"]
+[ext_resource type="PackedScene" uid="uid://drn1qoxlsnmab" path="res://Assets/3D Assets/Layout concinai/Electical box.glb" id="12_7hrk4"]
+[ext_resource type="Texture2D" uid="uid://c5cydrnerlw1s" path="res://Scenes/Main_Menu/Credits/windows-cursor-logo-png-transparent.png" id="12_w0bku"]
+[ext_resource type="PackedScene" uid="uid://c83vhgdh1hlai" path="res://Assets/3D Assets/Layout concinai/Floating chair.glb" id="13_rfukx"]
+[ext_resource type="PackedScene" uid="uid://pwcs2vfw5f31" path="res://Assets/3D Assets/Layout concinai/Floating table.glb" id="14_irs1d"]
+[ext_resource type="PackedScene" uid="uid://bsiq3t3lqv1g4" path="res://Assets/3D Assets/Layout concinai/Floor.glb" id="15_ofme6"]
+[ext_resource type="PackedScene" uid="uid://c5f2f547afaul" path="res://Assets/3D Assets/Layout concinai/HoneyComb.glb" id="16_jdyvg"]
+[ext_resource type="PackedScene" uid="uid://b3m1yjqi3p1xx" path="res://Assets/3D Assets/Layout concinai/Lights1.glb" id="17_26nav"]
+[ext_resource type="PackedScene" uid="uid://b0wbao4ycoob2" path="res://Assets/3D Assets/Layout concinai/Lights2.glb" id="18_ne1it"]
+[ext_resource type="PackedScene" uid="uid://clss0eqoo0vf1" path="res://Assets/3D Assets/Layout concinai/Lights3.glb" id="19_hhume"]
+[ext_resource type="PackedScene" uid="uid://ctascn1ssg26v" path="res://Assets/3D Assets/Layout concinai/Lights4.glb" id="20_au5ix"]
+[ext_resource type="PackedScene" uid="uid://c2jem42nxnj3" path="res://Assets/3D Assets/Layout concinai/Lights5.glb" id="21_pb8dl"]
+[ext_resource type="PackedScene" uid="uid://cgny5e2sg0h4x" path="res://Assets/3D Assets/Layout concinai/Logo 1.glb" id="22_3cv6b"]
+[ext_resource type="PackedScene" uid="uid://c5452vgsf2252" path="res://Scenes/Pause_Menu/Scenes/pause_menu.tscn" id="23_0ao37"]
+[ext_resource type="PackedScene" uid="uid://btt6ujt5dkf3b" path="res://Assets/3D Assets/Layout concinai/Monitor.glb" id="23_dwptd"]
+[ext_resource type="PackedScene" uid="uid://l7favgdno6ar" path="res://Assets/3D Assets/Layout concinai/Mouse.glb" id="24_bfota"]
+[ext_resource type="Shader" uid="uid://ddklekowi646o" path="res://Scenes/screenFX.gdshader" id="24_d3ars"]
+[ext_resource type="Script" uid="uid://cuks7kgmc5dbq" path="res://Scripts/Post_fx.gd" id="24_l11rc"]
+[ext_resource type="PackedScene" uid="uid://cxhj2m8i6e21d" path="res://Assets/3D Assets/Layout concinai/PC.glb" id="25_gcpal"]
+[ext_resource type="PackedScene" uid="uid://cpkumf3wmiocy" path="res://Assets/3D Assets/Layout concinai/Server 1.glb" id="26_1c8so"]
+[ext_resource type="PackedScene" uid="uid://dv7swpnaxf83u" path="res://Assets/3D Assets/Layout concinai/Server 2.glb" id="27_8mvdv"]
+[ext_resource type="PackedScene" uid="uid://dhnk85dkhr0fy" path="res://Assets/3D Assets/Layout concinai/Server 3.glb" id="28_lpp4p"]
+[ext_resource type="PackedScene" uid="uid://cm4y5lxsg4bba" path="res://Assets/3D Assets/Layout concinai/Server 4.glb" id="29_k7vvi"]
+[ext_resource type="PackedScene" uid="uid://b0v11k17trp8n" path="res://Assets/3D Assets/Layout concinai/Server 5.glb" id="30_slq5t"]
+[ext_resource type="PackedScene" uid="uid://ci71p671hj5b6" path="res://Assets/3D Assets/Layout concinai/Server 6.glb" id="31_kf4hd"]
+[ext_resource type="PackedScene" uid="uid://dhjuo0fj6iurq" path="res://Assets/3D Assets/Layout concinai/Server 7.glb" id="32_d533g"]
+[ext_resource type="PackedScene" uid="uid://d1elxmh1hu08h" path="res://Assets/3D Assets/Layout concinai/Server 8.glb" id="33_wnv30"]
+[ext_resource type="PackedScene" uid="uid://655j86h5g5dt" path="res://Assets/3D Assets/Layout concinai/Server.glb" id="34_nfsqp"]
+[ext_resource type="PackedScene" uid="uid://ch47jhj18emyj" path="res://Assets/3D Assets/Layout concinai/Shelve.glb" id="35_wcwqb"]
+[ext_resource type="PackedScene" uid="uid://l1xeeo7ophi5" path="res://Assets/3D Assets/Layout concinai/Stairs.glb" id="36_a60hx"]
+[ext_resource type="PackedScene" uid="uid://fte54f0dxgp8" path="res://Assets/3D Assets/Layout concinai/Support pillars.glb" id="37_n5pd3"]
+[ext_resource type="PackedScene" uid="uid://e1dln33lovi6" path="res://Assets/3D Assets/Layout concinai/Table.glb" id="38_7cnhw"]
+[ext_resource type="PackedScene" uid="uid://chg1200kyx8f7" path="res://Assets/3D Assets/Layout concinai/TV.glb" id="39_6ee4w"]
+[ext_resource type="PackedScene" uid="uid://sma443233v4r" path="res://Assets/3D Assets/Layout concinai/Wall1.glb" id="40_h2nrh"]
+[ext_resource type="PackedScene" uid="uid://v0ar1qnb2jhq" path="res://Assets/3D Assets/Layout concinai/Wall2.glb" id="41_nda70"]
+[ext_resource type="PackedScene" uid="uid://jskucds6sj40" path="res://Assets/3D Assets/Layout concinai/windows.glb" id="42_p70ga"]
+[ext_resource type="PackedScene" uid="uid://d0x1pljr0gjkh" path="res://Assets/3D Assets/Layout concinai/Wooden railing.glb" id="43_eq88g"]
+
+[sub_resource type="Sky" id="Sky_r0dna"]
+
+[sub_resource type="Environment" id="Environment_b5aes"]
+background_mode = 2
+sky = SubResource("Sky_r0dna")
+tonemap_mode = 3
+ssao_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+glow_strength = 0.5
+glow_bloom = 0.1
+glow_blend_mode = 1
+fog_light_color = Color(0.0919952, 0.19174, 0.258591, 1)
+fog_light_energy = 0.6
+fog_density = 0.015
+fog_aerial_perspective = 0.5
+
+[sub_resource type="GDScript" id="GDScript_r0dna"]
+script/source = "extends Node3D
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kn06e"]
+size = Vector3(1, 1.47852, 1)
+
+[sub_resource type="GDScript" id="GDScript_0ao37"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_0ao37"]
+viewport_path = NodePath("Apartamentu/monitor/ScreenMesh/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w0bku"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_0ao37")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_w0bku"]
+
+[sub_resource type="GDScript" id="GDScript_w0bku"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rfukx"]
+size = Vector3(0.107422, 2.21176, 5.53214)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ivbkn"]
+size = Vector3(6.54613, 0.136125, 10.5386)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0fglf"]
+size = Vector3(5.50505, 0.285152, 8.05029)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qtjmb"]
+size = Vector3(3.9958, 0.479431, 1.98874)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wi82k"]
+size = Vector3(0.615356, 0.36467, 5.0184)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l7i8q"]
+size = Vector3(0.923492, 0.237526, 3.39894)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l11rc"]
+shader = ExtResource("24_d3ars")
+shader_parameter/enabled = true
+shader_parameter/pixel_size = 3.0
+shader_parameter/posterize_steps = 6.0
+shader_parameter/saturation = 0.7
+shader_parameter/contrast = 1.15
+shader_parameter/brightness = 0.0
+shader_parameter/use_scanlines = true
+shader_parameter/scanline_intensity = 0.18
+shader_parameter/use_vignette = true
+shader_parameter/vignette_intensity = 0.35
+shader_parameter/use_noise = true
+shader_parameter/noise_intensity = 0.03
+shader_parameter/use_aberration = true
+shader_parameter/aberration = 0.3
+
+[node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_b5aes")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+light_color = Color(0.0304845, 0.0936589, 0.352585, 1)
+light_energy = 0.4
+shadow_enabled = true
+directional_shadow_mode = 0
+directional_shadow_max_distance = 300.0
+
+[node name="Player" parent="." instance=ExtResource("1_5cjrv")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 3.22132, 3.64235, 2.04781)
+
+[node name="Apartamentu" type="Node3D" parent="."]
+
+[node name="chair" parent="Apartamentu" groups=["Interaction"] instance=ExtResource("4_b5aes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.329527, 0.427453, 1.00486)
+script = SubResource("GDScript_r0dna")
+
+[node name="Chair2" parent="Apartamentu/chair" instance=ExtResource("8_0fglf")]
+transform = Transform3D(0.996255, 0, 0.0864648, 0, 1, 0, -0.0864648, 0, 0.996255, -3.08749, 0.346612, 2.34736)
+
+[node name="Area3D" type="Area3D" parent="Apartamentu/chair/Chair2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/chair/Chair2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.561523, 0)
+shape = SubResource("BoxShape3D_kn06e")
+
+[node name="Chair" parent="Apartamentu/chair" index="1"]
+transform = Transform3D(0.996255, 0, 0.0864648, 0, 1, 0, -0.0864648, 0, 0.996255, -3.08749, 0.346612, 2.34736)
+
+[node name="Looking_at_monitor" type="Camera3D" parent="Apartamentu/chair"]
+transform = Transform3D(-0.700648, 0, 0.713507, 0, 1, 0, -0.713507, 0, -0.700648, -3.38168, 1.17805, 2.47628)
+script = ExtResource("5_0ao37")
+monitor_path = NodePath("../../monitor/ScreenMesh")
+sub_viewport_path = NodePath("../../monitor/ScreenMesh/SubViewport")
+cursor_sprite_path = NodePath("../../monitor/ScreenMesh/SubViewport/Control/Cursor2D")
+
+[node name="Label" type="Label" parent="Apartamentu/chair/Looking_at_monitor"]
+offset_left = 218.0
+offset_top = 503.0
+offset_right = 569.0
+offset_bottom = 659.0
+text = "CTRL to zoom
+F to turn on PC"
+text_overrun_behavior = 1
+
+[node name="CursorRay" type="RayCast3D" parent="Apartamentu/chair/Looking_at_monitor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.32458e-06, 0, -0.00321746)
+exclude_parent = false
+target_position = Vector3(0, 0, -1)
+collision_mask = 3
+hit_from_inside = true
+hit_back_faces = false
+collide_with_areas = true
+debug_shape_custom_color = Color(1, 1, 1, 1)
+script = SubResource("GDScript_0ao37")
+
+[node name="monitor" parent="Apartamentu" instance=ExtResource("10_33kev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.239524, 0.427453, 1.00486)
+
+[node name="ScreenMesh" type="MeshInstance3D" parent="Apartamentu/monitor"]
+transform = Transform3D(-0.00556676, 0.00499867, -0.0023161, -0.00247627, -7.40073e-05, -0.157978, -0.312941, -8.83336e-05, 0.00129126, 1.58003, 3.57644, -0.0184245)
+material_override = SubResource("StandardMaterial3D_w0bku")
+mesh = SubResource("PlaneMesh_w0bku")
+script = SubResource("GDScript_w0bku")
+
+[node name="SubViewport" type="SubViewport" parent="Apartamentu/monitor/ScreenMesh"]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Control" type="Control" parent="Apartamentu/monitor/ScreenMesh/SubViewport"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Cursor2D" type="Sprite2D" parent="Apartamentu/monitor/ScreenMesh/SubViewport/Control"]
+position = Vector2(732, 721)
+scale = Vector2(0.1, 0.08)
+texture = ExtResource("12_w0bku")
+
+[node name="All2" parent="Apartamentu" instance=ExtResource("9_kn06e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/All2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/All2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04038, 1.0981, 4.76924)
+shape = SubResource("BoxShape3D_rfukx")
+
+[node name="Ceiling2" parent="Apartamentu" instance=ExtResource("7_ivbkn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Chair2" parent="Apartamentu" instance=ExtResource("8_0fglf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Crt Monitor2" parent="Apartamentu" instance=ExtResource("9_qtjmb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Door bell2" parent="Apartamentu" instance=ExtResource("10_wi82k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Drop" parent="Apartamentu" instance=ExtResource("11_l7i8q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Electical box2" parent="Apartamentu" instance=ExtResource("12_7hrk4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Floating chair2" parent="Apartamentu" instance=ExtResource("13_rfukx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Floating table2" parent="Apartamentu" instance=ExtResource("14_irs1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Floor2" parent="Apartamentu" instance=ExtResource("15_ofme6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/Floor2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/Floor2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72903, -0.0671411, 2.26858)
+shape = SubResource("BoxShape3D_ivbkn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Apartamentu/Floor2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.29374, 0.0596514, 1.01201)
+shape = SubResource("BoxShape3D_0fglf")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Apartamentu/Floor2/StaticBody3D"]
+transform = Transform3D(0.653289, 0, -0.757109, 0, 1, 0, 0.757109, 0, 0.653289, 0.00673604, -0.0384388, 4.15718)
+shape = SubResource("BoxShape3D_qtjmb")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Apartamentu/Floor2/StaticBody3D"]
+transform = Transform3D(0.941682, 0.336504, 0, -0.336504, 0.941682, 0, 0, 0, 1, -0.31343, -0.0745764, -0.50206)
+shape = SubResource("BoxShape3D_wi82k")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Apartamentu/Floor2/StaticBody3D"]
+transform = Transform3D(0.732292, 0.182581, 0.656059, -0.241922, 0.970296, 0, -0.636571, -0.158715, 0.75471, 0.611661, -0.00371873, 2.72148)
+shape = SubResource("BoxShape3D_l7i8q")
+
+[node name="HoneyComb2" parent="Apartamentu" instance=ExtResource("16_jdyvg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Lights12" parent="Apartamentu" instance=ExtResource("17_26nav")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Lights22" parent="Apartamentu" instance=ExtResource("18_ne1it")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Lights32" parent="Apartamentu" instance=ExtResource("19_hhume")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Lights42" parent="Apartamentu" instance=ExtResource("20_au5ix")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Lights52" parent="Apartamentu" instance=ExtResource("21_pb8dl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Logo 12" parent="Apartamentu" instance=ExtResource("22_3cv6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Monitor2" parent="Apartamentu" instance=ExtResource("23_dwptd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Mouse2" parent="Apartamentu" instance=ExtResource("24_bfota")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="PC2" parent="Apartamentu" instance=ExtResource("25_gcpal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server 12" parent="Apartamentu" instance=ExtResource("26_1c8so")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server 22" parent="Apartamentu" instance=ExtResource("27_8mvdv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server 32" parent="Apartamentu" instance=ExtResource("28_lpp4p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server 42" parent="Apartamentu" instance=ExtResource("29_k7vvi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server 52" parent="Apartamentu" instance=ExtResource("30_slq5t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server 62" parent="Apartamentu" instance=ExtResource("31_kf4hd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server 72" parent="Apartamentu" instance=ExtResource("32_d533g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server 82" parent="Apartamentu" instance=ExtResource("33_wnv30")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server2" parent="Apartamentu" instance=ExtResource("34_nfsqp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Shelve2" parent="Apartamentu" instance=ExtResource("35_wcwqb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Stairs2" parent="Apartamentu" instance=ExtResource("36_a60hx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Support pillars2" parent="Apartamentu" instance=ExtResource("37_n5pd3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Table2" parent="Apartamentu" instance=ExtResource("38_7cnhw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="TV2" parent="Apartamentu" instance=ExtResource("39_6ee4w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Wall12" parent="Apartamentu" instance=ExtResource("40_h2nrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Wall22" parent="Apartamentu" instance=ExtResource("41_nda70")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="windows" parent="Apartamentu" instance=ExtResource("42_p70ga")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Wooden railing2" parent="Apartamentu" instance=ExtResource("43_eq88g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+
+[node name="pausemenu" parent="PauseMenu" instance=ExtResource("23_0ao37")]
+
+[node name="PostFX" type="CanvasLayer" parent="."]
+layer = 100
+script = ExtResource("24_l11rc")
+
+[node name="PostFXRect" type="ColorRect" parent="PostFX"]
+material = SubResource("ShaderMaterial_l11rc")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.96422, 1.1588e-08, -0.265102, 0.265102, -4.21474e-08, 0.96422, 1.15127e-16, -1, -4.37114e-08, -13.1209, 16.9297, 3.37712)
+light_energy = 50.0
+spot_range = 24.8207
+
+[connection signal="_load" from="PauseMenu/pausemenu" to="Player" method="_on_pausemenu__load"]
+[connection signal="_save" from="PauseMenu/pausemenu" to="Player" method="_on_pausemenu__save"]
+
+[editable path="Apartamentu/chair"]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1d4qdvb251oc"]
+
+[ext_resource type="FontFile" uid="uid://db16gjjdg8f7x" path="res://Assets/Fonts/VT323-Regular.ttf" id="1_2ubhc"]
+[ext_resource type="Script" uid="uid://claghj3nehe4t" path="res://Scenes/PCUI/InputResponse.gd" id="1_ok7v6"]
+
+[node name="InputResponse" type="VBoxContainer"]
+offset_right = 720.0
+offset_bottom = 128.0
+theme_override_constants/separation = 5
+script = ExtResource("1_ok7v6")
+
+[node name="InputHistory" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2ubhc")
+theme_override_font_sizes/font_size = 30
+text = " > This is what user typed"
+
+[node name="Response" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2ubhc")
+theme_override_font_sizes/font_size = 40
+text = "This is what the game will give back"

@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://cwq4uacj2n3u3"]
+
+[ext_resource type="Script" uid="uid://drpr2sj068ufl" path="res://Scripts/Player.gd" id="1_nw1s3"]
+[ext_resource type="Script" uid="uid://bdk30xg51phfq" path="res://Scripts/camera_3d.gd" id="2_gntrk"]
+[ext_resource type="Texture2D" uid="uid://dc5w17hraxg3q" path="res://Assets/2D Assets/E(mega design).png" id="2_kyqiw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_twhws"]
+radius = 0.214682
+height = 1.71579
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v10kl"]
+albedo_color = Color(6.48562e-05, 0.106251, 0.394066, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7rmrn"]
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(0.999962, 0, -0.00872654, 0, 1, 0, 0.00872654, 0, 0.999962, 0, 0, 0)
+script = ExtResource("1_nw1s3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.46891e-05, -0.153933, -0.00626674)
+shape = SubResource("CapsuleShape3D_twhws")
+debug_color = Color(0.696601, 1.05888e-06, 0.402311, 0.42)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00162649, -0.00538266, -0.00577164)
+material_override = SubResource("StandardMaterial3D_v10kl")
+mesh = SubResource("CapsuleMesh_7rmrn")
+
+[node name="Head" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00202751, 0.499785, -0.00136256)
+script = ExtResource("2_gntrk")
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, -0.00156438, 0, -0.17926)
+target_position = Vector3(0, 0, -0.5)
+collide_with_areas = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="E" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(894, 484)
+scale = Vector2(0.6, 0.586)
+texture = ExtResource("2_kyqiw")
+centered = false

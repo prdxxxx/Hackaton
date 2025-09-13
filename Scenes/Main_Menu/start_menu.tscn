@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=3 uid="uid://cchar18v1xr73"]
+
+[ext_resource type="Theme" uid="uid://bypj0h0ctmou0" path="res://Scenes/Main_Menu/start_menu.tres" id="1_ia0g5"]
+[ext_resource type="Script" uid="uid://ujqw1bl72p63" path="res://Scenes/Main_Menu/main_menu.gd" id="2_vpdu5"]
+[ext_resource type="FontFile" uid="uid://bchsii8yr4w2i" path="res://Assets/Fonts/Orbitron-VariableFont_wght.ttf" id="3_6nn5l"]
+[ext_resource type="PackedScene" uid="uid://b51vsm7lxuuj0" path="res://Scenes/Main_Menu/Settings/Scenes/settings_menu.tscn" id="3_vpdu5"]
+[ext_resource type="PackedScene" uid="uid://b08d2atfoec2l" path="res://Scenes/Main_Menu/Credits/credits_menu.tscn" id="4_v2mkm"]
+[ext_resource type="AudioStream" uid="uid://vxoitbosc183" path="res://Assets/Music/Hollow Knight OST - Abyss.mp3" id="5_7esrr"]
+[ext_resource type="PackedScene" uid="uid://wqhyxohyxh14" path="res://Scenes/Main_Menu/start_game_options.tscn" id="6_si545"]
+
+[node name="MainMenu" type="CanvasLayer"]
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_ia0g5")
+script = ExtResource("2_vpdu5")
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -620.0
+offset_right = 374.0
+grow_vertical = 0
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_6nn5l")
+theme_override_font_sizes/font_size = 62
+text = "Game Title"
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 80
+
+[node name="StartButton" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 63)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_6nn5l")
+theme_override_font_sizes/font_size = 40
+text = "Start Game"
+
+[node name="Settings" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 63)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_6nn5l")
+theme_override_font_sizes/font_size = 40
+text = "Settings
+"
+
+[node name="Credits" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 63)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_6nn5l")
+theme_override_font_sizes/font_size = 40
+text = "Credits"
+
+[node name="Quit" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 63)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_6nn5l")
+theme_override_font_sizes/font_size = 40
+text = "Quit"
+
+[node name="MarginContainer2" type="MarginContainer" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 80
+
+[node name="Settings_menu" parent="." instance=ExtResource("3_vpdu5")]
+visible = false
+
+[node name="Credits" parent="." instance=ExtResource("4_v2mkm")]
+visible = false
+
+[node name="Start_game_options" parent="." instance=ExtResource("6_si545")]
+visible = false
+
+[node name="MainOST" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_7esrr")
+autoplay = true
+
+[connection signal="start_game_exit" from="Start_game_options" to="Menu" method="_on_start_game_options_start_game_exit"]

@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=3 uid="uid://b0n0s0o8hnx5p"]
+
+[ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="1_0ae2n"]
+[ext_resource type="Script" uid="uid://c8xyvwquwtmkr" path="res://Scenes/PCUI/EtterCap/mitm.gd" id="1_mekr8"]
+[ext_resource type="Script" uid="uid://cm8oep1ryqxso" path="res://Scenes/PCUI/EtterCap/command.gd" id="2_yr3tr"]
+[ext_resource type="Texture2D" uid="uid://b5rbk7fhvw1ky" path="res://Scenes/PCUI/EtterCap/cmd bgs.png" id="3_204qr"]
+[ext_resource type="Script" uid="uid://dj0bx0u28yd0c" path="res://Scenes/PCUI/EtterCap/input.gd" id="5_t7jt5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mekr8"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yr3tr"]
+texture = ExtResource("3_204qr")
+
+[node name="MITM" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mekr8")
+
+[node name="Command" type="Node" parent="."]
+script = ExtResource("2_yr3tr")
+
+[node name="WindowBase" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ae2n")
+
+[node name="Panel" type="Panel" parent="WindowBase"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainArea" type="PanelContainer" parent="WindowBase"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mekr8")
+
+[node name="MarginContainer" type="MarginContainer" parent="WindowBase/MainArea"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 40
+
+[node name="Rows" type="VBoxContainer" parent="WindowBase/MainArea/MarginContainer"]
+layout_mode = 2
+
+[node name="History" type="PanelContainer" parent="WindowBase/MainArea/MarginContainer/Rows"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_yr3tr")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="WindowBase/MainArea/MarginContainer/Rows/History"]
+layout_mode = 2
+
+[node name="HistoryRows" type="VBoxContainer" parent="WindowBase/MainArea/MarginContainer/Rows/History/ScrollContainer"]
+layout_mode = 2
+
+[node name="InputCont" type="PanelContainer" parent="WindowBase/MainArea"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/MainArea/InputCont"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Input" type="LineEdit" parent="WindowBase/MainArea/InputCont/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Enter your answer..."
+script = ExtResource("5_t7jt5")
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/MainArea"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="Button" type="Button" parent="WindowBase/MainArea/PanelContainer"]
+layout_mode = 2
+text = "X"
+
+[connection signal="sort_children" from="WindowBase/MainArea/MarginContainer/Rows/History/ScrollContainer" to="." method="_on_scroll_container_sort_children"]
+[connection signal="text_submitted" from="WindowBase/MainArea/InputCont/HBoxContainer/Input" to="." method="_on_input_text_submitted"]
+[connection signal="text_submitted" from="WindowBase/MainArea/InputCont/HBoxContainer/Input" to="WindowBase/MainArea/InputCont/HBoxContainer/Input" method="_on_text_submitted"]
+[connection signal="pressed" from="WindowBase/MainArea/PanelContainer/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://38gybghcwnc7"]
+
+[ext_resource type="Script" uid="uid://bdadcgrs4y4f" path="res://Scenes/PCUI/loading_screen.gd" id="1_2h0gn"]
+[ext_resource type="FontFile" uid="uid://db16gjjdg8f7x" path="res://Assets/Fonts/VT323-Regular.ttf" id="2_gm5nf"]
+[ext_resource type="SpriteFrames" uid="uid://dr35kyatm4pnh" path="res://Scenes/PCUI/loadinggif.gif" id="3_2uc7d"]
+
+[node name="LoadingScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2h0gn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 2
+offset_left = 660.0
+offset_right = 1260.0
+offset_bottom = 150.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_gm5nf")
+theme_override_font_sizes/font_size = 150
+text = "Loading..."
+
+[node name="ProgNumber" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -51.0
+offset_right = 36.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_gm5nf")
+theme_override_font_sizes/font_size = 100
+text = "100%"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ColorRect"]
+position = Vector2(904, 716)
+sprite_frames = ExtResource("3_2uc7d")
+animation = &"gif"

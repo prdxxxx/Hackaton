@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://t0bcl76nebgp"]
+
+[ext_resource type="Script" uid="uid://ckrb42td6676t" path="res://Scenes/PCUI/Site/accounts_panel.gd" id="1_4qgf0"]
+[ext_resource type="Texture2D" uid="uid://bimwtd4ln5ssr" path="res://Scenes/PCUI/Site/Bank.png" id="2_8u1hx"]
+[ext_resource type="FontFile" uid="uid://db16gjjdg8f7x" path="res://Assets/Fonts/VT323-Regular.ttf" id="3_ax3yp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8bked"]
+texture = ExtResource("2_8u1hx")
+
+[node name="Bank" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WindowBase" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AccountsPanel" type="Panel" parent="WindowBase"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4qgf0")
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/AccountsPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8bked")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/AccountsPanel/PanelContainer"]
+layout_mode = 2
+
+[node name="HeaderHBox" type="HBoxContainer" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/HeaderHBox"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_fonts/font = ExtResource("3_ax3yp")
+theme_override_font_sizes/font_size = 30
+text = "Victoriabank"
+
+[node name="LogoutButton" type="Button" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/HeaderHBox"]
+layout_mode = 2
+text = "Log out"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DetailsLabel" type="Label" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/HeaderHBox/LogoutButton" to="WindowBase/AccountsPanel" method="_on_logout_button_pressed"]

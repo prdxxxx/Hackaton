@@ -1,0 +1,136 @@
+[gd_scene load_steps=9 format=3 uid="uid://dvyuvwdvk0tbj"]
+
+[ext_resource type="Script" uid="uid://dlb6n0sx2xuxi" path="res://air_creck.gd" id="1_77561"]
+[ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="2_77561"]
+[ext_resource type="Script" uid="uid://da1if4xtfg2dl" path="res://commandaircrack.gd" id="2_b3u1a"]
+[ext_resource type="FontFile" uid="uid://db16gjjdg8f7x" path="res://Assets/Fonts/VT323-Regular.ttf" id="3_b3u1a"]
+[ext_resource type="Script" uid="uid://bbx1au7hv4sqw" path="res://inputcrack.gd" id="4_xlhr2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cq5oc"]
+bg_color = Color(0.214329, 0.311603, 0.273281, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n0yar"]
+bg_color = Color(0.199732, 0.199732, 0.199732, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.230315, 0.230315, 0.230315, 1)
+border_blend = true
+corner_radius_top_left = 26
+corner_radius_top_right = 26
+corner_radius_bottom_right = 26
+corner_radius_bottom_left = 26
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rq22w"]
+bg_color = Color(0.27451, 0.27451, 0.27451, 1)
+
+[node name="AirCreck" type="Control"]
+layout_mode = 3
+anchor_right = 0.529
+anchor_bottom = 0.578
+offset_right = 0.319946
+offset_bottom = 7.76001
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_77561")
+
+[node name="CommandProcAircrack" type="Node" parent="."]
+script = ExtResource("2_b3u1a")
+
+[node name="WindowBase" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_77561")
+
+[node name="Panel" type="Panel" parent="WindowBase"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="PanelContainer" parent="WindowBase"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cq5oc")
+
+[node name="MarginContainer" type="MarginContainer" parent="WindowBase/BG"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 120
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Rows" type="VBoxContainer" parent="WindowBase/BG/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="GameInfo" type="PanelContainer" parent="WindowBase/BG/MarginContainer/Rows"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_n0yar")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="WindowBase/BG/MarginContainer/Rows/GameInfo"]
+layout_mode = 2
+
+[node name="HistoryRows" type="VBoxContainer" parent="WindowBase/BG/MarginContainer/Rows/GameInfo/ScrollContainer"]
+layout_mode = 2
+
+[node name="InputArea" type="PanelContainer" parent="WindowBase/BG/MarginContainer/Rows"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rq22w")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/BG/MarginContainer/Rows/InputArea"]
+layout_mode = 2
+
+[node name="Caret" type="Label" parent="WindowBase/BG/MarginContainer/Rows/InputArea/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_b3u1a")
+theme_override_font_sizes/font_size = 30
+text = " >"
+
+[node name="Input" type="LineEdit" parent="WindowBase/BG/MarginContainer/Rows/InputArea/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_b3u1a")
+theme_override_font_sizes/font_size = 50
+placeholder_text = "Enter a command..."
+script = ExtResource("4_xlhr2")
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/BG"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="Button" type="Button" parent="WindowBase/BG/PanelContainer"]
+layout_mode = 2
+text = "X"
+
+[connection signal="sort_children" from="WindowBase/BG/MarginContainer/Rows/GameInfo/ScrollContainer" to="." method="_on_scroll_container_sort_children"]
+[connection signal="text_submitted" from="WindowBase/BG/MarginContainer/Rows/InputArea/HBoxContainer/Input" to="." method="_on_input_text_submitted"]
+[connection signal="text_submitted" from="WindowBase/BG/MarginContainer/Rows/InputArea/HBoxContainer/Input" to="WindowBase/BG/MarginContainer/Rows/InputArea/HBoxContainer/Input" method="_on_text_submitted"]
+[connection signal="pressed" from="WindowBase/BG/PanelContainer/Button" to="." method="_on_button_pressed"]

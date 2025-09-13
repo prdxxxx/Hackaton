@@ -1,0 +1,119 @@
+[gd_scene load_steps=10 format=3 uid="uid://brb2acniqq2i8"]
+
+[ext_resource type="Script" uid="uid://sx86362t4vhi" path="res://Scenes/PCUI/cmd.gd" id="1_pqyb1"]
+[ext_resource type="Script" uid="uid://6ianb0jquwg4" path="res://Scenes/PCUI/CommandProcessor.gd" id="2_2nbjq"]
+[ext_resource type="FontFile" uid="uid://db16gjjdg8f7x" path="res://Assets/Fonts/VT323-Regular.ttf" id="2_bdmyf"]
+[ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="3_t0pww"]
+[ext_resource type="Script" uid="uid://bm3iiqhnh42ia" path="res://Scenes/PCUI/input.gd" id="4_aq8rx"]
+[ext_resource type="Texture2D" uid="uid://b5rbk7fhvw1ky" path="res://Scenes/PCUI/EtterCap/cmd bgs.png" id="4_ccoy8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_186j6"]
+texture = ExtResource("4_ccoy8")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1v067"]
+bg_color = Color(0.199732, 0.199732, 0.199732, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rht3s"]
+bg_color = Color(0.27451, 0.27451, 0.27451, 1)
+
+[node name="CMD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -820.0
+offset_bottom = -377.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pqyb1")
+
+[node name="CommandProcessor" type="Node" parent="."]
+script = ExtResource("2_2nbjq")
+
+[node name="WindowBase" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_t0pww")
+
+[node name="Panel" type="Panel" parent="WindowBase"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="PanelContainer" parent="WindowBase"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_186j6")
+
+[node name="MarginContainer" type="MarginContainer" parent="WindowBase/BG"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Rows" type="VBoxContainer" parent="WindowBase/BG/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="GameInfo" type="PanelContainer" parent="WindowBase/BG/MarginContainer/Rows"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1v067")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="WindowBase/BG/MarginContainer/Rows/GameInfo"]
+layout_mode = 2
+
+[node name="HistoryRows" type="VBoxContainer" parent="WindowBase/BG/MarginContainer/Rows/GameInfo/ScrollContainer"]
+layout_mode = 2
+
+[node name="InputArea" type="PanelContainer" parent="WindowBase/BG/MarginContainer/Rows"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rht3s")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/BG/MarginContainer/Rows/InputArea"]
+layout_mode = 2
+
+[node name="Caret" type="Label" parent="WindowBase/BG/MarginContainer/Rows/InputArea/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bdmyf")
+theme_override_font_sizes/font_size = 30
+text = " >"
+
+[node name="Input" type="LineEdit" parent="WindowBase/BG/MarginContainer/Rows/InputArea/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_bdmyf")
+theme_override_font_sizes/font_size = 50
+placeholder_text = "Enter a command..."
+script = ExtResource("4_aq8rx")
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/BG"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="Button" type="Button" parent="WindowBase/BG/PanelContainer"]
+layout_mode = 2
+text = "X"
+
+[connection signal="sort_children" from="WindowBase/BG/MarginContainer/Rows/GameInfo/ScrollContainer" to="." method="_on_scroll_container_sort_children"]
+[connection signal="text_submitted" from="WindowBase/BG/MarginContainer/Rows/InputArea/HBoxContainer/Input" to="." method="_on_input_text_submitted"]
+[connection signal="text_submitted" from="WindowBase/BG/MarginContainer/Rows/InputArea/HBoxContainer/Input" to="WindowBase/BG/MarginContainer/Rows/InputArea/HBoxContainer/Input" method="_on_text_submitted"]
+[connection signal="pressed" from="WindowBase/BG/PanelContainer/Button" to="." method="_on_button_pressed"]

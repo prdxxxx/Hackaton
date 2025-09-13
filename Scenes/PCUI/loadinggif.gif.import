@@ -1,0 +1,15 @@
+[remap]
+
+importer="import_gif_to_sprite_frames"
+type="SpriteFrames"
+uid="uid://dr35kyatm4pnh"
+path="res://.godot/imported/loadinggif.gif-52d378c875886952a1a3bec87844523b.tres"
+
+[deps]
+
+source_file="res://Scenes/PCUI/loadinggif.gif"
+dest_files=["res://.godot/imported/loadinggif.gif-52d378c875886952a1a3bec87844523b.tres"]
+
+[params]
+
+frames_per_second=30

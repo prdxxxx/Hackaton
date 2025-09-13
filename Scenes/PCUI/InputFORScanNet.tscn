@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://biptk7k4korhl"]
+
+[ext_resource type="Script" uid="uid://d4gn5imc5fivp" path="res://52scannet.gd" id="1_70rx5"]
+
+[sub_resource type="SystemFont" id="SystemFont_n7amp"]
+subpixel_positioning = 0
+
+[node name="VBoxContainer" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_70rx5")
+
+[node name="Response" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_n7amp")
+theme_override_font_sizes/font_size = 20
+text = "5252525252525252525252525252"

@@ -1,0 +1,105 @@
+[gd_scene load_steps=3 format=3 uid="uid://wqhyxohyxh14"]
+
+[ext_resource type="Script" uid="uid://q11dm28330e7" path="res://Scenes/Main_Menu/start_game_options.gd" id="1_ghjid"]
+[ext_resource type="FontFile" uid="uid://bchsii8yr4w2i" path="res://Assets/Fonts/Orbitron-VariableFont_wght.ttf" id="2_0oxx0"]
+
+[node name="Start_game_options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ghjid")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 420
+theme_override_constants/margin_top = 300
+theme_override_constants/margin_right = 420
+theme_override_constants/margin_bottom = 300
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 300
+
+[node name="New" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 63)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_0oxx0")
+theme_override_font_sizes/font_size = 40
+text = "New Game"
+
+[node name="Load" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 63)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_0oxx0")
+theme_override_font_sizes/font_size = 40
+text = "Load Game"
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_0oxx0")
+theme_override_font_sizes/font_size = 42
+text = "Select a start option"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_0oxx0")
+theme_override_font_sizes/font_size = 42
+text = "Creates a new save file"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_0oxx0")
+theme_override_font_sizes/font_size = 42
+text = "Loads an existing save"
+horizontal_alignment = 1
+
+[node name="Exit" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 63)
+layout_mode = 2
+offset_left = 810.0
+offset_top = 788.0
+offset_right = 1110.0
+offset_bottom = 851.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_0oxx0")
+theme_override_font_sizes/font_size = 40
+text = "Exit
+"
+
+[node name="Label4" type="Label" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 420.0
+offset_top = 669.0
+offset_right = 1500.0
+offset_bottom = 723.0
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_0oxx0")
+theme_override_font_sizes/font_size = 42
+text = "No save file found"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/New" to="." method="_on_new_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
