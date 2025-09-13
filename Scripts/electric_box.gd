@@ -7,7 +7,7 @@ extends Node3D
 
 # Массив всех AudioStreamPlayer3D ламп
 @onready var lamp_sfx_list: Array = [
-	$Lights/Lights_2_Floor/Lightsw,
+	$Lights/Lights_2_Floor/Lights,
 	$Lights/Lights_Hall2/Lights,
 	$Lights/Lights_Storage/Lights
 ]

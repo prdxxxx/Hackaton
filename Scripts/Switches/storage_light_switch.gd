@@ -3,8 +3,8 @@ extends Node3D
 @onready var lights_storage: Node3D = $"../../ElectricBox/Lights/Lights_Storage"
 
 # Audio для этой группы ламп
-@onready var lamp_sfx: AudioStreamPlayer3D = $"../../ElectricBox/Lights/Lights_Storage/Lights"  # AudioStreamPlayer3D в сцене
-@onready var switch_sfx: AudioStreamPlayer3D = $AudioStreamPlayer3D  # добавляем отдельный звук для свитча
+@onready var lamp_sfx: AudioStreamPlayer3D = $"../../ElectricBox/Lights/Lights_Storage/Lights" # AudioStreamPlayer3D в сцене
+@onready var switch_sfx: AudioStreamPlayer3D = $AudioStreamPlayer3D # добавляем отдельный звук для свитча
 
 var onoff: bool = false
 

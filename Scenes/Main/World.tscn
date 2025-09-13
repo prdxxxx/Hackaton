@@ -792,7 +792,6 @@ volume_db = -15.0
 max_db = -10.0
 autoplay = true
 max_distance = 10.0
-bus = &"SFX_Lights"
 parameters/looping = true
 
 [node name="Lights_Hall" parent="Apartamentu/ElectricBox/Lights" instance=ExtResource("19_hhume")]
@@ -922,7 +921,6 @@ volume_db = -15.0
 max_db = -10.0
 autoplay = true
 max_distance = 10.0
-bus = &"SFX_Lights"
 parameters/looping = true
 
 [node name="Indicator_Light_on" type="Node3D" parent="Apartamentu/ElectricBox"]

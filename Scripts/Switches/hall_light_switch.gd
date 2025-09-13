@@ -4,7 +4,7 @@ extends Node3D
 @onready var lights_hall_2: Node3D = $"../../ElectricBox/Lights/Lights_Hall2"
 
 # Audio для этой группы ламп
-@onready var lamp_sfx: AudioStreamPlayer3D = $"../../ElectricBox/Lights/Lights_Hall/Lights"  # AudioStreamPlayer3D в сцене
+@onready var lamp_sfx: AudioStreamPlayer3D = $"../../ElectricBox/Lights/Lights_Hall2/Lights"  # AudioStreamPlayer3D в сцене
 @onready var switch_sfx: AudioStreamPlayer3D = $AudioStreamPlayer3D  # звук для переключателя
 
 var onoff: bool = false
