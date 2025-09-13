@@ -1,6 +1,7 @@
-[gd_scene load_steps=97 format=3 uid="uid://cen4j3rbwlj4u"]
+[gd_scene load_steps=100 format=3 uid="uid://cen4j3rbwlj4u"]
 
 [ext_resource type="PackedScene" uid="uid://cwq4uacj2n3u3" path="res://Scenes/Player.tscn" id="1_5cjrv"]
+[ext_resource type="Texture2D" uid="uid://gqtbfswpf8cb" path="res://Assets/2D Assets/pcui22.png" id="4_ofme6"]
 [ext_resource type="PackedScene" uid="uid://dseni4k4lehup" path="res://Assets/3D Assets/Layout concinai/Ceiling.glb" id="7_ivbkn"]
 [ext_resource type="PackedScene" uid="uid://b0ha4ubwc1i0k" path="res://Assets/3D Assets/Layout concinai/chair.glb" id="8_0fglf"]
 [ext_resource type="PackedScene" uid="uid://bu07dr4yvg3h1" path="res://Assets/3D Assets/Layout concinai/All.glb" id="9_kn06e"]
@@ -78,6 +79,11 @@ script/source = "extends Node3D
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kn06e"]
 size = Vector3(1.79373, 1.44922, 1.39203)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jdyvg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26nav"]
+albedo_texture = ExtResource("4_ofme6")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rfukx"]
 size = Vector3(0.107422, 2.21176, 5.53214)
@@ -285,6 +291,11 @@ text_overrun_behavior = 1
 
 [node name="monitor" parent="Apartamentu" instance=ExtResource("23_dwptd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.711702, -0.00127307, 0.233329)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Apartamentu/monitor"]
+transform = Transform3D(-0.225497, 0.583791, -5.01142e-09, 2.37539e-16, -3.67843e-08, -0.165263, -0.217198, -0.606097, 5.20291e-09, -3.89506, 1.18842, 2.88942)
+mesh = SubResource("PlaneMesh_jdyvg")
+surface_material_override/0 = SubResource("StandardMaterial3D_26nav")
 
 [node name="All" parent="Apartamentu" instance=ExtResource("9_kn06e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
