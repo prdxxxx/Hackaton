@@ -8,6 +8,7 @@ extends Control
 @onready var discord: Control = $Discord
 @onready var browser: Control = $LoginSite
 @onready var shop: Control = $Shop
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $"../AudioStreamPlayer2D"
 
 
 func _input(event):
@@ -17,6 +18,9 @@ func _input(event):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _ready() -> void:
+	if not Events.ui_sound_played:
+		audio_stream_player_2d.play()
+		Events.ui_sound_played = true
 	Events.connect("aircrack_command", Callable(self, "_on_aircrack_pressed"))
 	PcManager.ui_active = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)

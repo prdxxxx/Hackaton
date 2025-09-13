@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://38gybghcwnc7"]
+[gd_scene load_steps=5 format=3 uid="uid://38gybghcwnc7"]
 
 [ext_resource type="Script" uid="uid://bdadcgrs4y4f" path="res://Scenes/PCUI/loading_screen.gd" id="1_2h0gn"]
 [ext_resource type="FontFile" uid="uid://db16gjjdg8f7x" path="res://Assets/Fonts/VT323-Regular.ttf" id="2_gm5nf"]
 [ext_resource type="SpriteFrames" uid="uid://dr35kyatm4pnh" path="res://Scenes/PCUI/loadinggif.gif" id="3_2uc7d"]
+[ext_resource type="AudioStream" uid="uid://drwrqd1k1oqk8" path="res://Assets/SFX/PC/pc-startup-with-broken-hdd-2-25314.mp3" id="4_j1q4s"]
 
 [node name="LoadingScreen" type="Control"]
 layout_mode = 3
@@ -53,3 +54,8 @@ text = "100%"
 position = Vector2(904, 716)
 sprite_frames = ExtResource("3_2uc7d")
 animation = &"gif"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_j1q4s")
+volume_db = -20.0
+autoplay = true
