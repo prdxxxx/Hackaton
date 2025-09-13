@@ -175,10 +175,10 @@ custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_r3jss")
 
-[node name="Shop_Product" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer6" instance=ExtResource("2_yfbn2")]
+[node name="SmartTv" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer6" instance=ExtResource("2_yfbn2")]
 layout_mode = 2
 set_price = 300
-set_desc = "Compact Corner Sofa – Space-saving L-shaped design, dark blue fabric, with storage and pull-out bed option."
+set_desc = "Smart TV – A high-definition television with internet connectivity, apps, and streaming capabilities."
 
 [node name="Exit" type="Button" parent="WindowBase"]
 layout_mode = 1
@@ -221,4 +221,5 @@ text = "Not Enough Money!"
 [connection signal="button_pressed" from="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3/Sofa3" to="." method="_on_sofa_3_button_pressed"]
 [connection signal="button_pressed" from="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer4/Minecraft" to="." method="_on_minecraft_button_pressed"]
 [connection signal="button_pressed" from="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer5/Roblox" to="." method="_on_roblox_button_pressed"]
+[connection signal="button_pressed" from="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer6/SmartTv" to="." method="_on_smart_tv_button_pressed"]
 [connection signal="pressed" from="WindowBase/Exit" to="." method="_on_exit_pressed"]
