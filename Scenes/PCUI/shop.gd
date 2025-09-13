@@ -14,6 +14,9 @@ extends Control
 @onready var h_box_container: HBoxContainer = $WindowBase/ScrollContainer/VBoxContainer/HBoxContainer
 @onready var h_box_container_2: HBoxContainer = $WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2
 
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+
+
 
 func _ready() -> void:
 	v_box_container.visible = !SaveLoad.SaveFileData.world_obj["Sofa1"]
@@ -40,18 +43,24 @@ func check() -> void:
 func _on_sofa_1_button_pressed() -> void:
 	v_box_container.hide()
 	SaveLoad.SaveFileData.world_obj["Sofa1"] = !SaveLoad.SaveFileData.world_obj["Sofa1"]
+	audio_stream_player.play()
 func _on_sofa_2_button_pressed() -> void:
 	v_box_container_2.hide()
 	SaveLoad.SaveFileData.world_obj["Sofa2"] = !SaveLoad.SaveFileData.world_obj["Sofa2"]
+	audio_stream_player.play()
 func _on_sofa_3_button_pressed() -> void:
 	v_box_container_3.hide()
 	SaveLoad.SaveFileData.world_obj["Sofa3"] = !SaveLoad.SaveFileData.world_obj["Sofa3"]
+	audio_stream_player.play()
 func _on_minecraft_button_pressed() -> void:
 	v_box_container_4.hide()
 	SaveLoad.SaveFileData.world_obj["Minecraft"] = !SaveLoad.SaveFileData.world_obj["Minecraft"]
+	audio_stream_player.play()
 func _on_roblox_button_pressed() -> void:
 	v_box_container_5.hide()
 	SaveLoad.SaveFileData.world_obj["Roblox"] = !SaveLoad.SaveFileData.world_obj["Roblox"]
+	audio_stream_player.play()
 func _on_smart_tv_button_pressed() -> void:
 	v_box_container_6.hide()
 	SaveLoad.SaveFileData.world_obj["tv"] = !SaveLoad.SaveFileData.world_obj["tv"]
+	audio_stream_player.play()

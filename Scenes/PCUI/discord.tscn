@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cn63y8p0w6qjk"]
+[gd_scene load_steps=23 format=3 uid="uid://cn63y8p0w6qjk"]
 
 [ext_resource type="Texture2D" uid="uid://cijto0danu45l" path="res://Assets/2D Assets/ds.png" id="1_gm87t"]
 [ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="1_qcn4i"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cdsf8hfwjkse6" path="res://Scenes/PCUI/Icons/hydra.png" id="7_xytwj"]
 [ext_resource type="Script" uid="uid://ch46g02yehi4d" path="res://Scenes/PCUI/anon.gd" id="9_hceh1"]
 [ext_resource type="PackedScene" uid="uid://bnbdtimsalj7d" path="res://Scenes/PCUI/discord_call.tscn" id="9_xytwj"]
+[ext_resource type="AudioStream" uid="uid://cpf20qj83lek3" path="res://Assets/SFX/notification-2.mp3" id="11_svpby"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bgb4g"]
 texture = ExtResource("1_gm87t")
@@ -916,6 +917,9 @@ offset_left = 388.5
 offset_top = -101.5
 offset_right = 388.5
 offset_bottom = -101.5
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_svpby")
 
 [connection signal="anon_on" from="." to="WindowBase/Chat/Anon/VBoxContainer" method="_on_discord_anon_on"]
 [connection signal="visibility_changed" from="." to="WindowBase/Chat/Guide/VBoxContainer" method="_on_discord_visibility_changed"]

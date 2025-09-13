@@ -7,6 +7,7 @@ extends Node
 @onready var discord_call: Control = $"../../../Discord_Call"
 @onready var anon_contact: Panel = $"../../../Contacts/ScrollContainer/VBoxContainer/Anon_contact"
 @onready var guide: ScrollContainer = $".."
+@onready var audio_stream_player: AudioStreamPlayer = $"../../../../AudioStreamPlayer"
 
 @onready var scrollbar = guide.get_v_scroll_bar()
 
@@ -34,7 +35,9 @@ func _show_next_message() -> void:
 	# Show current message
 	var child = get_child(current_index)
 	child.visible = true
+	audio_stream_player.play()
 	current_index += 1
+	
 
 	# Check if we reached stop point
 	if current_index == stop_index and not continue_after_event:
@@ -48,6 +51,7 @@ func _show_next_message() -> void:
 			await get_tree().create_timer(delay).timeout
 			var next_child = get_child(current_index)
 			next_child.visible = true
+			audio_stream_player.play()
 			current_index += 1
 
 		return  # stop here until resumed

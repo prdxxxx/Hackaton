@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dx6yuj0ej7ic7"]
+[gd_scene load_steps=17 format=3 uid="uid://dx6yuj0ej7ic7"]
 
 [ext_resource type="Script" uid="uid://cya6t0vp8thxs" path="res://Scenes/PCUI/shop.gd" id="1_70wtv"]
 [ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="1_jpsmk"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bb6sgwpy7dgqu" path="res://Assets/2D Assets/Icons/14.png" id="6_70wtv"]
 [ext_resource type="Texture2D" uid="uid://cd7m3x1fr01wt" path="res://Assets/2D Assets/Icons/15.png" id="8_by8ki"]
 [ext_resource type="Texture2D" uid="uid://dsvibfilgniw" path="res://Assets/2D Assets/Icons/roblox.png" id="9_r3jss"]
+[ext_resource type="AudioStream" uid="uid://bdg3aatoba37c" path="res://Assets/SFX/notification.mp3" id="10_r3jss"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8n10j"]
 texture = ExtResource("2_qp7gd")
@@ -201,6 +202,7 @@ offset_right = -113.0
 offset_bottom = 38.0
 grow_horizontal = 0
 text = "Balance: ---$"
+horizontal_alignment = 1
 
 [node name="Warning" type="Label" parent="WindowBase"]
 visible = false
@@ -215,6 +217,9 @@ offset_bottom = 90.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(1, 0.694118, 0, 1)
 text = "Not Enough Money!"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_r3jss")
 
 [connection signal="button_pressed" from="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/Sofa1" to="." method="_on_sofa_1_button_pressed"]
 [connection signal="button_pressed" from="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Sofa2" to="." method="_on_sofa_2_button_pressed"]
