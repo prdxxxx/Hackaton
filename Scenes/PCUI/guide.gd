@@ -1,6 +1,6 @@
 extends Node
 
-@export var delay: float = 1.0          # seconds between messages
+@export var delay: float = 5.0          # seconds between messages
 @export var stop_index: int = 6         # the index where we pause (0-based)
 @export var messages_after_call: int = 2 # how many messages to show after call automatically
 
