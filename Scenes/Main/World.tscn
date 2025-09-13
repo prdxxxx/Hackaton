@@ -1,0 +1,988 @@
+[gd_scene load_steps=96 format=3 uid="uid://cen4j3rbwlj4u"]
+
+[ext_resource type="PackedScene" uid="uid://cwq4uacj2n3u3" path="res://Scenes/Player.tscn" id="1_5cjrv"]
+[ext_resource type="Texture2D" uid="uid://gqtbfswpf8cb" path="res://Assets/2D Assets/pcui22.png" id="4_7ujmr"]
+[ext_resource type="PackedScene" uid="uid://dseni4k4lehup" path="res://Assets/3D Assets/Layout concinai/Ceiling.glb" id="7_ivbkn"]
+[ext_resource type="PackedScene" uid="uid://b0ha4ubwc1i0k" path="res://Assets/3D Assets/Layout concinai/chair.glb" id="8_0fglf"]
+[ext_resource type="PackedScene" uid="uid://bu07dr4yvg3h1" path="res://Assets/3D Assets/Layout concinai/All.glb" id="9_kn06e"]
+[ext_resource type="PackedScene" uid="uid://cn7jl48qt4ibi" path="res://Assets/3D Assets/Layout concinai/Crt Monitor.glb" id="9_qtjmb"]
+[ext_resource type="PackedScene" uid="uid://dve3hp6nlib2n" path="res://Assets/3D Assets/Layout concinai/Door bell.glb" id="10_wi82k"]
+[ext_resource type="PackedScene" uid="uid://d2ilp87eseqsf" path="res://Assets/3D Assets/Layout concinai/Drop.glb" id="11_l7i8q"]
+[ext_resource type="PackedScene" uid="uid://c83vhgdh1hlai" path="res://Assets/3D Assets/Layout concinai/Floating chair.glb" id="13_rfukx"]
+[ext_resource type="PackedScene" uid="uid://pwcs2vfw5f31" path="res://Assets/3D Assets/Layout concinai/Floating table.glb" id="14_irs1d"]
+[ext_resource type="PackedScene" uid="uid://bsiq3t3lqv1g4" path="res://Assets/3D Assets/Layout concinai/floor.glb" id="15_ofme6"]
+[ext_resource type="PackedScene" uid="uid://c5f2f547afaul" path="res://Assets/3D Assets/Layout concinai/HoneyComb.glb" id="16_jdyvg"]
+[ext_resource type="PackedScene" uid="uid://b3m1yjqi3p1xx" path="res://Assets/3D Assets/Layout concinai/Lights1.glb" id="17_26nav"]
+[ext_resource type="PackedScene" uid="uid://b0wbao4ycoob2" path="res://Assets/3D Assets/Layout concinai/Lights2.glb" id="18_ne1it"]
+[ext_resource type="PackedScene" uid="uid://clss0eqoo0vf1" path="res://Assets/3D Assets/Layout concinai/Lights3.glb" id="19_hhume"]
+[ext_resource type="PackedScene" uid="uid://ctascn1ssg26v" path="res://Assets/3D Assets/Layout concinai/Lights4.glb" id="20_au5ix"]
+[ext_resource type="PackedScene" uid="uid://c2jem42nxnj3" path="res://Assets/3D Assets/Layout concinai/Lights5.glb" id="21_pb8dl"]
+[ext_resource type="PackedScene" uid="uid://cgny5e2sg0h4x" path="res://Assets/3D Assets/Layout concinai/Logo 1.glb" id="22_3cv6b"]
+[ext_resource type="PackedScene" uid="uid://c5452vgsf2252" path="res://Scenes/Pause_Menu/Scenes/pause_menu.tscn" id="23_0ao37"]
+[ext_resource type="PackedScene" uid="uid://btt6ujt5dkf3b" path="res://Assets/3D Assets/Layout concinai/monitor.glb" id="23_dwptd"]
+[ext_resource type="PackedScene" uid="uid://l7favgdno6ar" path="res://Assets/3D Assets/Layout concinai/Mouse.glb" id="24_bfota"]
+[ext_resource type="Shader" uid="uid://ddklekowi646o" path="res://Scenes/screenFX.gdshader" id="24_d3ars"]
+[ext_resource type="Script" uid="uid://cuks7kgmc5dbq" path="res://Scripts/Post_fx.gd" id="24_l11rc"]
+[ext_resource type="PackedScene" uid="uid://cxhj2m8i6e21d" path="res://Assets/3D Assets/Layout concinai/PC.glb" id="25_gcpal"]
+[ext_resource type="PackedScene" uid="uid://cpkumf3wmiocy" path="res://Assets/3D Assets/Layout concinai/Server 1.glb" id="26_1c8so"]
+[ext_resource type="PackedScene" uid="uid://dv7swpnaxf83u" path="res://Assets/3D Assets/Layout concinai/Server 2.glb" id="27_8mvdv"]
+[ext_resource type="PackedScene" uid="uid://dhnk85dkhr0fy" path="res://Assets/3D Assets/Layout concinai/Server 3.glb" id="28_lpp4p"]
+[ext_resource type="PackedScene" uid="uid://cm4y5lxsg4bba" path="res://Assets/3D Assets/Layout concinai/Server 4.glb" id="29_k7vvi"]
+[ext_resource type="PackedScene" uid="uid://b0v11k17trp8n" path="res://Assets/3D Assets/Layout concinai/Server 5.glb" id="30_slq5t"]
+[ext_resource type="PackedScene" uid="uid://ci71p671hj5b6" path="res://Assets/3D Assets/Layout concinai/Server 6.glb" id="31_kf4hd"]
+[ext_resource type="PackedScene" uid="uid://dhjuo0fj6iurq" path="res://Assets/3D Assets/Layout concinai/Server 7.glb" id="32_d533g"]
+[ext_resource type="PackedScene" uid="uid://d1elxmh1hu08h" path="res://Assets/3D Assets/Layout concinai/Server 8.glb" id="33_wnv30"]
+[ext_resource type="PackedScene" uid="uid://655j86h5g5dt" path="res://Assets/3D Assets/Layout concinai/Server.glb" id="34_nfsqp"]
+[ext_resource type="AudioStream" uid="uid://dsc55tbod38bv" path="res://Assets/SFX/light-off.mp3" id="35_4j0uw"]
+[ext_resource type="PackedScene" uid="uid://ch47jhj18emyj" path="res://Assets/3D Assets/Layout concinai/Shelve.glb" id="35_wcwqb"]
+[ext_resource type="PackedScene" uid="uid://l1xeeo7ophi5" path="res://Assets/3D Assets/Layout concinai/Stairs.glb" id="36_a60hx"]
+[ext_resource type="Script" uid="uid://d0ed8cv2gb1jb" path="res://Scripts/Switches/storage_light_switch.gd" id="36_wi82k"]
+[ext_resource type="Script" uid="uid://bnvb8ykhacfho" path="res://Scripts/Switches/hall_light_switch.gd" id="37_l7i8q"]
+[ext_resource type="PackedScene" uid="uid://fte54f0dxgp8" path="res://Assets/3D Assets/Layout concinai/Support pillars.glb" id="37_n5pd3"]
+[ext_resource type="PackedScene" uid="uid://e1dln33lovi6" path="res://Assets/3D Assets/Layout concinai/table.glb" id="38_7cnhw"]
+[ext_resource type="Script" uid="uid://ys2dchuvgkj6" path="res://Scripts/Switches/walls_light_switch.gd" id="38_7hrk4"]
+[ext_resource type="PackedScene" uid="uid://chg1200kyx8f7" path="res://Assets/3D Assets/Layout concinai/TV.glb" id="39_6ee4w"]
+[ext_resource type="Script" uid="uid://1uo8ilimauhg" path="res://Scripts/Switches/stairs_light_switch.gd" id="39_rfukx"]
+[ext_resource type="PackedScene" uid="uid://sma443233v4r" path="res://Assets/3D Assets/Layout concinai/wall1.glb" id="40_h2nrh"]
+[ext_resource type="Script" uid="uid://cy4jk5y3jtlr8" path="res://Scripts/Switches/2_floor_switch.gd" id="40_irs1d"]
+[ext_resource type="PackedScene" uid="uid://v0ar1qnb2jhq" path="res://Assets/3D Assets/Layout concinai/wall2.glb" id="41_nda70"]
+[ext_resource type="Material" uid="uid://b4agjheiiiw26" path="res://Assets/3D Assets/Layout concinai/lightOff.tres" id="42_0fglf"]
+[ext_resource type="PackedScene" uid="uid://jskucds6sj40" path="res://Assets/3D Assets/Layout concinai/windows.glb" id="42_p70ga"]
+[ext_resource type="Script" uid="uid://ctmhi047m35xp" path="res://Scripts/electric_box.gd" id="42_qtjmb"]
+[ext_resource type="PackedScene" uid="uid://d0x1pljr0gjkh" path="res://Assets/3D Assets/Layout concinai/Wooden railing.glb" id="43_eq88g"]
+[ext_resource type="PackedScene" uid="uid://crb1uhbn164jn" path="res://Assets/3D Assets/Layout concinai/ElectricBox.glb" id="44_fq1sc"]
+[ext_resource type="PackedScene" uid="uid://dtkq55ti20acl" path="res://Assets/3D Assets/Layout concinai/Lever.glb" id="45_ivbkn"]
+[ext_resource type="PackedScene" uid="uid://rb8nxn3hoa7c" path="res://Assets/3D Assets/Layout concinai/Apartaments.glb" id="46_ivbkn"]
+[ext_resource type="AudioStream" uid="uid://d0fqv4t8xv5ox" path="res://Assets/SFX/lamp-buzz.mp3" id="53_7ujmr"]
+
+[sub_resource type="Sky" id="Sky_r0dna"]
+
+[sub_resource type="Environment" id="Environment_b5aes"]
+background_mode = 2
+sky = SubResource("Sky_r0dna")
+tonemap_mode = 3
+ssao_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+glow_strength = 0.5
+glow_bloom = 0.1
+glow_blend_mode = 1
+fog_enabled = true
+fog_light_color = Color(0.142014, 0.16277, 0.170171, 1)
+fog_density = 0.02
+fog_aerial_perspective = 0.1
+adjustment_enabled = true
+
+[sub_resource type="GDScript" id="GDScript_r0dna"]
+script/source = "extends Node3D
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kn06e"]
+size = Vector3(1.79373, 1.44922, 1.39203)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_artvm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6wuwi"]
+albedo_texture = ExtResource("4_7ujmr")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rfukx"]
+size = Vector3(0.107422, 2.21176, 5.53214)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3cv6b"]
+size = Vector3(6.1557, 2.2066, 0.121582)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dwptd"]
+size = Vector3(2.18555, 2.20551, 0.125488)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k7vvi"]
+size = Vector3(6.10175, 0.1474, 3.78674)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gcpal"]
+size = Vector3(0.213464, 2.20529, 2.55612)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1c8so"]
+size = Vector3(5.81965, 2.20453, 0.225067)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lpp4p"]
+size = Vector3(1.42892, 2.198, 0.170013)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8mvdv"]
+size = Vector3(0.12648, 2.20221, 1.24362)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bfota"]
+size = Vector3(5.06367, 0.135376, 5.02217)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_slq5t"]
+size = Vector3(0.111816, 2.08276, 3.0195)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kf4hd"]
+size = Vector3(2.39117, 2.11737, 0.175751)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d533g"]
+size = Vector3(4.02911, 0.109116, 2.96094)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ivbkn"]
+size = Vector3(6.54613, 0.136125, 10.5386)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0fglf"]
+size = Vector3(5.50505, 0.285152, 8.05029)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qtjmb"]
+size = Vector3(3.9958, 0.479431, 1.98874)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wi82k"]
+size = Vector3(0.615356, 0.36467, 5.0184)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l7i8q"]
+size = Vector3(0.923492, 0.237526, 3.39894)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pb8dl"]
+size = Vector3(3.53362, 0.43335, 1.82411)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_au5ix"]
+size = Vector3(1.04724, 0.649292, 2.08813)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hhume"]
+size = Vector3(0.201752, 5.60108, 8.17526)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ne1it"]
+size = Vector3(11.9687, 5.63049, 0.16217)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7hrk4"]
+size = Vector3(0.161621, 1.97467, 6.00473)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_26nav"]
+size = Vector3(0.134277, 1.97473, 2.97617)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_irs1d"]
+size = Vector3(0.0716553, 3.40874, 2.95581)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ofme6"]
+size = Vector3(0.0744629, 0.970825, 2.2887)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jdyvg"]
+size = Vector3(0.0522156, 0.985718, 1.45787)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wi82k"]
+albedo_color = Color(0.255659, 0.255659, 0.255659, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qtjmb"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_l7i8q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nfsqp"]
+size = Vector3(0.113449, 0.148438, 0.113037)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qtjmb"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wi82k"]
+material = SubResource("StandardMaterial3D_qtjmb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0fglf"]
+albedo_color = Color(0.151276, 0.151276, 0.151276, 1)
+emission_enabled = true
+emission_energy_multiplier = 11.85
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wnv30"]
+size = Vector3(0.463501, 0.744995, 0.573795)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l11rc"]
+shader = ExtResource("24_d3ars")
+shader_parameter/enabled = true
+shader_parameter/pixel_size = 2.0
+shader_parameter/posterize_steps = 6.0
+shader_parameter/saturation = 0.7
+shader_parameter/contrast = 1.15
+shader_parameter/brightness = 0.0
+shader_parameter/use_scanlines = true
+shader_parameter/scanline_intensity = 0.18
+shader_parameter/use_vignette = true
+shader_parameter/vignette_intensity = 0.35
+shader_parameter/use_noise = true
+shader_parameter/noise_intensity = 0.03
+shader_parameter/use_aberration = true
+shader_parameter/aberration = 0.3
+
+[node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_b5aes")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+light_color = Color(0.313726, 0.407843, 0.52549, 1)
+light_energy = 2.0
+shadow_enabled = true
+directional_shadow_mode = 0
+directional_shadow_max_distance = 300.0
+
+[node name="Player" parent="." instance=ExtResource("1_5cjrv")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 3.22132, 3.64235, 2.04781)
+
+[node name="Apartamentu" type="Node3D" parent="."]
+
+[node name="chair" parent="Apartamentu" groups=["Interaction"] instance=ExtResource("8_0fglf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.329527, 0.427453, 1.00486)
+script = SubResource("GDScript_r0dna")
+
+[node name="Chair" parent="Apartamentu/chair" index="0"]
+transform = Transform3D(0.996255, 0, 0.0864648, 0, 1, 0, -0.0864648, 0, 0.996255, -3.2437, -0.0797907, 1.48568)
+
+[node name="Area3D" type="Area3D" parent="Apartamentu/chair/Chair" index="0"]
+transform = Transform3D(1, 0, -3.72529e-08, 0, 1, 0, 3.72529e-08, 0, 1, 0.519713, 0, -0.0490286)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/chair/Chair/Area3D"]
+transform = Transform3D(1, 0, -4.47035e-07, 0, 1, 0, 4.47035e-07, 0, 1, -0.751238, 0.576173, -0.115082)
+shape = SubResource("BoxShape3D_kn06e")
+
+[node name="Looking_at_monitor" type="Camera3D" parent="Apartamentu/chair"]
+transform = Transform3D(-0.700648, 0, 0.713507, 0, 1, 0, -0.713507, 0, -0.700648, -3.9972, 0.749324, 1.8505)
+fov = 56.8492
+
+[node name="Label" type="Label" parent="Apartamentu/chair/Looking_at_monitor"]
+offset_left = 218.0
+offset_top = 503.0
+offset_right = 569.0
+offset_bottom = 659.0
+text = "CTRL to enter in PC
+"
+text_overrun_behavior = 1
+
+[node name="monitor" parent="Apartamentu" instance=ExtResource("23_dwptd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.711702, -0.00127307, 0.233329)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Apartamentu/monitor"]
+transform = Transform3D(-0.225497, 0.583791, -5.01142e-09, 2.37539e-16, -3.67843e-08, -0.165263, -0.217198, -0.606097, 5.20291e-09, -3.89506, 1.18842, 2.88942)
+mesh = SubResource("PlaneMesh_artvm")
+surface_material_override/0 = SubResource("StandardMaterial3D_6wuwi")
+
+[node name="All" parent="Apartamentu" instance=ExtResource("9_kn06e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/All"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/All/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04038, 1.0981, 4.76924)
+shape = SubResource("BoxShape3D_rfukx")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Apartamentu/All/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.06933, 1.0996, 7.58242)
+shape = SubResource("BoxShape3D_3cv6b")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Apartamentu/All/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.911, 1.10053, 7.57962)
+shape = SubResource("BoxShape3D_dwptd")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Apartamentu/All/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.05076, -0.0641289, 6.78561)
+shape = SubResource("BoxShape3D_k7vvi")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Apartamentu/All/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0994, 1.10042, 6.2443)
+shape = SubResource("BoxShape3D_gcpal")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Apartamentu/All/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.09202, 1.10037, 4.88409)
+shape = SubResource("BoxShape3D_1c8so")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Apartamentu/All/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.99273, 1.10158, 8.67903)
+shape = SubResource("BoxShape3D_lpp4p")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Apartamentu/All/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.76823, 1.10405, 8.1407)
+shape = SubResource("BoxShape3D_8mvdv")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Apartamentu/All/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.21238, 1.10534, 8.14436)
+shape = SubResource("BoxShape3D_8mvdv")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="Apartamentu/All/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.53106, 2.13917, -0.508852)
+shape = SubResource("BoxShape3D_bfota")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="Apartamentu/All/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.55321, 1.03612, 3.51168)
+shape = SubResource("BoxShape3D_slq5t")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="Apartamentu/All/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8064, 1.02515, 2.08637)
+shape = SubResource("BoxShape3D_kf4hd")
+
+[node name="CollisionShape3D13" type="CollisionShape3D" parent="Apartamentu/All/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.14172, 3.30576, 5.03735)
+shape = SubResource("BoxShape3D_3cv6b")
+
+[node name="CollisionShape3D14" type="CollisionShape3D" parent="Apartamentu/All/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.99872, 2.14836, 3.47287)
+shape = SubResource("BoxShape3D_d533g")
+
+[node name="Ceiling" parent="Apartamentu" instance=ExtResource("7_ivbkn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Crt Monitor" parent="Apartamentu" instance=ExtResource("9_qtjmb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Door bell" parent="Apartamentu" instance=ExtResource("10_wi82k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+visible = false
+
+[node name="Drop" parent="Apartamentu" instance=ExtResource("11_l7i8q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Floating chair" parent="Apartamentu" instance=ExtResource("13_rfukx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Floating table" parent="Apartamentu" instance=ExtResource("14_irs1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Floor" parent="Apartamentu" instance=ExtResource("15_ofme6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/Floor/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72903, -0.0671411, 2.26858)
+shape = SubResource("BoxShape3D_ivbkn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Apartamentu/Floor/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.29374, 0.0596514, 1.01201)
+shape = SubResource("BoxShape3D_0fglf")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Apartamentu/Floor/StaticBody3D"]
+transform = Transform3D(0.653289, 0, -0.757109, 0, 1, 0, 0.757109, 0, 0.653289, 0.00673604, -0.0384388, 4.15718)
+shape = SubResource("BoxShape3D_qtjmb")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Apartamentu/Floor/StaticBody3D"]
+transform = Transform3D(0.941682, 0.336504, 0, -0.336504, 0.941682, 0, 0, 0, 1, -0.31343, -0.0745764, -0.50206)
+shape = SubResource("BoxShape3D_wi82k")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Apartamentu/Floor/StaticBody3D"]
+transform = Transform3D(0.732292, 0.182581, 0.656059, -0.241922, 0.970296, 0, -0.636571, -0.158715, 0.75471, 0.611661, -0.00371873, 2.72148)
+shape = SubResource("BoxShape3D_l7i8q")
+
+[node name="HoneyComb" parent="Apartamentu" instance=ExtResource("16_jdyvg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Logo 1" parent="Apartamentu" instance=ExtResource("22_3cv6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Mouse" parent="Apartamentu" instance=ExtResource("24_bfota")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="PC" parent="Apartamentu" instance=ExtResource("25_gcpal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server 1" parent="Apartamentu" instance=ExtResource("26_1c8so")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server 2" parent="Apartamentu" instance=ExtResource("27_8mvdv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server 3" parent="Apartamentu" instance=ExtResource("28_lpp4p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server 4" parent="Apartamentu" instance=ExtResource("29_k7vvi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server 5" parent="Apartamentu" instance=ExtResource("30_slq5t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server 6" parent="Apartamentu" instance=ExtResource("31_kf4hd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server 7" parent="Apartamentu" instance=ExtResource("32_d533g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server 8" parent="Apartamentu" instance=ExtResource("33_wnv30")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Server" parent="Apartamentu" instance=ExtResource("34_nfsqp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Shelve" parent="Apartamentu" instance=ExtResource("35_wcwqb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Stairs" parent="Apartamentu" instance=ExtResource("36_a60hx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/Stairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.45107)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/Stairs/StaticBody3D"]
+transform = Transform3D(0.788011, -0.615662, 0, 0.615662, 0.788011, 0, 0, 0, 1, -0.251903, 0.953332, -0.620887)
+shape = SubResource("BoxShape3D_pb8dl")
+
+[node name="Support pillars" parent="Apartamentu" instance=ExtResource("37_n5pd3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Table" parent="Apartamentu" instance=ExtResource("38_7cnhw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/Table"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/Table/StaticBody3D"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -3.73362, 0.541537, 2.72565)
+shape = SubResource("BoxShape3D_au5ix")
+
+[node name="TV" parent="Apartamentu" instance=ExtResource("39_6ee4w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="Wall1" parent="Apartamentu" instance=ExtResource("40_h2nrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/Wall1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/Wall1/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.09361, 2.79276, 0.903976)
+shape = SubResource("BoxShape3D_hhume")
+
+[node name="Wall2" parent="Apartamentu" instance=ExtResource("41_nda70")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/Wall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/Wall2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.019989, 2.78131, -3.07755)
+shape = SubResource("BoxShape3D_ne1it")
+
+[node name="windows" parent="Apartamentu" instance=ExtResource("42_p70ga")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/windows"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/windows/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.03569, 1.18967, 0.00102234)
+shape = SubResource("BoxShape3D_7hrk4")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Apartamentu/windows/StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.01218, 1.19057, 5.02574)
+shape = SubResource("BoxShape3D_7hrk4")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Apartamentu/windows/StaticBody3D"]
+transform = Transform3D(0.706687, 0, 0.707526, 0, 1, 0, -0.707526, 0, 0.706687, -5.02365, 1.18889, 4.01361)
+shape = SubResource("BoxShape3D_26nav")
+
+[node name="windows2" parent="Apartamentu" instance=ExtResource("42_p70ga")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/windows2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/windows2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.03569, 1.18967, 0.00102234)
+shape = SubResource("BoxShape3D_7hrk4")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Apartamentu/windows2/StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.01218, 1.19057, 5.02574)
+shape = SubResource("BoxShape3D_7hrk4")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Apartamentu/windows2/StaticBody3D"]
+transform = Transform3D(0.706687, 0, 0.707526, 0, 1, 0, -0.707526, 0, 0.706687, -5.02365, 1.18889, 4.01361)
+shape = SubResource("BoxShape3D_26nav")
+
+[node name="Wooden railing" parent="Apartamentu" instance=ExtResource("43_eq88g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/Wooden railing"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/Wooden railing/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.03809, 3.90924, 3.48222)
+shape = SubResource("BoxShape3D_irs1d")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Apartamentu/Wooden railing/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04982, 2.68692, -0.140822)
+shape = SubResource("BoxShape3D_ofme6")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Apartamentu/Wooden railing/StaticBody3D"]
+transform = Transform3D(0.711523, 0, 0.702662, 0, 1, 0, -0.702662, 0, 0.711523, 1.5436, 2.67978, 1.5026)
+shape = SubResource("BoxShape3D_jdyvg")
+
+[node name="Switches" type="Node3D" parent="Apartamentu"]
+
+[node name="switch_storage" type="Node3D" parent="Apartamentu/Switches"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.963, 1, 2.201)
+script = ExtResource("36_wi82k")
+
+[node name="SpotLight3D_5" type="SpotLight3D" parent="Apartamentu/Switches/switch_storage"]
+transform = Transform3D(1, -0.000207725, 0.000225219, -0.00020931, -0.999975, 0.00705878, 0.000223747, -0.00705883, -0.999975, 0.0489419, 0.077006, -1.06421)
+light_color = Color(0.0352941, 0.262745, 0.360784, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 4.212
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Apartamentu/Switches/switch_storage"]
+transform = Transform3D(-1.24621e-09, 0, 0.0907803, 0, 0.131541, 0, -0.0285099, 0, -3.96813e-09, 0.0554909, 0.0853763, 0.0657308)
+material_override = SubResource("StandardMaterial3D_wi82k")
+mesh = SubResource("BoxMesh_qtjmb")
+
+[node name="on" type="MeshInstance3D" parent="Apartamentu/Switches/switch_storage"]
+transform = Transform3D(0.0190135, 0, 0, 0, 0.0565268, 0.0167745, 0, -0.0565268, 0.0167745, 0.0560159, 0.0804952, 0.0574539)
+mesh = SubResource("BoxMesh_l7i8q")
+
+[node name="off" type="MeshInstance3D" parent="Apartamentu/Switches/switch_storage"]
+transform = Transform3D(0.0190135, 0, 0, 0, -0.0455076, 0.0195038, 0, -0.0657238, -0.0135045, 0.0560159, 0.0804952, 0.0589888)
+visible = false
+mesh = SubResource("BoxMesh_l7i8q")
+
+[node name="Storage_Switch" type="StaticBody3D" parent="Apartamentu/Switches/switch_storage"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/Switches/switch_storage/Storage_Switch"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0550256, 0.0889028, 0.0634336)
+shape = SubResource("BoxShape3D_nfsqp")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Apartamentu/Switches/switch_storage"]
+stream = ExtResource("35_4j0uw")
+
+[node name="switch_hall" type="Node3D" parent="Apartamentu/Switches"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.679, 1, 7.705)
+script = ExtResource("37_l7i8q")
+
+[node name="SpotLight3D_5" type="SpotLight3D" parent="Apartamentu/Switches/switch_hall"]
+transform = Transform3D(1, -0.000207725, 0.000225219, -0.00020931, -0.999975, 0.00705878, 0.000223747, -0.00705883, -0.999975, 0.0537326, 0.0770059, -0.415173)
+light_color = Color(0.0352941, 0.262745, 0.360784, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 4.212
+spot_angle = 60.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Apartamentu/Switches/switch_hall"]
+transform = Transform3D(-1.24621e-09, 0, 0.0907803, 0, 0.131541, 0, -0.0285099, 0, -3.96813e-09, 0.0554909, 0.0853763, 0.0657308)
+material_override = SubResource("StandardMaterial3D_wi82k")
+mesh = SubResource("BoxMesh_qtjmb")
+
+[node name="on" type="MeshInstance3D" parent="Apartamentu/Switches/switch_hall"]
+transform = Transform3D(0.0190135, 0, 0, 0, 0.0565268, 0.0167745, 0, -0.0565268, 0.0167745, 0.0560159, 0.0804952, 0.0574539)
+mesh = SubResource("BoxMesh_l7i8q")
+
+[node name="off" type="MeshInstance3D" parent="Apartamentu/Switches/switch_hall"]
+transform = Transform3D(0.0190135, 0, 0, 0, -0.0455076, 0.0195038, 0, -0.0657238, -0.0135045, 0.0560159, 0.0804952, 0.0589888)
+visible = false
+mesh = SubResource("BoxMesh_l7i8q")
+
+[node name="Hall_Switch" type="StaticBody3D" parent="Apartamentu/Switches/switch_hall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/Switches/switch_hall/Hall_Switch"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0550256, 0.0889028, 0.0634336)
+shape = SubResource("BoxShape3D_nfsqp")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Apartamentu/Switches/switch_hall"]
+stream = ExtResource("35_4j0uw")
+
+[node name="switch_walls" type="Node3D" parent="Apartamentu/Switches"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.241, 1, 2.733)
+script = ExtResource("38_7hrk4")
+
+[node name="SpotLight3D_5" type="SpotLight3D" parent="Apartamentu/Switches/switch_walls"]
+transform = Transform3D(1, -0.000207725, 0.000225219, -0.00020931, -0.999975, 0.00705878, 0.000223747, -0.00705883, -0.999975, 0.0537326, 0.0770059, -0.673514)
+light_color = Color(0.0352941, 0.262745, 0.360784, 1)
+light_energy = 1.25
+light_volumetric_fog_energy = 4.212
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Apartamentu/Switches/switch_walls"]
+transform = Transform3D(-1.24621e-09, 0, 0.0907803, 0, 0.131541, 0, -0.0285099, 0, -3.96813e-09, 0.0554909, 0.0853763, 0.0657308)
+material_override = SubResource("StandardMaterial3D_wi82k")
+mesh = SubResource("BoxMesh_qtjmb")
+
+[node name="on" type="MeshInstance3D" parent="Apartamentu/Switches/switch_walls"]
+transform = Transform3D(0.0190135, 0, 0, 0, 0.0565268, 0.0167745, 0, -0.0565268, 0.0167745, 0.0560159, 0.0804952, 0.0574539)
+mesh = SubResource("BoxMesh_l7i8q")
+
+[node name="off" type="MeshInstance3D" parent="Apartamentu/Switches/switch_walls"]
+transform = Transform3D(0.0190135, 0, 0, 0, -0.0455076, 0.0195038, 0, -0.0657238, -0.0135045, 0.0560159, 0.0804952, 0.0589888)
+visible = false
+mesh = SubResource("BoxMesh_l7i8q")
+
+[node name="Walls_Switch" type="StaticBody3D" parent="Apartamentu/Switches/switch_walls"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/Switches/switch_walls/Walls_Switch"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0550256, 0.0889028, 0.0634336)
+shape = SubResource("BoxShape3D_nfsqp")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Apartamentu/Switches/switch_walls"]
+stream = ExtResource("35_4j0uw")
+
+[node name="switch_stairs" type="Node3D" parent="Apartamentu/Switches"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.83768, 1, -2.65827)
+script = ExtResource("39_rfukx")
+
+[node name="SpotLight3D_5" type="SpotLight3D" parent="Apartamentu/Switches/switch_stairs"]
+transform = Transform3D(1, -0.000207725, 0.000225219, -0.00020931, -0.999975, 0.00705878, 0.000223747, -0.00705883, -0.999975, 0.0537326, 0.0770059, -0.673514)
+light_color = Color(0.0352941, 0.262745, 0.360784, 1)
+light_energy = 1.5
+light_volumetric_fog_energy = 4.212
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Apartamentu/Switches/switch_stairs"]
+transform = Transform3D(-1.24621e-09, 0, 0.0907803, 0, 0.131541, 0, -0.0285099, 0, -3.96813e-09, 0.0554909, 0.0853763, 0.0657308)
+material_override = SubResource("StandardMaterial3D_wi82k")
+mesh = SubResource("BoxMesh_qtjmb")
+
+[node name="on" type="MeshInstance3D" parent="Apartamentu/Switches/switch_stairs"]
+transform = Transform3D(0.0190135, 0, 0, 0, 0.0565268, 0.0167745, 0, -0.0565268, 0.0167745, 0.0560159, 0.0804952, 0.0574539)
+mesh = SubResource("BoxMesh_l7i8q")
+
+[node name="off" type="MeshInstance3D" parent="Apartamentu/Switches/switch_stairs"]
+transform = Transform3D(0.0190135, 0, 0, 0, -0.0455076, 0.0195038, 0, -0.0657238, -0.0135045, 0.0560159, 0.0804952, 0.0589888)
+visible = false
+mesh = SubResource("BoxMesh_l7i8q")
+
+[node name="Stairs_Switch" type="StaticBody3D" parent="Apartamentu/Switches/switch_stairs"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/Switches/switch_stairs/Stairs_Switch"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0550256, 0.0889028, 0.0634336)
+shape = SubResource("BoxShape3D_nfsqp")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Apartamentu/Switches/switch_stairs"]
+stream = ExtResource("35_4j0uw")
+
+[node name="switch_2_floor" type="Node3D" parent="Apartamentu/Switches"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.389, 3.2, -2.659)
+script = ExtResource("40_irs1d")
+
+[node name="SpotLight3D_5" type="SpotLight3D" parent="Apartamentu/Switches/switch_2_floor"]
+transform = Transform3D(1, -0.000207725, 0.000225219, -0.00020931, -0.999975, 0.00705878, 0.000223747, -0.00705883, -0.999975, 0.0537326, 0.0770059, -0.673514)
+light_color = Color(0.0352941, 0.262745, 0.360784, 1)
+light_energy = 1.5
+light_volumetric_fog_energy = 4.212
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Apartamentu/Switches/switch_2_floor"]
+transform = Transform3D(-1.24621e-09, 0, 0.0907803, 0, 0.131541, 0, -0.0285099, 0, -3.96813e-09, 0.0554909, 0.0853763, 0.0657308)
+material_override = SubResource("StandardMaterial3D_wi82k")
+mesh = SubResource("BoxMesh_qtjmb")
+
+[node name="on" type="MeshInstance3D" parent="Apartamentu/Switches/switch_2_floor"]
+transform = Transform3D(0.0190135, 0, 0, 0, 0.0565268, 0.0167745, 0, -0.0565268, 0.0167745, 0.0560159, 0.0804952, 0.0574539)
+mesh = SubResource("BoxMesh_l7i8q")
+
+[node name="off" type="MeshInstance3D" parent="Apartamentu/Switches/switch_2_floor"]
+transform = Transform3D(0.0190135, 0, 0, 0, -0.0455076, 0.0195038, 0, -0.0657238, -0.0135045, 0.0560159, 0.0804952, 0.0589888)
+visible = false
+mesh = SubResource("BoxMesh_l7i8q")
+
+[node name="2_Floor_Switch" type="StaticBody3D" parent="Apartamentu/Switches/switch_2_floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/Switches/switch_2_floor/2_Floor_Switch"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0550256, 0.0889028, 0.0634336)
+shape = SubResource("BoxShape3D_nfsqp")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Apartamentu/Switches/switch_2_floor"]
+stream = ExtResource("35_4j0uw")
+
+[node name="ElectricBox" parent="Apartamentu" instance=ExtResource("44_fq1sc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69, 0.1, 0.245)
+script = ExtResource("42_qtjmb")
+
+[node name="Lights" type="Node3D" parent="Apartamentu/ElectricBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69, -0.1, -0.245)
+
+[node name="Lights_Walls" parent="Apartamentu/ElectricBox/Lights" instance=ExtResource("17_26nav")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="SpotLight3D_1" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Walls"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.87596, 0.75, 4.92057)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 4.212
+shadow_enabled = true
+
+[node name="SpotLight3D_2" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Walls"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.876, 1.5, 4.921)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 4.212
+shadow_enabled = true
+
+[node name="SpotLight3D_3" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0.75, 4.92057)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 4.212
+shadow_enabled = true
+spot_angle = 80.0
+
+[node name="SpotLight3D_4" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.75, 4.921)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 4.212
+shadow_enabled = true
+spot_angle = 80.0
+
+[node name="SpotLight3D_5" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9246, 0.75, 4.94396)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 4.212
+shadow_enabled = true
+spot_angle = 80.0
+
+[node name="SpotLight3D_6" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Walls"]
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, -5.95972, 0.748118, 2.92499)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 4.212
+shadow_enabled = true
+spot_angle = 80.0
+
+[node name="SpotLight3D_7" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Walls"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.96054, 0.75, 0.977742)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 4.212
+shadow_enabled = true
+spot_angle = 80.0
+
+[node name="SpotLight3D_8" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Walls"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.96054, 0.75, -0.972767)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 4.212
+shadow_enabled = true
+spot_angle = 80.0
+
+[node name="SpotLight3D_9" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Walls"]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -5.96054, 0.75, -2.86657)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 4.212
+shadow_enabled = true
+
+[node name="SpotLight3D_10" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Walls"]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -5.961, 1.5, -2.867)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 4.212
+shadow_enabled = true
+
+[node name="Lights_2_Floor" parent="Apartamentu/ElectricBox/Lights" instance=ExtResource("18_ne1it")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="SpotLight3D_1" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_2_Floor"]
+transform = Transform3D(1, -7.35555e-05, 0.000297497, -0.000297447, 0.000685039, 1, -7.37593e-05, -1, 0.000685017, 3.23737, 5.54571, -0.535898)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 10.0
+spot_angle = 80.0
+
+[node name="SpotLight3D_5" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_2_Floor"]
+transform = Transform3D(1, -7.35555e-05, 0.000297497, -0.000297447, 0.000685039, 1, -7.37593e-05, -1, 0.000685017, 3.89625, 5.54571, 2.08971)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 10.0
+spot_angle = 80.0
+
+[node name="SpotLight3D_2" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_2_Floor"]
+transform = Transform3D(1, -7.35555e-05, 0.000297497, -0.000297447, 0.000685039, 1, -7.37593e-05, -1, 0.000685017, 2.08927, 5.54571, -0.535898)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 2.0
+spot_angle = 80.0
+
+[node name="SpotLight3D_3" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_2_Floor"]
+transform = Transform3D(1, -7.35555e-05, 0.000297497, -0.000297447, 0.000685039, 1, -7.37593e-05, -1, 0.000685017, -0.124536, 5.36915, -0.535898)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 10.0
+spot_range = 10.0
+spot_angle = 60.0
+
+[node name="SpotLight3D_4" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_2_Floor"]
+transform = Transform3D(1, -7.35555e-05, 0.000297497, -0.000297447, 0.000685039, 1, -7.37593e-05, -1, 0.000685017, -1.28065, 5.35884, -0.535898)
+light_energy = 10.0
+spot_range = 8.0
+spot_angle = 40.0
+
+[node name="Lights" type="AudioStreamPlayer3D" parent="Apartamentu/ElectricBox/Lights/Lights_2_Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0305797, 5.49659, -0.572119)
+stream = ExtResource("53_7ujmr")
+volume_db = -15.0
+max_db = -10.0
+autoplay = true
+max_distance = 10.0
+bus = &"SFX_Lights"
+parameters/looping = true
+
+[node name="Lights_Hall" parent="Apartamentu/ElectricBox/Lights" instance=ExtResource("19_hhume")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="SpotLight3D_1" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Hall"]
+transform = Transform3D(1, -7.35555e-05, 0.000297497, -0.000297447, 0.000685039, 1, -7.37593e-05, -1, 0.000685017, 5.77804, 2.21046, 6.17463)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 4.0
+light_volumetric_fog_energy = 4.212
+spot_angle = 80.0
+
+[node name="SpotLight3D_2" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Hall"]
+transform = Transform3D(1, -7.35555e-05, -3.21521e-12, 0, -4.37114e-08, 1, -7.35555e-05, -1, -4.37114e-08, 4.05719, 2.21046, 6.17463)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 4.0
+light_volumetric_fog_energy = 4.212
+spot_angle = 80.0
+
+[node name="Lights_Hall2" parent="Apartamentu/ElectricBox/Lights" instance=ExtResource("19_hhume")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.66193, 0, 0.271843)
+
+[node name="SpotLight3D_1" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Hall2"]
+transform = Transform3D(1, -7.35555e-05, 0.000297497, -0.000297447, 0.000685039, 1, -7.37593e-05, -1, 0.000685017, 5.77804, 2.21046, 6.17463)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 4.0
+light_volumetric_fog_energy = 4.212
+spot_angle = 60.0
+
+[node name="SpotLight3D_2" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Hall2"]
+transform = Transform3D(1, -7.35555e-05, -3.21521e-12, 0, -4.37114e-08, 1, -7.35555e-05, -1, -4.37114e-08, 3.61422, 2.21046, 7.01714)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 4.0
+light_volumetric_fog_energy = 4.212
+spot_angle = 80.0
+
+[node name="Lights" type="AudioStreamPlayer3D" parent="Apartamentu/ElectricBox/Lights/Lights_Hall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15139, 2.09325, 5.55405)
+stream = ExtResource("53_7ujmr")
+volume_db = -15.0
+max_db = -10.0
+autoplay = true
+max_distance = 10.0
+parameters/looping = true
+
+[node name="Lights_Stairs" parent="Apartamentu/ElectricBox/Lights" instance=ExtResource("20_au5ix")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+visible = false
+
+[node name="SpotLight3D_1" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Stairs"]
+transform = Transform3D(0.562084, 0.000637384, 0.82708, -0.82708, 0.000974385, 0.562083, -0.000447631, -0.999999, 0.00107485, 1.0736, 2.07852, -1.97564)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 0.75
+light_volumetric_fog_energy = 4.212
+spot_angle = 60.0
+
+[node name="SpotLight3D_2" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Stairs"]
+transform = Transform3D(0.562084, 0.000637384, 0.82708, -0.82708, 0.000974385, 0.562083, -0.000447631, -0.999999, 0.00107485, 1.0736, 2.07852, -2.54673)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 0.75
+light_volumetric_fog_energy = 4.212
+spot_angle = 60.0
+
+[node name="SpotLight3D_3" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Stairs"]
+transform = Transform3D(0.562084, 0.000637384, 0.82708, -0.82708, 0.000974385, 0.562083, -0.000447631, -0.999999, 0.00107485, 1.0736, 2.07852, -1.38519)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 0.75
+light_volumetric_fog_energy = 4.212
+spot_angle = 60.0
+
+[node name="SpotLight3D_4" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Stairs"]
+transform = Transform3D(0.562084, 0.000637384, 0.82708, -0.82708, 0.000974385, 0.562083, -0.000447631, -0.999999, 0.00107485, 0.112338, 1.27732, -1.97564)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 0.75
+light_volumetric_fog_energy = 4.212
+spot_angle = 60.0
+
+[node name="SpotLight3D_5" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Stairs"]
+transform = Transform3D(0.562084, 0.000637384, 0.82708, -0.82708, 0.000974385, 0.562083, -0.000447631, -0.999999, 0.00107485, 0.112338, 1.27732, -2.54673)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 0.75
+light_volumetric_fog_energy = 4.212
+spot_angle = 60.0
+
+[node name="SpotLight3D_6" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Stairs"]
+transform = Transform3D(0.562084, 0.000637384, 0.82708, -0.82708, 0.000974385, 0.562083, -0.000447631, -0.999999, 0.00107485, 0.112338, 1.27732, -1.38519)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 0.75
+light_volumetric_fog_energy = 4.212
+spot_angle = 60.0
+
+[node name="Lights_Storage" parent="Apartamentu/ElectricBox/Lights" instance=ExtResource("21_pb8dl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+
+[node name="SpotLight3D_1" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Storage"]
+transform = Transform3D(1, -7.35555e-05, 0.000297497, -0.000297447, 0.000685039, 1, -7.37593e-05, -1, 0.000685017, 2.0962, 2.07188, -0.536934)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 4.0
+light_volumetric_fog_energy = 4.212
+spot_angle = 80.0
+
+[node name="SpotLight3D_2" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Storage"]
+transform = Transform3D(1, -7.35555e-05, 0.000297497, -0.000297447, 0.000685039, 1, -7.37593e-05, -1, 0.000685017, 4.26436, 2.07188, -0.536934)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 4.0
+light_volumetric_fog_energy = 4.212
+spot_angle = 80.0
+
+[node name="SpotLight3D_3" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Storage"]
+transform = Transform3D(1, -7.35555e-05, 0.000297497, -0.000297447, 0.000685039, 1, -7.37593e-05, -1, 0.000685017, 3.80144, 2.07188, -2.144)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 1.5
+light_volumetric_fog_energy = 4.212
+spot_angle = 80.0
+
+[node name="SpotLight3D_4" type="SpotLight3D" parent="Apartamentu/ElectricBox/Lights/Lights_Storage"]
+transform = Transform3D(1, -7.35555e-05, 0.000297497, -0.000297447, 0.000685039, 1, -7.37593e-05, -1, 0.000685017, 3.80144, 2.07188, 1.00237)
+light_color = Color(0.991743, 0.992142, 0.902525, 1)
+light_energy = 4.0
+light_volumetric_fog_energy = 4.212
+spot_angle = 80.0
+
+[node name="Lights" type="AudioStreamPlayer3D" parent="Apartamentu/ElectricBox/Lights/Lights_Storage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.15398, 1.95038, -0.578212)
+stream = ExtResource("53_7ujmr")
+volume_db = -15.0
+max_db = -10.0
+autoplay = true
+max_distance = 10.0
+bus = &"SFX_Lights"
+parameters/looping = true
+
+[node name="Indicator_Light_on" type="Node3D" parent="Apartamentu/ElectricBox"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Apartamentu/ElectricBox/Indicator_Light_on"]
+transform = Transform3D(0.02, 0, 0, 0, 0.017, 0, 0, 0, 0.015, 8.8316, 1.13338, 8.5673)
+material_override = ExtResource("42_0fglf")
+mesh = SubResource("BoxMesh_wi82k")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Apartamentu/ElectricBox/Indicator_Light_on"]
+transform = Transform3D(1, 0, 0, 0, -0.390667, 0.920532, 0, -0.920532, -0.390667, 8.97604, 1.81542, 8.08177)
+light_color = Color(0.0339021, 0.263707, 0.362296, 1)
+light_energy = 2.0
+spot_angle = 30.0
+
+[node name="Indicator_Light_off" type="Node3D" parent="Apartamentu/ElectricBox"]
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Apartamentu/ElectricBox/Indicator_Light_off"]
+transform = Transform3D(0.02, 0, 0, 0, 0.017, 0, 0, 0, 0.015, 8.8316, 1.13131, 8.56731)
+material_override = SubResource("StandardMaterial3D_0fglf")
+mesh = SubResource("BoxMesh_wi82k")
+
+[node name="ElectricBox_Switch" type="StaticBody3D" parent="Apartamentu/ElectricBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.98587, 1.06884, 8.43984)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/ElectricBox/ElectricBox_Switch"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0327759, 0.017395, 0.304014)
+shape = SubResource("BoxShape3D_wnv30")
+
+[node name="Lever" parent="Apartamentu" instance=ExtResource("45_ivbkn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69, 0.1, 0.245)
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+
+[node name="pausemenu" parent="PauseMenu" instance=ExtResource("23_0ao37")]
+
+[node name="PostFX" type="CanvasLayer" parent="."]
+layer = 100
+script = ExtResource("24_l11rc")
+
+[node name="PostFXRect" type="ColorRect" parent="PostFX"]
+material = SubResource("ShaderMaterial_l11rc")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Apartaments2" parent="." instance=ExtResource("46_ivbkn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.931989, 4.56083, -4.78593)
+
+[node name="Music" type="Node" parent="."]
+
+[node name="LightsOn" type="AudioStreamPlayer" parent="Music"]
+
+[node name="LightsOff" type="AudioStreamPlayer" parent="Music"]
+
+[connection signal="_load" from="PauseMenu/pausemenu" to="Player" method="_on_pausemenu__load"]
+[connection signal="_save" from="PauseMenu/pausemenu" to="Player" method="_on_pausemenu__save"]
+
+[editable path="Apartamentu/chair"]
