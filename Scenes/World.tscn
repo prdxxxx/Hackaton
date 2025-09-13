@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=3 uid="uid://cen4j3rbwlj4u"]
+[gd_scene load_steps=92 format=3 uid="uid://cen4j3rbwlj4u"]
 
 [ext_resource type="PackedScene" uid="uid://cwq4uacj2n3u3" path="res://Scenes/Player.tscn" id="1_5cjrv"]
 [ext_resource type="PackedScene" uid="uid://dseni4k4lehup" path="res://Assets/3D Assets/Layout concinai/Ceiling.glb" id="7_ivbkn"]
@@ -51,6 +51,7 @@
 [ext_resource type="PackedScene" uid="uid://crb1uhbn164jn" path="res://Assets/3D Assets/Layout concinai/ElectricBox.glb" id="44_fq1sc"]
 [ext_resource type="PackedScene" uid="uid://dtkq55ti20acl" path="res://Assets/3D Assets/Layout concinai/Lever.glb" id="45_ivbkn"]
 [ext_resource type="PackedScene" uid="uid://rb8nxn3hoa7c" path="res://Assets/3D Assets/Layout concinai/Apartaments.glb" id="46_ivbkn"]
+[ext_resource type="PackedScene" uid="uid://ctd5viwl2al4s" path="res://Assets/3D Assets/Layout concinai/Calculator,gaming,Hackathon.glb" id="48_rfukx"]
 
 [sub_resource type="Sky" id="Sky_r0dna"]
 
@@ -898,6 +899,9 @@ shape = SubResource("BoxShape3D_wnv30")
 
 [node name="Lever" parent="Apartamentu" instance=ExtResource("45_ivbkn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69, 0.1, 0.245)
+
+[node name="Calculator,gaming,Hackathon" parent="Apartamentu" instance=ExtResource("48_rfukx")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 
 [node name="PauseMenu" type="CanvasLayer" parent="."]
 

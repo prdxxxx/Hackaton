@@ -61,18 +61,15 @@ layout_mode = 2
 theme_override_constants/separation = 100
 
 [node name="CMD" type="Button" parent="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/VBoxContainer"]
-z_index = 100
 layout_mode = 2
 toggle_mode = true
 icon = ExtResource("3_xtwrv")
 
 [node name="aircrack" type="Button" parent="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/VBoxContainer"]
-z_index = 100
 layout_mode = 2
 icon = ExtResource("4_l61ky")
 
 [node name="notepad" type="Button" parent="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/VBoxContainer"]
-z_index = 100
 layout_mode = 2
 text = "
 
@@ -81,17 +78,14 @@ text = "
 icon = ExtResource("5_qp7xw")
 
 [node name="etter_cap" type="Button" parent="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/VBoxContainer"]
-z_index = 100
 layout_mode = 2
 icon = ExtResource("6_nm78k")
 
 [node name="discord" type="Button" parent="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/VBoxContainer"]
-z_index = 100
 layout_mode = 2
 icon = ExtResource("7_1wrfy")
 
 [node name="btowser" type="Button" parent="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/VBoxContainer"]
-z_index = 100
 layout_mode = 2
 icon = ExtResource("8_w5hxt")
 

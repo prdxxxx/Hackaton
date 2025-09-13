@@ -36,6 +36,10 @@ window/size/mode=3
 window/stretch/mode="canvas_items"
 window/main_scene="uid://cen4j3rbwlj4u"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 Forward={

@@ -7,6 +7,8 @@ extends Control
 
 @export var discord_open: bool 
 
+signal anon_on
+
 
 func _ready() -> void:
 	guide.show()
@@ -26,3 +28,4 @@ func _on_guide_button_pressed() -> void:
 func _on_anon_button_pressed() -> void:
 	guide.hide()
 	anon.show()
+	anon_on.emit()

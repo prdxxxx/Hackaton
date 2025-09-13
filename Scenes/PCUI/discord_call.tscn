@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b4xsjjvgrf0kn" path="res://Scenes/PCUI/discord_call.gd" id="1_qgkk8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ut3bd"]
-bg_color = Color(0.180005, 0.180005, 0.180005, 1)
+bg_color = Color(0.2484, 0.2484, 0.2484, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qgkk8"]
 texture = ExtResource("1_5ne8r")
@@ -86,7 +86,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 25
 text = "Anonymous"
 
-[node name="Button" type="Button" parent="."]
+[node name="Accept" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -101,7 +101,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "✓"
 
-[node name="Button2" type="Button" parent="."]
+[node name="Cancel" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -116,6 +116,29 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "x"
 
+[node name="Label4" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 32.0
+offset_top = 137.0
+offset_right = 86.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0.525101, 0.525101, 0.525101, 1)
+theme_override_font_sizes/font_size = 12
+text = "Ignore"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -93.0
+offset_top = 137.0
+offset_right = -39.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0.525101, 0.525101, 0.525101, 1)
+theme_override_font_sizes/font_size = 12
+text = "Accept"
+horizontal_alignment = 1
+
 [connection signal="cancel_threat_call" from="." to="." method="_on_cancel_threat_call"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Cancel" to="." method="_on_button_2_pressed"]

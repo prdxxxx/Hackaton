@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cn63y8p0w6qjk"]
+[gd_scene load_steps=21 format=3 uid="uid://cn63y8p0w6qjk"]
 
 [ext_resource type="Texture2D" uid="uid://cijto0danu45l" path="res://Assets/2D Assets/ds.png" id="1_gm87t"]
 [ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="1_qcn4i"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://feo3g6surcma" path="res://Assets/2D Assets/Icons/16.png" id="5_gm87t"]
 [ext_resource type="Texture2D" uid="uid://dxf54u1w755u" path="res://Assets/2D Assets/Icons/hydra.png" id="6_mae1e"]
 [ext_resource type="Texture2D" uid="uid://cdsf8hfwjkse6" path="res://Scenes/PCUI/Icons/hydra.png" id="7_xytwj"]
+[ext_resource type="Script" uid="uid://ch46g02yehi4d" path="res://Scenes/PCUI/anon.gd" id="9_hceh1"]
 [ext_resource type="PackedScene" uid="uid://bnbdtimsalj7d" path="res://Scenes/PCUI/discord_call.tscn" id="9_xytwj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bgb4g"]
@@ -99,7 +100,7 @@ offset_bottom = 33.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 24
-text = "Security Guide"
+text = "CyberBot"
 
 [node name="PanelContainer" type="PanelContainer" parent="WindowBase/Contacts/ScrollContainer/VBoxContainer/Guide_contact"]
 custom_minimum_size = Vector2(45, 45)
@@ -208,7 +209,7 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Security Guide"
+text = "CyberBot"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message"]
 layout_mode = 0
@@ -240,7 +241,7 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Security Guide"
+text = "CyberBot"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message2"]
 layout_mode = 0
@@ -272,7 +273,7 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Security Guide"
+text = "CyberBot"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message3"]
 layout_mode = 0
@@ -304,7 +305,7 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Security Guide"
+text = "CyberBot"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message4"]
 layout_mode = 0
@@ -336,7 +337,7 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Security Guide"
+text = "CyberBot"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message5"]
 layout_mode = 0
@@ -368,7 +369,7 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Security Guide"
+text = "CyberBot"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message6"]
 layout_mode = 0
@@ -400,7 +401,7 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Security Guide"
+text = "CyberBot"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message7"]
 layout_mode = 0
@@ -432,7 +433,7 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Security Guide"
+text = "CyberBot"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message8"]
 layout_mode = 0
@@ -464,7 +465,7 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Security Guide"
+text = "CyberBot"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message9"]
 layout_mode = 0
@@ -483,7 +484,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
-text = "😬 Oops! That wasn’t safe…"
+text = "Smart! You stayed safe."
 
 [node name="Message10" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
 layout_mode = 2
@@ -496,7 +497,7 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Security Guide"
+text = "CyberBot"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message10"]
 layout_mode = 0
@@ -528,7 +529,7 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Security Guide"
+text = "CyberBot"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message11"]
 layout_mode = 0
@@ -549,39 +550,8 @@ size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
 text = "You should never answer them!"
 
-[node name="Message12" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message12"]
-layout_mode = 0
-offset_left = 50.0
-offset_right = 81.0
-offset_bottom = 17.0
-size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("2_72yau")
-theme_override_font_sizes/font_size = 20
-text = "Security Guide"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message12"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message12/HBoxContainer"]
-custom_minimum_size = Vector2(45, 45)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_qbooq")
-
-[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Guide/VBoxContainer/Message12/HBoxContainer"]
-layout_mode = 2
-
-[node name="Message_text" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message12/HBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
-text = "Let’s try that again — stay sharp!"
-
 [node name="Message13" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message13"]
@@ -592,7 +562,7 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Security Guide"
+text = "CyberBot"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message13"]
 layout_mode = 0
@@ -614,6 +584,7 @@ theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
 text = "Test Mesage"
 
 [node name="Message14" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message14"]
@@ -624,7 +595,7 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Security Guide"
+text = "CyberBot"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message14"]
 layout_mode = 0
@@ -646,6 +617,7 @@ theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
 text = "Test Mesage"
 
 [node name="Message15" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message15"]
@@ -656,7 +628,7 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Security Guide"
+text = "CyberBot"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message15"]
 layout_mode = 0
@@ -689,6 +661,7 @@ grow_vertical = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/Chat/Anon"]
 layout_mode = 2
 theme_override_constants/separation = 75
+script = ExtResource("9_hceh1")
 
 [node name="Message" type="Panel" parent="WindowBase/Chat/Anon/VBoxContainer"]
 layout_mode = 2
@@ -720,7 +693,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
-text = "Test Mesage"
+text = "Hello! Congratulations, you’ve been selected to receive a special gift card! 🎉 "
 
 [node name="Message2" type="Panel" parent="WindowBase/Chat/Anon/VBoxContainer"]
 layout_mode = 2
@@ -752,7 +725,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
-text = "Test Mesage"
+text = "To claim it, please confirm your account information."
 
 [node name="Message3" type="Panel" parent="WindowBase/Chat/Anon/VBoxContainer"]
 layout_mode = 2
@@ -783,10 +756,24 @@ layout_mode = 2
 [node name="Message_text" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message3/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
-theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
-text = "Test Mesage"
+theme_override_colors/font_color = Color(0.454524, 0.454524, 0.454524, 1)
+text = "You missed a call from "
+
+[node name="Name" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message3/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 25
+text = "Anonymous"
+
+[node name="Message_text2" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message3/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.454902, 0.454902, 0.454902, 1)
+text = "that lasted a few seconds.."
 
 [node name="Message4" type="Panel" parent="WindowBase/Chat/Anon/VBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Name" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message4"]
@@ -816,9 +803,10 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
-text = "Test Mesage"
+text = "Urgent!"
 
 [node name="Message5" type="Panel" parent="WindowBase/Chat/Anon/VBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Name" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message5"]
@@ -848,9 +836,10 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
-text = "Test Mesage"
+text = "Your reward will expire in 24 hours if we don’t receive the verification."
 
 [node name="Message6" type="Panel" parent="WindowBase/Chat/Anon/VBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Name" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message6"]
@@ -880,7 +869,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
-text = "Test Mesage"
+text = "Please provide the details so you don’t miss out!"
 
 [node name="Exit" type="Button" parent="WindowBase"]
 layout_mode = 1
@@ -899,9 +888,9 @@ offset_top = -101.5
 offset_right = 388.5
 offset_bottom = -101.5
 
+[connection signal="anon_on" from="." to="WindowBase/Chat/Anon/VBoxContainer" method="_on_discord_anon_on"]
 [connection signal="visibility_changed" from="." to="WindowBase/Chat/Guide/VBoxContainer" method="_on_discord_visibility_changed"]
 [connection signal="pressed" from="WindowBase/Contacts/ScrollContainer/VBoxContainer/Guide_contact/Guide_Button" to="." method="_on_guide_button_pressed"]
 [connection signal="pressed" from="WindowBase/Contacts/ScrollContainer/VBoxContainer/Anon_contact/Anon_Button" to="." method="_on_anon_button_pressed"]
 [connection signal="pressed" from="WindowBase/Exit" to="." method="_on_exit_pressed"]
 [connection signal="cancel_threat_call" from="WindowBase/Discord_Call" to="WindowBase/Chat/Guide/VBoxContainer" method="_on_discord_call_cancel_threat_call"]
-[connection signal="wrong_choice" from="WindowBase/Discord_Call" to="WindowBase/Chat/Guide/VBoxContainer" method="_on_discord_call_wrong_choice"]
