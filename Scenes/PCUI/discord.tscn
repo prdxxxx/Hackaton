@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cn63y8p0w6qjk"]
+[gd_scene load_steps=20 format=3 uid="uid://cn63y8p0w6qjk"]
 
 [ext_resource type="Texture2D" uid="uid://cijto0danu45l" path="res://Assets/2D Assets/ds.png" id="1_gm87t"]
 [ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="1_qcn4i"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://feo3g6surcma" path="res://Assets/2D Assets/Icons/16.png" id="5_gm87t"]
 [ext_resource type="Texture2D" uid="uid://dxf54u1w755u" path="res://Assets/2D Assets/Icons/hydra.png" id="6_mae1e"]
 [ext_resource type="Texture2D" uid="uid://cdsf8hfwjkse6" path="res://Scenes/PCUI/Icons/hydra.png" id="7_xytwj"]
+[ext_resource type="PackedScene" uid="uid://bnbdtimsalj7d" path="res://Scenes/PCUI/discord_call.tscn" id="9_xytwj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bgb4g"]
 texture = ExtResource("1_gm87t")
@@ -601,6 +602,9 @@ anchor_right = 1.0
 offset_left = -14.0
 offset_bottom = 15.0
 grow_horizontal = 0
+
+[node name="Discord_Call" parent="WindowBase" instance=ExtResource("9_xytwj")]
+layout_mode = 1
 
 [connection signal="pressed" from="WindowBase/Contacts/ScrollContainer/VBoxContainer/Guide_contact/Guide_Button" to="." method="_on_guide_button_pressed"]
 [connection signal="pressed" from="WindowBase/Contacts/ScrollContainer/VBoxContainer/Anon_contact/Anon_Button" to="." method="_on_anon_button_pressed"]
