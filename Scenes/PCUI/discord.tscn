@@ -1,16 +1,42 @@
-[gd_scene load_steps=8 format=3 uid="uid://cn63y8p0w6qjk"]
+[gd_scene load_steps=19 format=3 uid="uid://cn63y8p0w6qjk"]
 
 [ext_resource type="Texture2D" uid="uid://cijto0danu45l" path="res://Assets/2D Assets/ds.png" id="1_gm87t"]
 [ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="1_qcn4i"]
 [ext_resource type="FontFile" uid="uid://db16gjjdg8f7x" path="res://Assets/Fonts/VT323-Regular.ttf" id="2_72yau"]
 [ext_resource type="Script" uid="uid://0rv5ldycllyo" path="res://Scenes/PCUI/discord.gd" id="2_gm87t"]
-[ext_resource type="Texture2D" uid="uid://dxf54u1w755u" path="res://Assets/2D Assets/Icons/hydra.png" id="3_gm87t"]
+[ext_resource type="Script" uid="uid://bnrhs8rk5ebn" path="res://Scenes/PCUI/guide.gd" id="4_bgb4g"]
+[ext_resource type="Texture2D" uid="uid://feo3g6surcma" path="res://Assets/2D Assets/Icons/16.png" id="5_gm87t"]
+[ext_resource type="Texture2D" uid="uid://dxf54u1w755u" path="res://Assets/2D Assets/Icons/hydra.png" id="6_mae1e"]
+[ext_resource type="Texture2D" uid="uid://cdsf8hfwjkse6" path="res://Scenes/PCUI/Icons/hydra.png" id="7_xytwj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bgb4g"]
 texture = ExtResource("1_gm87t")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_84nat"]
-texture = ExtResource("3_gm87t")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hceh1"]
+texture = ExtResource("6_mae1e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mae1e"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xytwj"]
+texture = ExtResource("5_gm87t")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_svpby"]
+texture = ExtResource("7_xytwj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ra3j4"]
+texture = ExtResource("7_xytwj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f7cgo"]
+texture = ExtResource("7_xytwj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bfb6h"]
+texture = ExtResource("7_xytwj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qbooq"]
+texture = ExtResource("7_xytwj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2oo82"]
+texture = ExtResource("5_gm87t")
 
 [node name="Discord" type="Control"]
 layout_mode = 3
@@ -39,7 +65,14 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_bgb4g")
 
-[node name="Chat" type="Control" parent="WindowBase"]
+[node name="Contacts" type="Control" parent="WindowBase"]
+anchors_preset = 0
+offset_left = 80.0
+offset_top = 115.0
+offset_right = 280.0
+offset_bottom = 700.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="WindowBase/Contacts"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -47,28 +80,331 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="WindowBase/Chat"]
+[node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/Contacts/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 75
+
+[node name="Guide_contact" type="Panel" parent="WindowBase/Contacts/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="WindowBase/Contacts/ScrollContainer/VBoxContainer/Guide_contact"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 13.0
+offset_right = 162.0
+offset_bottom = 33.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 24
+text = "Security Guide"
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Contacts/ScrollContainer/VBoxContainer/Guide_contact"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+offset_right = 45.0
+offset_bottom = 45.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_hceh1")
+
+[node name="Guide_Button" type="Button" parent="WindowBase/Contacts/ScrollContainer/VBoxContainer/Guide_contact"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.244
-anchor_top = 0.033
+anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 0.875
-offset_left = 0.587982
-offset_top = -0.198999
-offset_right = -12.0
-offset_bottom = -0.125061
+anchor_bottom = 1.0
+offset_top = -4.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/normal = SubResource("StyleBoxTexture_mae1e")
+
+[node name="Anon_contact" type="Panel" parent="WindowBase/Contacts/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="WindowBase/Contacts/ScrollContainer/VBoxContainer/Anon_contact"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 13.0
+offset_right = 162.0
+offset_bottom = 33.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 24
+text = "Anonymous"
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Contacts/ScrollContainer/VBoxContainer/Anon_contact"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+offset_right = 45.0
+offset_bottom = 45.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xytwj")
+
+[node name="Anon_Button" type="Button" parent="WindowBase/Contacts/ScrollContainer/VBoxContainer/Anon_contact"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/normal = SubResource("StyleBoxTexture_mae1e")
+
+[node name="Chat" type="Control" parent="WindowBase"]
+layout_mode = 1
+anchor_left = 0.239
+anchor_top = 0.027
+anchor_right = 0.989
+anchor_bottom = 0.895
+offset_left = -0.296997
+offset_top = 0.0189991
+offset_right = 0.453003
+offset_bottom = -0.185059
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/Chat/ScrollContainer"]
+[node name="Guide" type="ScrollContainer" parent="WindowBase/Chat"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/Chat/Guide"]
+layout_mode = 2
+theme_override_constants/separation = 75
+script = ExtResource("4_bgb4g")
+
+[node name="Message" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 81.0
+offset_bottom = 17.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 20
+text = "Security Guide"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message/HBoxContainer"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hceh1")
+
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Guide/VBoxContainer/Message/HBoxContainer"]
+layout_mode = 2
+
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
+text = "Test Mesage"
+
+[node name="Message2" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message2"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 81.0
+offset_bottom = 17.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 20
+text = "Security Guide"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message2/HBoxContainer"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_svpby")
+
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Guide/VBoxContainer/Message2/HBoxContainer"]
+layout_mode = 2
+
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message2/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
+text = "Test Mesage"
+
+[node name="Message3" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message3"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 81.0
+offset_bottom = 17.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 20
+text = "Security Guide"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message3/HBoxContainer"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ra3j4")
+
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Guide/VBoxContainer/Message3/HBoxContainer"]
+layout_mode = 2
+
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message3/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
+text = "Test Mesage"
+
+[node name="Message4" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message4"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 81.0
+offset_bottom = 17.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 20
+text = "Security Guide"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message4"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message4/HBoxContainer"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_f7cgo")
+
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Guide/VBoxContainer/Message4/HBoxContainer"]
+layout_mode = 2
+
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message4/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
+text = "Test Mesage"
+
+[node name="Message5" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message5"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 81.0
+offset_bottom = 17.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 20
+text = "Security Guide"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message5"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message5/HBoxContainer"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bfb6h")
+
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Guide/VBoxContainer/Message5/HBoxContainer"]
+layout_mode = 2
+
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message5/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
+text = "Test Mesage"
+
+[node name="Message6" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message6"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 81.0
+offset_bottom = 17.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 20
+text = "Security Guide"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message6"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message6/HBoxContainer"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qbooq")
+
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Guide/VBoxContainer/Message6/HBoxContainer"]
+layout_mode = 2
+
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message6/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
+text = "Test Mesage"
+
+[node name="Anon" type="ScrollContainer" parent="WindowBase/Chat"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/Chat/Anon"]
 layout_mode = 2
 theme_override_constants/separation = 75
 
-[node name="Message" type="Panel" parent="WindowBase/Chat/ScrollContainer/VBoxContainer"]
+[node name="Message" type="Panel" parent="WindowBase/Chat/Anon/VBoxContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message"]
+[node name="Name" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message"]
 layout_mode = 0
 offset_left = 50.0
 offset_right = 81.0
@@ -76,31 +412,31 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Eshak"
+text = "Anonymous"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message"]
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Anon/VBoxContainer/Message"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message/HBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Anon/VBoxContainer/Message/HBoxContainer"]
 custom_minimum_size = Vector2(45, 45)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_84nat")
+theme_override_styles/panel = SubResource("StyleBoxTexture_2oo82")
 
-[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message/HBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Anon/VBoxContainer/Message/HBoxContainer"]
 layout_mode = 2
 
-[node name="Message_text" type="Label" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message/HBoxContainer"]
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
 text = "Test Mesage"
 
-[node name="Message2" type="Panel" parent="WindowBase/Chat/ScrollContainer/VBoxContainer"]
+[node name="Message2" type="Panel" parent="WindowBase/Chat/Anon/VBoxContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message2"]
+[node name="Name" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message2"]
 layout_mode = 0
 offset_left = 50.0
 offset_right = 81.0
@@ -108,31 +444,31 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Eshak"
+text = "Anonymous"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Anon/VBoxContainer/Message2"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message2/HBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Anon/VBoxContainer/Message2/HBoxContainer"]
 custom_minimum_size = Vector2(45, 45)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_84nat")
+theme_override_styles/panel = SubResource("StyleBoxTexture_2oo82")
 
-[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message2/HBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Anon/VBoxContainer/Message2/HBoxContainer"]
 layout_mode = 2
 
-[node name="Message_text" type="Label" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message2/HBoxContainer"]
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message2/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
 text = "Test Mesage"
 
-[node name="Message3" type="Panel" parent="WindowBase/Chat/ScrollContainer/VBoxContainer"]
+[node name="Message3" type="Panel" parent="WindowBase/Chat/Anon/VBoxContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message3"]
+[node name="Name" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message3"]
 layout_mode = 0
 offset_left = 50.0
 offset_right = 81.0
@@ -140,31 +476,31 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Eshak"
+text = "Anonymous"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Anon/VBoxContainer/Message3"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message3/HBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Anon/VBoxContainer/Message3/HBoxContainer"]
 custom_minimum_size = Vector2(45, 45)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_84nat")
+theme_override_styles/panel = SubResource("StyleBoxTexture_2oo82")
 
-[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message3/HBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Anon/VBoxContainer/Message3/HBoxContainer"]
 layout_mode = 2
 
-[node name="Message_text" type="Label" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message3/HBoxContainer"]
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message3/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
 text = "Test Mesage"
 
-[node name="Message4" type="Panel" parent="WindowBase/Chat/ScrollContainer/VBoxContainer"]
+[node name="Message4" type="Panel" parent="WindowBase/Chat/Anon/VBoxContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message4"]
+[node name="Name" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message4"]
 layout_mode = 0
 offset_left = 50.0
 offset_right = 81.0
@@ -172,31 +508,31 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Eshak"
+text = "Anonymous"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message4"]
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Anon/VBoxContainer/Message4"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message4/HBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Anon/VBoxContainer/Message4/HBoxContainer"]
 custom_minimum_size = Vector2(45, 45)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_84nat")
+theme_override_styles/panel = SubResource("StyleBoxTexture_2oo82")
 
-[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message4/HBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Anon/VBoxContainer/Message4/HBoxContainer"]
 layout_mode = 2
 
-[node name="Message_text" type="Label" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message4/HBoxContainer"]
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message4/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
 text = "Test Mesage"
 
-[node name="Message5" type="Panel" parent="WindowBase/Chat/ScrollContainer/VBoxContainer"]
+[node name="Message5" type="Panel" parent="WindowBase/Chat/Anon/VBoxContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message5"]
+[node name="Name" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message5"]
 layout_mode = 0
 offset_left = 50.0
 offset_right = 81.0
@@ -204,31 +540,31 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Eshak"
+text = "Anonymous"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message5"]
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Anon/VBoxContainer/Message5"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message5/HBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Anon/VBoxContainer/Message5/HBoxContainer"]
 custom_minimum_size = Vector2(45, 45)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_84nat")
+theme_override_styles/panel = SubResource("StyleBoxTexture_2oo82")
 
-[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message5/HBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Anon/VBoxContainer/Message5/HBoxContainer"]
 layout_mode = 2
 
-[node name="Message_text" type="Label" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message5/HBoxContainer"]
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message5/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
 text = "Test Mesage"
 
-[node name="Message6" type="Panel" parent="WindowBase/Chat/ScrollContainer/VBoxContainer"]
+[node name="Message6" type="Panel" parent="WindowBase/Chat/Anon/VBoxContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message6"]
+[node name="Name" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message6"]
 layout_mode = 0
 offset_left = 50.0
 offset_right = 81.0
@@ -236,22 +572,22 @@ offset_bottom = 17.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_72yau")
 theme_override_font_sizes/font_size = 20
-text = "Eshak"
+text = "Anonymous"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message6"]
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Anon/VBoxContainer/Message6"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message6/HBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Anon/VBoxContainer/Message6/HBoxContainer"]
 custom_minimum_size = Vector2(45, 45)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_84nat")
+theme_override_styles/panel = SubResource("StyleBoxTexture_2oo82")
 
-[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message6/HBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Anon/VBoxContainer/Message6/HBoxContainer"]
 layout_mode = 2
 
-[node name="Message_text" type="Label" parent="WindowBase/Chat/ScrollContainer/VBoxContainer/Message6/HBoxContainer"]
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Anon/VBoxContainer/Message6/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
@@ -266,4 +602,6 @@ offset_left = -14.0
 offset_bottom = 15.0
 grow_horizontal = 0
 
+[connection signal="pressed" from="WindowBase/Contacts/ScrollContainer/VBoxContainer/Guide_contact/Guide_Button" to="." method="_on_guide_button_pressed"]
+[connection signal="pressed" from="WindowBase/Contacts/ScrollContainer/VBoxContainer/Anon_contact/Anon_Button" to="." method="_on_anon_button_pressed"]
 [connection signal="pressed" from="WindowBase/Exit" to="." method="_on_exit_pressed"]

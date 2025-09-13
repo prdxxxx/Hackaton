@@ -9,6 +9,7 @@ extends Control
 @onready var notepad: Control = $Notepad as Control
 @onready var discord: Control = $Discord
 @onready var browser: Control = $LoginSite
+@onready var shop: Control = $Shop
 
 
 func _input(event):
@@ -61,3 +62,7 @@ func _on_discord_pressed() -> void:
 
 func _on_btowser_pressed() -> void:
 	browser.show()
+
+
+func _on_e_shop_pressed() -> void:
+	shop.show()
