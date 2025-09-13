@@ -1,7 +1,10 @@
 extends Node
 
 @export var delay: float = 1.0          # seconds between messages
-@export var stop_index: int = 7         # the index where we pause (0-based)
+@export var stop_index: int = 8         # the index where we pause (0-based)
+@onready var discord_call: Control = $"../../../Discord_Call"
+@onready var anon_contact: Panel = $"../../../Contacts/ScrollContainer/VBoxContainer/Anon_contact"
+
 
 var paused: bool = false
 var current_index: int = 0
@@ -12,9 +15,6 @@ func _ready() -> void:
 	for child in get_children():
 		child.visible = false
 	
-	# Start sequence
-	show_children()
-
 
 func show_children() -> void:
 	_show_next_message()
@@ -41,14 +41,18 @@ func _show_next_message() -> void:
 
 
 func _trigger_event() -> void:
-	# Do something special here
-	print("Event triggered at message:", stop_index)
-	# Example: play animation, show a choice, etc.
-	# After the event finishes, call `resume_messages()`
-
+	discord_call.show()
+	anon_contact.show()
+	
 
 func resume_messages() -> void:
 	if paused:
 		paused = false
 		continue_after_event = true
 		_show_next_message()
+  
+ 
+func _on_discord_call_cancel_threat_call() -> void:
+	discord_call.hide()
+	resume_messages()
+	
