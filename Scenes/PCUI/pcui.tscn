@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bcpw8l6frx651"]
+[gd_scene load_steps=18 format=3 uid="uid://bcpw8l6frx651"]
 
 [ext_resource type="Script" uid="uid://bis2kgpadpvhm" path="res://Scenes/PCUI/pcui.gd" id="1_yina7"]
 [ext_resource type="PackedScene" uid="uid://brb2acniqq2i8" path="res://Scenes/PCUI/CMD.tscn" id="3_bxve3"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://ctpwqpgosom54" path="res://Scenes/PCUI/etter_cap.tscn" id="11_1wrfy"]
 [ext_resource type="PackedScene" uid="uid://cn63y8p0w6qjk" path="res://Scenes/PCUI/discord.tscn" id="14_ppt72"]
 [ext_resource type="PackedScene" uid="uid://ctxt2mrdrdeet" path="res://Scenes/PCUI/Site/login_site.tscn" id="16_pbsi7"]
+[ext_resource type="PackedScene" uid="uid://dx6yuj0ej7ic7" path="res://Scenes/PCUI/shop.tscn" id="17_3u63p"]
 
 [node name="PCUI" type="CanvasLayer"]
 
@@ -47,7 +48,7 @@ offset_top = 100.0
 offset_right = 232.0
 offset_bottom = 516.0
 
-[node name="ButtonsContAl" type="VBoxContainer" parent="PCUI/ButtonsCont"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PCUI/ButtonsCont"]
 layout_mode = 2
 theme_override_constants/separation = 100
 
@@ -150,10 +151,15 @@ offset_top = 8.0
 offset_right = -1002.0
 offset_bottom = -490.0
 
-[connection signal="pressed" from="PCUI/ButtonsCont/ButtonsContAl/CMD" to="PCUI" method="_on_cmd_pressed"]
-[connection signal="pressed" from="PCUI/ButtonsCont/ButtonsContAl/Aircrack" to="PCUI" method="_on_aircrack_pressed"]
-[connection signal="pressed" from="PCUI/ButtonsCont/ButtonsContAl/Notepad" to="PCUI" method="_on_notepad_pressed"]
-[connection signal="pressed" from="PCUI/ButtonsCont/ButtonsContAl/EtterCap" to="PCUI" method="_on_etter_cap_pressed"]
-[connection signal="pressed" from="PCUI/ButtonsCont/ButtonsContAl/Discord" to="PCUI" method="_on_discord_pressed"]
-[connection signal="pressed" from="PCUI/ButtonsCont/ButtonsContAl/Btowser" to="PCUI" method="_on_btowser_pressed"]
+[node name="Shop" parent="PCUI" instance=ExtResource("17_3u63p")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl/CMD" to="PCUI" method="_on_cmd_pressed"]
+[connection signal="pressed" from="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl/Aircrack" to="PCUI" method="_on_aircrack_pressed"]
+[connection signal="pressed" from="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl/Notepad" to="PCUI" method="_on_notepad_pressed"]
+[connection signal="pressed" from="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl/EtterCap" to="PCUI" method="_on_etter_cap_pressed"]
+[connection signal="pressed" from="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl/Discord" to="PCUI" method="_on_discord_pressed"]
+[connection signal="pressed" from="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl/Btowser" to="PCUI" method="_on_btowser_pressed"]
+[connection signal="pressed" from="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl2/E-Shop" to="PCUI" method="_on_e_shop_pressed"]
 [connection signal="pressed" from="PCUI/powerButton" to="PCUI" method="_on_power_button_pressed"]
