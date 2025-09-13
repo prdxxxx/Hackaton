@@ -140,7 +140,7 @@ anchor_right = 0.967
 anchor_bottom = 0.926
 offset_left = -24.64
 offset_top = -8.0
-offset_right = 7.35986
+offset_right = 7.35999
 offset_bottom = 15.9199
 
 [connection signal="pressed" from="WindowBase/Panel/VBoxContainer/SubmitButton" to="." method="_on_submit_button_pressed"]

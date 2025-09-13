@@ -1,30 +1,28 @@
 extends Control
 
-# === Настройки ===
-@export var GrabThreshold := 50         # зона для перетаскивания (верх окна)
-@export var ResizeThreshold := 10        # зона для ресайза (границы окна)
-@export var MinSize := Vector2(300, 200) # минимальный размер окна
-@export var CenterOnShow := true        # центрировать окно при показе?
+@export var GrabThreshold := 50
+@export var ResizeThreshold := 30
+@export var MinSize := Vector2(300, 200)
+@export var CenterOnShow := true
 
-# === Внутренние переменные ===
 var start: Vector2
 var initialPosition: Vector2
 var initialSize: Vector2 = Vector2.ZERO
+var base_size: Vector2 = Vector2.ZERO
 
-var isMoving: bool = false
-var isResizing: bool = false
-var resizeX: bool = false
-var resizeY: bool = false
-var resizeLeft: bool = false
-var resizeTop: bool = false
+var isMoving := false
+var isResizing := false
+var resizeX := false
+var resizeY := false
+var resizeLeft := false
+var resizeTop := false
 
-var current_cursor = null # текущий курсор
+var current_cursor = null
 
 func _ready() -> void:
-	# Гарантируем что окно будет блокировать ввод
 	mouse_filter = Control.MOUSE_FILTER_STOP
+	base_size = size   # запоминаем изначальный размер окна
 
-# === Обработка ввода ===
 func _input(event):
 	if not visible:
 		return
@@ -32,7 +30,6 @@ func _input(event):
 	var mouse_pos = get_global_mouse_position()
 	var rect = get_global_rect()
 
-	# Игнорируем события, если мышь вне окна и мы не двигаем/ресайзим
 	if not rect.has_point(mouse_pos) and not isMoving and not isResizing:
 		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 		return
@@ -41,85 +38,60 @@ func _input(event):
 		_update_cursor(mouse_pos)
 		_handle_mouse_motion(event)
 	elif event is InputEventMouseButton:
-		if event.button_index != MOUSE_BUTTON_LEFT:
-			return
-		if event.pressed:
-			_handle_mouse_press(event)
-		else:
-			_handle_mouse_release()
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				_handle_mouse_press(event)
+			else:
+				_handle_mouse_release()
 
-# === Перетаскивание и ресайз ===
 func _handle_mouse_press(event: InputEventMouseButton) -> void:
 	var rect = get_global_rect()
 	var localMousePos = event.position - get_global_position()
 
-	# Перемещение окна (верхняя полоска)
 	if localMousePos.y < GrabThreshold:
-		start = get_global_mouse_position()  # глобальная позиция
+		start = get_global_mouse_position()
 		initialPosition = get_global_position()
 		isMoving = true
 		return
 
-	# Правый ресайз
-	if abs(localMousePos.x - rect.size.x) < ResizeThreshold:
-		start.x = get_global_mouse_position().x
-		initialSize.x = get_size().x
+	if abs(localMousePos.x - rect.size.x) < ResizeThreshold or localMousePos.x < ResizeThreshold:
+		start = get_global_mouse_position()
+		initialSize = size
+		isResizing = true
 		resizeX = true
-		isResizing = true
 
-	# Нижний ресайз
-	if abs(localMousePos.y - rect.size.y) < ResizeThreshold:
-		start.y = get_global_mouse_position().y
-		initialSize.y = get_size().y
+	if abs(localMousePos.y - rect.size.y) < ResizeThreshold or localMousePos.y < ResizeThreshold:
+		start = get_global_mouse_position()
+		initialSize = size
+		isResizing = true
 		resizeY = true
-		isResizing = true
 
-	# Левый ресайз
-	if localMousePos.x < ResizeThreshold:
-		start.x = get_global_mouse_position().x
-		initialPosition.x = get_global_position().x
-		initialSize.x = get_size().x
-		resizeX = true
-		resizeLeft = true
-		isResizing = true
-
-	# Верхний ресайз
-	if localMousePos.y < ResizeThreshold:
-		start.y = get_global_mouse_position().y
-		initialPosition.y = get_global_position().y
-		initialSize.y = get_size().y
-		resizeY = true
-		resizeTop = true
-		isResizing = true
-
-# === Движение и изменение размера ===
 func _handle_mouse_motion(event: InputEventMouseMotion) -> void:
 	if isMoving:
-		set_position(initialPosition + (get_global_mouse_position() - start))
+		position = initialPosition + (get_global_mouse_position() - start)
 
 	if isResizing:
-		var newWidth = get_size().x
-		var newHeight = get_size().y
-		var newPos = get_global_position()
+		var diff = get_global_mouse_position() - start
+		var new_size = initialSize
 
+		# Масштабируем только по тем осям, которые выбраны
 		if resizeX:
-			if resizeLeft:
-				newWidth = max(MinSize.x, initialSize.x - (get_global_mouse_position().x - start.x))
-				newPos.x = initialPosition.x + (initialSize.x - newWidth)
-			else:
-				newWidth = max(MinSize.x, initialSize.x + (get_global_mouse_position().x - start.x))
-
+			new_size.x += diff.x
 		if resizeY:
-			if resizeTop:
-				newHeight = max(MinSize.y, initialSize.y - (get_global_mouse_position().y - start.y))
-				newPos.y = initialPosition.y + (initialSize.y - newHeight)
-			else:
-				newHeight = max(MinSize.y, initialSize.y + (get_global_mouse_position().y - start.y))
+			new_size.y += diff.y
 
-		set_global_position(newPos)
-		set_size(Vector2(newWidth, newHeight))
+		# ограничение по минимуму
+		new_size.x = max(MinSize.x, new_size.x)
+		new_size.y = max(MinSize.y, new_size.y)
 
-# === Сброс флагов при отпускании мыши ===
+		# ограничение по максимуму (например 2x)
+		new_size.x = min(base_size.x * 2.0, new_size.x)
+		new_size.y = min(base_size.y * 2.0, new_size.y)
+
+		# применяем масштабирование
+		scale = new_size / base_size
+
+
 func _handle_mouse_release():
 	isMoving = false
 	isResizing = false
@@ -127,9 +99,7 @@ func _handle_mouse_release():
 	resizeY = false
 	resizeLeft = false
 	resizeTop = false
-	initialPosition = Vector2.ZERO
 
-# === Курсоры ===
 func _update_cursor(mouse_pos: Vector2):
 	var rect = get_global_rect()
 	var cursor_shape = Input.CURSOR_ARROW
@@ -138,11 +108,9 @@ func _update_cursor(mouse_pos: Vector2):
 		cursor_shape = Input.CURSOR_FDIAGSIZE
 	elif mouse_pos.x <= rect.position.x + ResizeThreshold and mouse_pos.y >= rect.position.y + rect.size.y - ResizeThreshold:
 		cursor_shape = Input.CURSOR_BDIAGSIZE
-	elif mouse_pos.x >= rect.position.x + rect.size.x - ResizeThreshold:
+	elif mouse_pos.x >= rect.position.x + rect.size.x - ResizeThreshold or mouse_pos.x <= rect.position.x + ResizeThreshold:
 		cursor_shape = Input.CURSOR_HSIZE
-	elif mouse_pos.x <= rect.position.x + ResizeThreshold:
-		cursor_shape = Input.CURSOR_HSIZE
-	elif mouse_pos.y >= rect.position.y + rect.size.y - ResizeThreshold:
+	elif mouse_pos.y >= rect.position.y + rect.size.y - ResizeThreshold or mouse_pos.y <= rect.position.y + ResizeThreshold:
 		cursor_shape = Input.CURSOR_VSIZE
 	elif mouse_pos.y <= rect.position.y + GrabThreshold:
 		cursor_shape = Input.CURSOR_POINTING_HAND
@@ -151,13 +119,12 @@ func _update_cursor(mouse_pos: Vector2):
 		current_cursor = cursor_shape
 		Input.set_default_cursor_shape(current_cursor)
 
-# === Центрирование при показе ===
 func _on_visibility_changed():
 	if visible:
 		_handle_mouse_release()
 		if CenterOnShow:
 			var viewport_size = get_viewport_rect().size
-			set_position((viewport_size - get_size()) / 2)
+			position = (viewport_size - size) / 2
 
 func _on_exit_pressed() -> void:
 	hide()

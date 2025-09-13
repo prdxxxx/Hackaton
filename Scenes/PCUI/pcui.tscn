@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://bcpw8l6frx651"]
 
 [ext_resource type="Script" uid="uid://bis2kgpadpvhm" path="res://Scenes/PCUI/pcui.gd" id="1_yina7"]
-[ext_resource type="PackedScene" uid="uid://brb2acniqq2i8" path="res://Scenes/PCUI/cmd.tscn" id="3_bxve3"]
+[ext_resource type="PackedScene" uid="uid://brb2acniqq2i8" path="res://Scenes/PCUI/CMD.tscn" id="3_bxve3"]
 [ext_resource type="Texture2D" uid="uid://26clwvg21oq4" path="res://Assets/2D Assets/Icons/5.png" id="3_xtwrv"]
 [ext_resource type="Texture2D" uid="uid://bn3rafu1aqce0" path="res://Assets/2D Assets/Icons/Aircrackng.png" id="4_l61ky"]
 [ext_resource type="Texture2D" uid="uid://b51veipknpxrw" path="res://Scenes/PCUI/background.png" id="4_lkbei"]
@@ -52,15 +52,18 @@ layout_mode = 2
 theme_override_constants/separation = 100
 
 [node name="CMD" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+z_index = 100
 layout_mode = 2
 toggle_mode = true
 icon = ExtResource("3_xtwrv")
 
 [node name="Aircrack" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+z_index = 100
 layout_mode = 2
 icon = ExtResource("4_l61ky")
 
 [node name="Notepad" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+z_index = 100
 layout_mode = 2
 text = "
 
@@ -69,14 +72,17 @@ text = "
 icon = ExtResource("5_qp7xw")
 
 [node name="EtterCap" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+z_index = 100
 layout_mode = 2
 icon = ExtResource("6_nm78k")
 
 [node name="Discord" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+z_index = 100
 layout_mode = 2
 icon = ExtResource("7_1wrfy")
 
 [node name="Btowser" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+z_index = 100
 layout_mode = 2
 icon = ExtResource("8_w5hxt")
 
@@ -117,7 +123,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Help_Text" type="Label" parent="PCUI/Help_UI"]
-visible = false
 z_index = 102
 layout_mode = 0
 offset_left = 1580.0
@@ -140,10 +145,10 @@ layout_mode = 1
 [node name="LoginSite" parent="PCUI" instance=ExtResource("16_pbsi7")]
 visible = false
 layout_mode = 1
-offset_left = 1.0
-offset_top = 2.0
-offset_right = -1009.0
-offset_bottom = -496.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -1002.0
+offset_bottom = -490.0
 
 [connection signal="pressed" from="PCUI/ButtonsCont/ButtonsContAl/CMD" to="PCUI" method="_on_cmd_pressed"]
 [connection signal="pressed" from="PCUI/ButtonsCont/ButtonsContAl/Aircrack" to="PCUI" method="_on_aircrack_pressed"]
