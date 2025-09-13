@@ -68,11 +68,15 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_bgb4g")
 
 [node name="Contacts" type="Control" parent="WindowBase"]
-anchors_preset = 0
-offset_left = 80.0
-offset_top = 115.0
-offset_right = 280.0
-offset_bottom = 700.0
+layout_mode = 1
+anchor_left = 0.065
+anchor_top = 0.164
+anchor_right = 0.229
+anchor_bottom = 0.996
+offset_left = 0.504997
+offset_top = -0.292
+offset_right = -0.0670166
+offset_bottom = -0.188049
 
 [node name="ScrollContainer" type="ScrollContainer" parent="WindowBase/Contacts"]
 layout_mode = 1
