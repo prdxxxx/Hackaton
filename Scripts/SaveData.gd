@@ -15,3 +15,5 @@ class_name SaveDataResourse
 @export var lights_storage: bool = true
 
 @export var desktop_txt: String = " "
+
+@export var money = 0

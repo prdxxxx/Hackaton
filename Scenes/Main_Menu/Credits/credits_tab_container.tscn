@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://gegirfonhi02"]
 
 [sub_resource type="SystemFont" id="SystemFont_tossb"]
+subpixel_positioning = 0
 
 [node name="Credits_Tab_Container" type="Control"]
 layout_mode = 3
@@ -85,4 +86,4 @@ alignment = 1
 [node name="Label3" type="Label" parent="TabContainer/A Game Made By/MarginContainer/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 42
-text = "Kocak Dan-Valerian"
+text = "Casapciuc Arsenie"
