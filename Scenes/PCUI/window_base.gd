@@ -1,9 +1,9 @@
 extends Control
 
 # === Настройки ===
-@export var GrabThreshold := 20         # зона для перетаскивания (верх окна)
-@export var ResizeThreshold := 5        # зона для ресайза (границы окна)
-@export var MinSize := Vector2(100, 50) # минимальный размер окна
+@export var GrabThreshold := 50         # зона для перетаскивания (верх окна)
+@export var ResizeThreshold := 10        # зона для ресайза (границы окна)
+@export var MinSize := Vector2(300, 200) # минимальный размер окна
 @export var CenterOnShow := true        # центрировать окно при показе?
 
 # === Внутренние переменные ===
@@ -19,6 +19,10 @@ var resizeLeft: bool = false
 var resizeTop: bool = false
 
 var current_cursor = null # текущий курсор
+
+func _ready() -> void:
+	# Гарантируем что окно будет блокировать ввод
+	mouse_filter = Control.MOUSE_FILTER_STOP
 
 # === Обработка ввода ===
 func _input(event):
@@ -155,6 +159,5 @@ func _on_visibility_changed():
 			var viewport_size = get_viewport_rect().size
 			set_position((viewport_size - get_size()) / 2)
 
-
 func _on_exit_pressed() -> void:
-	pass # Replace with function body.
+	hide()

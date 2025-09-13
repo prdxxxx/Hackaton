@@ -6,7 +6,7 @@ extends Control
 @onready var submit_btn: Button = $WindowBase/Panel/VBoxContainer/SubmitButton
 @onready var result_label: Label = $WindowBase/Panel/VBoxContainer/ResultLabel
 @onready var login: Control = $"."
-@onready var Acc: Control = $WindowBase/AccountsPanel
+@onready var Bank: Control = $Bank
 
 
 const CORRECT_LOGIN: String = "admin"
@@ -35,7 +35,7 @@ func _on_submit_button_pressed(_arg: String = "") -> void:
 	
 	if login == CORRECT_LOGIN and pwd == CORRECT_PASSWORD:
 		_show_result("[✓] Access granted. Welcome, %s!" % login)
-		Acc.show()
+		Bank.show()
 	else:
 		_show_result("[X] Invalid login or password.")
 

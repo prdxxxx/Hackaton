@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://ctxt2mrdrdeet"]
+[gd_scene load_steps=7 format=3 uid="uid://ctxt2mrdrdeet"]
 
 [ext_resource type="Script" uid="uid://bovd04t1t0jrp" path="res://Scenes/PCUI/Site/login_site.gd" id="1_ktf6f"]
 [ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="2_6x7dh"]
-[ext_resource type="Script" uid="uid://ckrb42td6676t" path="res://Scenes/PCUI/Site/accounts_panel.gd" id="3_fekqi"]
-[ext_resource type="Texture2D" uid="uid://bimwtd4ln5ssr" path="res://Scenes/PCUI/Site/Bank.png" id="4_j0mnj"]
+[ext_resource type="PackedScene" uid="uid://t0bcl76nebgp" path="res://Scenes/PCUI/Site/bank.tscn" id="3_fekqi"]
 [ext_resource type="FontFile" uid="uid://db16gjjdg8f7x" path="res://Assets/Fonts/VT323-Regular.ttf" id="5_tdvof"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6x7dh"]
@@ -13,8 +12,15 @@ border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ikyvv"]
-texture = ExtResource("4_j0mnj")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fekqi"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [node name="LoginSite" type="Control"]
 layout_mode = 3
@@ -35,6 +41,7 @@ grow_vertical = 2
 script = ExtResource("2_6x7dh")
 
 [node name="Panel" type="Panel" parent="WindowBase"]
+z_index = 100
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,11 +50,37 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_6x7dh")
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="WindowBase/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.022
+anchor_right = 0.996
+anchor_bottom = 0.044
+offset_top = -23.76
+offset_right = -0.320068
+offset_bottom = 12.48
+grow_horizontal = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Panel/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_fekqi")
+
+[node name="TextEdit" type="TextEdit" parent="WindowBase/Panel/VBoxContainer2/PanelContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_tdvof")
+theme_override_font_sizes/font_size = 50
+text = "https://www.bank.com/"
+editable = false
+
 [node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/Panel"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = 0.081
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -15.48
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 40
@@ -85,12 +118,12 @@ size_flags_horizontal = 4
 [node name="Button" type="Button" parent="WindowBase/Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.984
-anchor_top = 0.006
+anchor_left = 0.988
+anchor_top = 0.007
 anchor_right = 0.997
 anchor_bottom = 0.029
-offset_left = 7.71997
-offset_top = -1.48
+offset_left = 0.039917
+offset_top = -2.56
 offset_right = 0.759888
 offset_bottom = 4.68
 grow_horizontal = 0
@@ -98,56 +131,17 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 text = "X"
 
-[node name="AccountsPanel" type="Panel" parent="WindowBase"]
+[node name="Bank" parent="." instance=ExtResource("3_fekqi")]
+visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.1
-anchor_top = 0.126
-anchor_right = 0.567
-anchor_bottom = 0.711
-offset_left = -16.0
-offset_top = -17.08
-offset_right = 0.359985
-offset_bottom = 17.12
-script = ExtResource("3_fekqi")
-
-[node name="PanelContainer" type="PanelContainer" parent="WindowBase/AccountsPanel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_ikyvv")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/AccountsPanel/PanelContainer"]
-layout_mode = 2
-
-[node name="HeaderHBox" type="HBoxContainer" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TitleLabel" type="Label" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/HeaderHBox"]
-layout_mode = 2
-size_flags_horizontal = 6
-theme_override_fonts/font = ExtResource("5_tdvof")
-theme_override_font_sizes/font_size = 30
-text = "Victoriabank"
-
-[node name="LogoutButton" type="Button" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/HeaderHBox"]
-layout_mode = 2
-text = "Log out"
-
-[node name="ScrollContainer" type="ScrollContainer" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/ScrollContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="DetailsLabel" type="Label" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
+anchor_left = 0.167
+anchor_right = 0.967
+anchor_bottom = 0.926
+offset_left = -24.64
+offset_top = -8.0
+offset_right = 7.35986
+offset_bottom = 15.9199
 
 [connection signal="pressed" from="WindowBase/Panel/VBoxContainer/SubmitButton" to="." method="_on_submit_button_pressed"]
 [connection signal="pressed" from="WindowBase/Panel/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/HeaderHBox/LogoutButton" to="WindowBase/AccountsPanel" method="_on_logout_button_pressed"]

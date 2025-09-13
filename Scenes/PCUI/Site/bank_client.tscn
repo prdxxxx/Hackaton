@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=3 uid="uid://3tyq58ys056w"]
+
+[ext_resource type="FontFile" uid="uid://db16gjjdg8f7x" path="res://Assets/Fonts/VT323-Regular.ttf" id="1_rvcuf"]
+[ext_resource type="Texture2D" uid="uid://b7bv16ldm4bbs" path="res://Scenes/PCUI/Site/2.png" id="2_a5lo2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jtpxl"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+
+[node name="BankClient" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WindowBase" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jtpxl")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="WindowBase/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_rvcuf")
+theme_override_font_sizes/font_size = 100
+text = "Welcome, Aether Dynamics!"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="WindowBase/PanelContainer/HBoxContainer"]
+position = Vector2(54, 46)
+scale = Vector2(1.625, 1.625)
+texture = ExtResource("2_a5lo2")
+
+[node name="Label" type="Label" parent="WindowBase/PanelContainer/HBoxContainer/Sprite2D"]
+offset_left = 40.0
+offset_right = 80.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Bank"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/PanelContainer"]
+custom_minimum_size = Vector2(0, 950)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="WindowBase/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_rvcuf")
+theme_override_font_sizes/font_size = 100
+text = "Balance: 120,500$"
