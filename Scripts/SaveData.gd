@@ -19,9 +19,9 @@ class_name SaveDataResourse
 @export var money = 0
 
 @export var world_obj: Dictionary = {
-	"Sofa1" = false,
-	"Sofa2" = false,
-	"Sofa3" = false,
-	"Minecraft" = false,
-	"Roblox" = false
+	"Sofa1" = true,
+	"Sofa2" = true,
+	"Sofa3" = true,
+	"Minecraft" = true,
+	"Roblox" = true
 	}
