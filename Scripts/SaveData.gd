@@ -17,3 +17,11 @@ class_name SaveDataResourse
 @export var desktop_txt: String = " "
 
 @export var money = 0
+
+@export var world_obj: Dictionary = {
+	"Sofa1" = false,
+	"Sofa2" = false,
+	"Sofa3" = false,
+	"Minecraft" = false,
+	"Roblox" = false
+	}

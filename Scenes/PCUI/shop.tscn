@@ -1,12 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://dx6yuj0ej7ic7"]
+[gd_scene load_steps=16 format=3 uid="uid://dx6yuj0ej7ic7"]
 
-[ext_resource type="Script" path="res://Scenes/PCUI/shop.gd" id="1_70wtv"]
+[ext_resource type="Script" uid="uid://cya6t0vp8thxs" path="res://Scenes/PCUI/shop.gd" id="1_70wtv"]
 [ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="1_jpsmk"]
 [ext_resource type="Texture2D" uid="uid://ubytug3ke5co" path="res://Assets/2D Assets/e-shop.png" id="2_qp7gd"]
 [ext_resource type="PackedScene" uid="uid://cg1euowhbbyiu" path="res://Scenes/PCUI/shop_product.tscn" id="2_yfbn2"]
 [ext_resource type="Texture2D" uid="uid://b602icfmkrecm" path="res://Assets/2D Assets/Icons/dc46b01094df87c3.png" id="3_8n10j"]
 [ext_resource type="Texture2D" uid="uid://cwxgvqjmi2tg" path="res://Assets/2D Assets/Icons/13.png" id="5_f76mj"]
 [ext_resource type="Texture2D" uid="uid://bb6sgwpy7dgqu" path="res://Assets/2D Assets/Icons/14.png" id="6_70wtv"]
+[ext_resource type="Texture2D" uid="uid://cd7m3x1fr01wt" path="res://Assets/2D Assets/Icons/15.png" id="8_by8ki"]
+[ext_resource type="Texture2D" uid="uid://dsvibfilgniw" path="res://Assets/2D Assets/Icons/roblox.png" id="9_r3jss"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8n10j"]
 texture = ExtResource("2_qp7gd")
@@ -19,6 +21,12 @@ texture = ExtResource("5_f76mj")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r3jss"]
 texture = ExtResource("6_70wtv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y40eq"]
+texture = ExtResource("8_by8ki")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_es07h"]
+texture = ExtResource("9_r3jss")
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -65,7 +73,6 @@ offset_bottom = -0.196045
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/separation = 100
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 558)
@@ -74,8 +81,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(298, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
@@ -83,36 +90,93 @@ custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_46jkg")
 
-[node name="Shop_Product" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_yfbn2")]
+[node name="Sofa1" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_yfbn2")]
 layout_mode = 2
 size_flags_vertical = 4
 set_desc = "Modern Grey Sofa – Sleek 3-seater with soft fabric upholstery, minimalist design, and sturdy wooden legs."
+prod_name = "Sofa1"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(298, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="PanelContainer" type="PanelContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_by8ki")
 
-[node name="Shop_Product" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("2_yfbn2")]
+[node name="Sofa2" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("2_yfbn2")]
 layout_mode = 2
 size_flags_vertical = 4
 set_price = 200
 set_desc = "Classic Leather Sofa – Timeless brown leather finish, plush cushions, and durable frame for everyday comfort."
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(298, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="PanelContainer" type="PanelContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_r3jss")
 
-[node name="Shop_Product" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("2_yfbn2")]
+[node name="Sofa3" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("2_yfbn2")]
+layout_mode = 2
+set_price = 300
+set_desc = "Compact Corner Sofa – Space-saving L-shaped design, dark blue fabric, with storage and pull-out bed option."
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="WindowBase/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 558)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(298, 0)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer4"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_y40eq")
+
+[node name="Minecraft" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer4" instance=ExtResource("2_yfbn2")]
+layout_mode = 2
+size_flags_vertical = 4
+set_price = 20
+set_desc = "Minecraft – A sandbox game where you explore, build, and survive in blocky worlds limited only by your imagination."
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(298, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer5"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_es07h")
+
+[node name="Roblox" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer5" instance=ExtResource("2_yfbn2")]
+layout_mode = 2
+size_flags_vertical = 4
+set_price = 5
+set_desc = "Roblox – An online platform where you play, create, and share games with millions of players worldwide."
+
+[node name="VBoxContainer6" type="VBoxContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer6"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_r3jss")
+
+[node name="Shop_Product" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer6" instance=ExtResource("2_yfbn2")]
 layout_mode = 2
 set_price = 300
 set_desc = "Compact Corner Sofa – Space-saving L-shaped design, dark blue fabric, with storage and pull-out bed option."
@@ -139,4 +203,23 @@ offset_bottom = 38.0
 grow_horizontal = 0
 text = "Balance: ---$"
 
+[node name="Warning" type="Label" parent="WindowBase"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -223.0
+offset_top = 67.0
+offset_right = -74.9999
+offset_bottom = 90.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 0.694118, 0, 1)
+text = "Not Enough Money!"
+
+[connection signal="button_pressed" from="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/Sofa1" to="." method="_on_sofa_1_button_pressed"]
+[connection signal="button_pressed" from="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Sofa2" to="." method="_on_sofa_2_button_pressed"]
+[connection signal="button_pressed" from="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3/Sofa3" to="." method="_on_sofa_3_button_pressed"]
+[connection signal="button_pressed" from="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer4/Minecraft" to="." method="_on_minecraft_button_pressed"]
+[connection signal="button_pressed" from="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer5/Roblox" to="." method="_on_roblox_button_pressed"]
 [connection signal="pressed" from="WindowBase/Exit" to="." method="_on_exit_pressed"]
