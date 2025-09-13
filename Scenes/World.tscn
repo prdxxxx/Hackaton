@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=3 uid="uid://cen4j3rbwlj4u"]
+[gd_scene load_steps=101 format=3 uid="uid://cen4j3rbwlj4u"]
 
 [ext_resource type="PackedScene" uid="uid://cwq4uacj2n3u3" path="res://Scenes/Player.tscn" id="1_5cjrv"]
 [ext_resource type="Texture2D" uid="uid://gqtbfswpf8cb" path="res://Assets/2D Assets/pcui22.png" id="4_ofme6"]
@@ -54,6 +54,7 @@
 [ext_resource type="PackedScene" uid="uid://dcgq15fmh8ec6" path="res://Assets/3D Assets/Layout concinai/TastaturaGaming.glb" id="52_au5ix"]
 [ext_resource type="PackedScene" uid="uid://cafthqnagxt1s" path="res://Assets/3D Assets/Layout concinai/MinecraftCD.glb" id="53_ne1it"]
 [ext_resource type="PackedScene" uid="uid://dvgs73iy5uanj" path="res://Assets/3D Assets/Layout concinai/mi tv.glb" id="55_au5ix"]
+[ext_resource type="AudioStream" uid="uid://c82r02jq83am0" path="res://Assets/SFX/busy-street-ambience-195884.mp3" id="55_jdyvg"]
 
 [sub_resource type="Sky" id="Sky_r0dna"]
 
@@ -1059,6 +1060,13 @@ mouse_filter = 2
 
 [node name="Apartaments2" parent="." instance=ExtResource("46_ivbkn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.931989, 4.56083, -4.78593)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7062, -1.74361, 8.97924)
+stream = ExtResource("55_jdyvg")
+volume_db = -20.0
+max_db = -10.0
+autoplay = true
 
 [connection signal="_load" from="PauseMenu/pausemenu" to="Player" method="_on_pausemenu__load"]
 [connection signal="_save" from="PauseMenu/pausemenu" to="Player" method="_on_pausemenu__save"]
