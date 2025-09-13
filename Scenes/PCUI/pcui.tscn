@@ -134,6 +134,7 @@ icon = ExtResource("5_mlvvv")
 icon_alignment = 1
 
 [node name="Help_UI" type="Control" parent="PCUI"]
+visible = false
 z_index = 100
 anchors_preset = 0
 offset_right = 40.0
