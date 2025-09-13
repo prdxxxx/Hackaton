@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bcpw8l6frx651"]
+[gd_scene load_steps=21 format=3 uid="uid://bcpw8l6frx651"]
 
 [ext_resource type="Script" uid="uid://bis2kgpadpvhm" path="res://Scenes/PCUI/pcui.gd" id="1_yina7"]
 [ext_resource type="PackedScene" uid="uid://brb2acniqq2i8" path="res://Scenes/PCUI/CMD.tscn" id="3_bxve3"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://ctxt2mrdrdeet" path="res://Scenes/PCUI/Site/login_site.tscn" id="16_pbsi7"]
 [ext_resource type="PackedScene" uid="uid://dx6yuj0ej7ic7" path="res://Scenes/PCUI/shop.tscn" id="17_3u63p"]
 [ext_resource type="AudioStream" uid="uid://vocyk1ntu8pw" path="res://Assets/SFX/PC/windows-xp-startup.mp3" id="19_5flyb"]
+[ext_resource type="AudioStream" uid="uid://cxmjjdtwr3j0a" path="res://Assets/SFX/computer-mouse-click-.mp3" id="20_6i0vh"]
 
 [node name="PCUI" type="CanvasLayer"]
 
@@ -169,7 +170,11 @@ layout_mode = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("19_5flyb")
-volume_db = -15.0
+volume_db = -30.0
+
+[node name="click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("20_6i0vh")
+volume_db = -20.0
 
 [connection signal="pressed" from="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/VBoxContainer/CMD" to="PCUI" method="_on_cmd_pressed"]
 [connection signal="pressed" from="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/VBoxContainer/aircrack" to="PCUI" method="_on_aircrack_pressed"]

@@ -9,6 +9,7 @@ extends Control
 @onready var browser: Control = $LoginSite
 @onready var shop: Control = $Shop
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $"../AudioStreamPlayer2D"
+@onready var click: AudioStreamPlayer2D = $"../click"
 
 
 func _input(event):
@@ -32,10 +33,11 @@ func _exit_tree():
 
 func _on_cmd_pressed() -> void:
 	cmd.show()
-
+	click.play()
 
 func _on_power_button_pressed() -> void:
 	show_help_text("Press 'Ctrl' key for shutdown", 3.0)
+	click.play()
 	pass
 
 func show_help_text(customText: String, duration:float):#!!!Cand este prea mult text folositi: \n
@@ -48,17 +50,21 @@ func show_help_text(customText: String, duration:float):#!!!Cand este prea mult 
 
 func _on_aircrack_pressed() -> void:
 	aircrack.show()
+	click.play()
 
 
 func _on_etter_cap_pressed() -> void:
 	ettercap.show()
+	click.play()
 
 
 func _on_notepad_pressed() -> void:
 	notepad.show()
+	click.play()
 
 
 func _on_discord_pressed() -> void:
+	click.play()
 	discord.show()
 	var msg_node = discord.get_node("WindowBase/Chat/Guide/VBoxContainer") 
 	msg_node.show_children()
@@ -67,7 +73,9 @@ func _on_discord_pressed() -> void:
 
 func _on_btowser_pressed() -> void:
 	browser.show()
+	click.play()
 
 
 func _on_e_shop_pressed() -> void:
 	shop.show()
+	click.play()
