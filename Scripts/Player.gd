@@ -20,6 +20,8 @@ const fovChange = 1.4
 @onready var icon = $CanvasLayer/E
 @onready var world_environment: WorldEnvironment = $"../WorldEnvironment"
 
+signal exit_pc
+
 func _ready():
 	player_ref = self
 	_on_pausemenu__load()
@@ -180,3 +182,7 @@ func _on_pausemenu__load() -> void:
 		
 		player_ref.rotation = SaveLoad.SaveFileData.rotation["player_rotation"]
 		camera.rotation = SaveLoad.SaveFileData.rotation["camera_rotation"]
+
+
+func _on_camera_3d_exit_pc() -> void:
+	exit_pc.emit()

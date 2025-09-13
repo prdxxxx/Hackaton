@@ -17,6 +17,8 @@ var icon_locked = false
 var mouse_locked = false
 var can_sit = false
 
+signal exit_pc
+
 # Мышь
 var mouse_sensitivity = 0.003
 var yaw := 0.0
@@ -121,6 +123,7 @@ func close_pc():
 	PcManager.ui_active = false
 	get_tree().paused = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	exit_pc.emit()
 
 # -------------------- Телепортация --------------------
 func teleport_to_target():

@@ -152,7 +152,6 @@ set_desc = "Minecraft – A sandbox game where you explore, build, and survive i
 [node name="VBoxContainer5" type="VBoxContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(298, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="PanelContainer" type="PanelContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer5"]
 custom_minimum_size = Vector2(150, 150)
@@ -168,8 +167,8 @@ set_price = 5
 set_desc = "Roblox – An online platform where you play, create, and share games with millions of players worldwide."
 
 [node name="VBoxContainer6" type="VBoxContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(298, 0)
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="PanelContainer" type="PanelContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer6"]
 custom_minimum_size = Vector2(100, 150)

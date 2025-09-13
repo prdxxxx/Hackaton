@@ -55,3 +55,5 @@ stream = ExtResource("4_dewec")
 volume_db = -20.0
 
 [node name="GroundCheck" type="RayCast3D" parent="PlayerAudio"]
+
+[connection signal="exit_pc" from="Head/Camera3D" to="." method="_on_camera_3d_exit_pc"]
