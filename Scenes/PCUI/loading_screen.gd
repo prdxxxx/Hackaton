@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 	else:
 		target = min(real_progress * 0.9, 0.9)
 
-	fake_progress = lerp(fake_progress, target, delta * 0.6)
+	fake_progress = lerp(fake_progress, target, delta * 0.8)
 	$ColorRect/ProgNumber.text = str(int(fake_progress * 100)) + "%"
 
 	# Проверяем, готово ли к показу PCUI

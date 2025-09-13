@@ -1,13 +1,19 @@
-[gd_scene load_steps=11 format=3 uid="uid://t0bcl76nebgp"]
+[gd_scene load_steps=15 format=3 uid="uid://t0bcl76nebgp"]
 
 [ext_resource type="Script" uid="uid://coo2rxwr1jfax" path="res://Scenes/PCUI/Site/bank.gd" id="1_8u1hx"]
 [ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="2_ax3yp"]
 [ext_resource type="Texture2D" uid="uid://decbdsohc1x5j" path="res://Scenes/PCUI/Site/Bank2.png" id="3_8u1hx"]
 [ext_resource type="FontFile" uid="uid://db16gjjdg8f7x" path="res://Assets/Fonts/VT323-Regular.ttf" id="3_ax3yp"]
 [ext_resource type="PackedScene" uid="uid://3tyq58ys056w" path="res://Scenes/PCUI/Site/bank_client1.tscn" id="5_ax3yp"]
+[ext_resource type="PackedScene" uid="uid://qk8bqipo8tn0" path="res://Scenes/PCUI/Site/bank_client_2.tscn" id="6_8bked"]
+[ext_resource type="PackedScene" uid="uid://c50nrlihsia5q" path="res://Scenes/PCUI/Site/bank_client_3.tscn" id="7_uibq2"]
+[ext_resource type="PackedScene" uid="uid://dejtfhb0iggi4" path="res://Scenes/PCUI/Site/bank_client_4.tscn" id="8_5p2ef"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8bked"]
 texture = ExtResource("3_8u1hx")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5p2ef"]
+bg_color = Color(0.0941176, 0.172549, 0.235294, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8u1hx"]
 bg_color = Color(1, 1, 1, 1)
@@ -97,6 +103,8 @@ text = "Victoriabank"
 
 [node name="LogoutButton" type="Button" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/HeaderHBox"]
 layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5p2ef")
 text = "Log out"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer"]
@@ -120,7 +128,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ax3yp")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_8u1hx")
-text = "Aether Dynamics — Quantum Finance — Balance: $120,500.00 — Type: Corporate"
+text = "Aether Dynamics — Quantum Finance — Balance: $50 — Type: Corporate"
 
 [node name="Enter1" type="Button" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -137,7 +145,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ax3yp")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_ax3yp")
-text = "James Carter — NorthGate Savings — Balance: $8,900.20 — Type: Personal"
+text = "James Carter — NorthGate Savings — Balance: $30 — Type: Personal"
 
 [node name="Enter2" type="Button" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -154,7 +162,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ax3yp")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_8bked")
-text = "Maria Smirnova — SafeBank — Balance: $2,150.75 — Type: Personal"
+text = "Maria Smirnova — SafeBank — Balance: $70 — Type: Personal"
 
 [node name="Enter3" type="Button" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
@@ -171,7 +179,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ax3yp")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_uibq2")
-text = "Ivan Petrov — FirstTrust Bank — Balance: $12,430.50 — Type: Personal
+text = "Ivan Petrov — FirstTrust Bank — Balance: $150 — Type: Personal
 "
 
 [node name="Enter4" type="Button" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer4"]
@@ -183,13 +191,51 @@ visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.008
-anchor_top = 0.015
-anchor_right = 0.775
-anchor_bottom = 0.341
-offset_left = -23.36
-offset_top = -24.2
-offset_right = 16.0
-offset_bottom = 15.72
+anchor_top = 0.052
+anchor_right = 0.992
+anchor_bottom = 0.896
+offset_left = -7.36
+offset_top = -16.16
+offset_right = 31.3599
+offset_bottom = 24.3199
+
+[node name="BankClient2" parent="." instance=ExtResource("6_8bked")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.033
+anchor_top = 0.044
+anchor_right = 0.912
+anchor_bottom = 0.911
+offset_left = -31.36
+offset_top = -7.52
+offset_right = 24.9598
+offset_bottom = 16.1199
+
+[node name="BankClient3" parent="." instance=ExtResource("7_uibq2")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.089
+anchor_right = 0.771
+anchor_bottom = 0.756
+offset_top = -8.12
+offset_right = 23.6799
+offset_bottom = 7.51996
+
+[node name="BankClient4" parent="." instance=ExtResource("8_5p2ef")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.119
+anchor_right = 0.708
+anchor_bottom = 0.637
+offset_top = -0.520004
+offset_right = 16.64
+offset_bottom = 0.039978
 
 [connection signal="pressed" from="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/HeaderHBox/LogoutButton" to="." method="_on_logout_button_pressed"]
 [connection signal="pressed" from="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer/Enter1" to="." method="_on_enter_1_pressed"]
+[connection signal="pressed" from="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Enter2" to="." method="_on_enter_2_pressed"]
+[connection signal="pressed" from="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Enter3" to="." method="_on_enter_3_pressed"]
+[connection signal="pressed" from="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer4/Enter4" to="." method="_on_enter_4_pressed"]

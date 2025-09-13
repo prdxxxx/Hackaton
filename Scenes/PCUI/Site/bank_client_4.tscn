@@ -1,11 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://3tyq58ys056w"]
+[gd_scene load_steps=6 format=3 uid="uid://dejtfhb0iggi4"]
 
-[ext_resource type="Script" uid="uid://c8ugney82tplh" path="res://Scenes/PCUI/Site/bank_client_1.gd" id="1_8avkt"]
-[ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="1_a5lo2"]
-[ext_resource type="FontFile" uid="uid://db16gjjdg8f7x" path="res://Assets/Fonts/VT323-Regular.ttf" id="1_rvcuf"]
-[ext_resource type="PackedScene" uid="uid://7hfan16f6ato" path="res://Scenes/PCUI/Site/2fa.tscn" id="5_g2b45"]
+[ext_resource type="Script" uid="uid://cd4j7eoh3d1bp" path="res://bank_client_4.gd" id="1_vbtlr"]
+[ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="2_wlle4"]
+[ext_resource type="FontFile" uid="uid://db16gjjdg8f7x" path="res://Assets/Fonts/VT323-Regular.ttf" id="3_ihqv0"]
+[ext_resource type="PackedScene" uid="uid://7hfan16f6ato" path="res://Scenes/PCUI/Site/2fa.tscn" id="4_wlle4"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jtpxl"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_surfo"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 10
 border_width_top = 10
@@ -13,14 +13,14 @@ border_width_right = 10
 border_width_bottom = 10
 border_color = Color(0, 0, 0, 1)
 
-[node name="BankClient" type="Control"]
+[node name="BankClient4" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_8avkt")
+script = ExtResource("1_vbtlr")
 
 [node name="WindowBase" type="Control" parent="."]
 layout_mode = 1
@@ -29,7 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_a5lo2")
+script = ExtResource("2_wlle4")
 
 [node name="PanelContainer" type="PanelContainer" parent="WindowBase"]
 layout_mode = 1
@@ -38,7 +38,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_jtpxl")
+theme_override_styles/panel = SubResource("StyleBoxFlat_surfo")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/PanelContainer"]
 layout_mode = 2
@@ -50,9 +50,9 @@ size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_rvcuf")
+theme_override_fonts/font = ExtResource("3_ihqv0")
 theme_override_font_sizes/font_size = 100
-text = "Welcome, Aether Dynamics!"
+text = "Welcome, Ivan Petrov!"
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/PanelContainer"]
@@ -65,9 +65,9 @@ size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_rvcuf")
+theme_override_fonts/font = ExtResource("3_ihqv0")
 theme_override_font_sizes/font_size = 100
-text = "Balance: 50$"
+text = "Balance: 150$"
 
 [node name="Button" type="Button" parent="WindowBase/PanelContainer/VBoxContainer/Label"]
 layout_mode = 2
@@ -87,17 +87,9 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 text = "X"
 
-[node name="2FA" parent="." instance=ExtResource("5_g2b45")]
+[node name="2FA" parent="." instance=ExtResource("4_wlle4")]
 visible = false
 layout_mode = 1
-anchor_left = 0.012
-anchor_top = 0.044
-anchor_right = 0.592
-anchor_bottom = 0.2
-offset_left = -15.04
-offset_top = -15.52
-offset_right = 15.36
-offset_bottom = 24.0
 
 [connection signal="pressed" from="WindowBase/PanelContainer/VBoxContainer/Label/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="WindowBase/PanelContainer/Exit" to="." method="_on_exit_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ctxt2mrdrdeet"]
+[gd_scene load_steps=8 format=3 uid="uid://ctxt2mrdrdeet"]
 
 [ext_resource type="Script" uid="uid://bovd04t1t0jrp" path="res://Scenes/PCUI/Site/login_site.gd" id="1_ktf6f"]
 [ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="2_6x7dh"]
@@ -21,6 +21,9 @@ corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xr4i4"]
+bg_color = Color(0.352941, 0.352941, 0.352941, 1)
 
 [node name="LoginSite" type="Control"]
 layout_mode = 3
@@ -52,17 +55,13 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_6x7dh")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="WindowBase/Panel"]
 layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.022
-anchor_right = 0.996
-anchor_bottom = 0.044
-offset_top = -23.76
-offset_right = -0.320068
-offset_bottom = 12.48
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
 grow_horizontal = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="WindowBase/Panel/VBoxContainer2"]
-custom_minimum_size = Vector2(0, 60)
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_fekqi")
@@ -70,8 +69,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_fekqi")
 [node name="TextEdit" type="TextEdit" parent="WindowBase/Panel/VBoxContainer2/PanelContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_tdvof")
-theme_override_font_sizes/font_size = 50
-text = "https://www.bank.com/"
+theme_override_font_sizes/font_size = 30
+text = "http://bank.com
+"
 editable = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/Panel"]
@@ -129,6 +129,7 @@ offset_bottom = 4.68
 grow_horizontal = 0
 size_flags_horizontal = 8
 size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_xr4i4")
 text = "X"
 
 [node name="Bank" parent="." instance=ExtResource("3_fekqi")]

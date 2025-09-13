@@ -22,9 +22,9 @@ texture = ExtResource("6_70wtv")
 
 [node name="Shop" type="Control"]
 layout_mode = 3
-anchor_right = 0.617
+anchor_right = 0.633
 anchor_bottom = 0.622
-offset_right = 38.3599
+offset_right = 7.63989
 offset_bottom = 31.2399
 grow_horizontal = 2
 grow_vertical = 2
