@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bcpw8l6frx651"]
+[gd_scene load_steps=19 format=3 uid="uid://bcpw8l6frx651"]
 
 [ext_resource type="Script" uid="uid://bis2kgpadpvhm" path="res://Scenes/PCUI/pcui.gd" id="1_yina7"]
 [ext_resource type="PackedScene" uid="uid://brb2acniqq2i8" path="res://Scenes/PCUI/CMD.tscn" id="3_bxve3"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c4bndga47361e" path="res://Assets/2D Assets/Icons/logo.png" id="7_1wrfy"]
 [ext_resource type="PackedScene" uid="uid://dvyuvwdvk0tbj" path="res://AirCreck.tscn" id="7_autvq"]
 [ext_resource type="Texture2D" uid="uid://dvmlijjgrjrxt" path="res://Scenes/PCUI/Icons/Browser.png" id="8_w5hxt"]
+[ext_resource type="Texture2D" uid="uid://p8ycfnjir1wq" path="res://Assets/2D Assets/Icons/7.png" id="9_q524b"]
 [ext_resource type="PackedScene" uid="uid://da0je3bmb4hp0" path="res://Scenes/PCUI/Notepad.tscn" id="9_qp7xw"]
 [ext_resource type="PackedScene" uid="uid://ctpwqpgosom54" path="res://Scenes/PCUI/etter_cap.tscn" id="11_1wrfy"]
 [ext_resource type="PackedScene" uid="uid://cn63y8p0w6qjk" path="res://Scenes/PCUI/discord.tscn" id="14_ppt72"]
@@ -48,22 +49,24 @@ offset_top = 100.0
 offset_right = 232.0
 offset_bottom = 516.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PCUI/ButtonsCont"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PCUI/ButtonsCont"]
 layout_mode = 2
-theme_override_constants/separation = 100
 
-[node name="CMD" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PCUI/ButtonsCont/VBoxContainer"]
+layout_mode = 2
+
+[node name="CMD" type="Button" parent="PCUI/ButtonsCont/VBoxContainer/HBoxContainer"]
 z_index = 100
 layout_mode = 2
 toggle_mode = true
 icon = ExtResource("3_xtwrv")
 
-[node name="Aircrack" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+[node name="aircrack" type="Button" parent="PCUI/ButtonsCont/VBoxContainer/HBoxContainer"]
 z_index = 100
 layout_mode = 2
 icon = ExtResource("4_l61ky")
 
-[node name="Notepad" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+[node name="notepad" type="Button" parent="PCUI/ButtonsCont/VBoxContainer/HBoxContainer"]
 z_index = 100
 layout_mode = 2
 text = "
@@ -72,20 +75,24 @@ text = "
 "
 icon = ExtResource("5_qp7xw")
 
-[node name="EtterCap" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+[node name="etter_cap" type="Button" parent="PCUI/ButtonsCont/VBoxContainer/HBoxContainer"]
 z_index = 100
 layout_mode = 2
 icon = ExtResource("6_nm78k")
 
-[node name="Discord" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+[node name="discord" type="Button" parent="PCUI/ButtonsCont/VBoxContainer/HBoxContainer"]
 z_index = 100
 layout_mode = 2
 icon = ExtResource("7_1wrfy")
 
-[node name="Btowser" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+[node name="btowser" type="Button" parent="PCUI/ButtonsCont/VBoxContainer/HBoxContainer"]
 z_index = 100
 layout_mode = 2
 icon = ExtResource("8_w5hxt")
+
+[node name="e_shop" type="Button" parent="PCUI/ButtonsCont/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("9_q524b")
 
 [node name="AirCreck" parent="PCUI" instance=ExtResource("7_autvq")]
 visible = false
@@ -155,11 +162,11 @@ offset_bottom = -490.0
 visible = false
 layout_mode = 1
 
-[connection signal="pressed" from="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl/CMD" to="PCUI" method="_on_cmd_pressed"]
-[connection signal="pressed" from="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl/Aircrack" to="PCUI" method="_on_aircrack_pressed"]
-[connection signal="pressed" from="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl/Notepad" to="PCUI" method="_on_notepad_pressed"]
-[connection signal="pressed" from="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl/EtterCap" to="PCUI" method="_on_etter_cap_pressed"]
-[connection signal="pressed" from="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl/Discord" to="PCUI" method="_on_discord_pressed"]
-[connection signal="pressed" from="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl/Btowser" to="PCUI" method="_on_btowser_pressed"]
-[connection signal="pressed" from="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl2/E-Shop" to="PCUI" method="_on_e_shop_pressed"]
+[connection signal="pressed" from="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/CMD" to="PCUI" method="_on_cmd_pressed"]
+[connection signal="pressed" from="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/aircrack" to="PCUI" method="_on_aircrack_pressed"]
+[connection signal="pressed" from="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/notepad" to="PCUI" method="_on_notepad_pressed"]
+[connection signal="pressed" from="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/etter_cap" to="PCUI" method="_on_etter_cap_pressed"]
+[connection signal="pressed" from="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/discord" to="PCUI" method="_on_discord_pressed"]
+[connection signal="pressed" from="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/btowser" to="PCUI" method="_on_btowser_pressed"]
+[connection signal="pressed" from="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/e_shop" to="PCUI" method="_on_e_shop_pressed"]
 [connection signal="pressed" from="PCUI/powerButton" to="PCUI" method="_on_power_button_pressed"]

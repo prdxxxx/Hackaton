@@ -1,6 +1,4 @@
 extends Control
-@onready var cmd_button: Button = $ButtonsCont/ButtonsContAl/CMD as Button
-@onready var aircrack_button: Button = $ButtonsCont/ButtonsContAl/Aircrack as Button
 @onready var buttons_container: Button = $ButtonsCont as Button
 @onready var cmd: Control = $CMD as Control
 @onready var helpText = $Help_UI/Help_Text
