@@ -8,8 +8,8 @@ var onoff = false
 var random = RandomNumberGenerator.new()
 var timer: Timer
 
-@export var min_interval := 10  # 5 минут
-@export var max_interval := 15  # 10 минут
+@export var min_interval := 150  # 5 минут
+@export var max_interval := 300  # 10 минут
 
 func _ready() -> void:
 	random.randomize()
