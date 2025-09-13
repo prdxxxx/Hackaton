@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://cen4j3rbwlj4u"]
+[gd_scene load_steps=100 format=3 uid="uid://cen4j3rbwlj4u"]
 
 [ext_resource type="PackedScene" uid="uid://cwq4uacj2n3u3" path="res://Scenes/Player.tscn" id="1_5cjrv"]
 [ext_resource type="PackedScene" uid="uid://dseni4k4lehup" path="res://Assets/3D Assets/Layout concinai/Ceiling.glb" id="7_ivbkn"]
@@ -52,6 +52,11 @@
 [ext_resource type="PackedScene" uid="uid://dtkq55ti20acl" path="res://Assets/3D Assets/Layout concinai/Lever.glb" id="45_ivbkn"]
 [ext_resource type="PackedScene" uid="uid://rb8nxn3hoa7c" path="res://Assets/3D Assets/Layout concinai/Apartaments.glb" id="46_ivbkn"]
 [ext_resource type="PackedScene" uid="uid://ctd5viwl2al4s" path="res://Assets/3D Assets/Layout concinai/Calculator,gaming,Hackathon.glb" id="48_rfukx"]
+[ext_resource type="PackedScene" uid="uid://c7p643y0r73kk" path="res://Assets/3D Assets/Layout concinai/MinecraftCubeHackathon.glb" id="49_26nav"]
+[ext_resource type="PackedScene" uid="uid://csyxmqwsvwppd" path="res://Assets/3D Assets/Layout concinai/Canapea_.glb" id="50_ne1it"]
+[ext_resource type="PackedScene" uid="uid://bay236ed2m76p" path="res://Assets/3D Assets/Layout concinai/futuristic.canapea.glb" id="51_hhume"]
+[ext_resource type="PackedScene" uid="uid://dcgq15fmh8ec6" path="res://Assets/3D Assets/Layout concinai/TastaturaGaming.glb" id="52_au5ix"]
+[ext_resource type="PackedScene" uid="uid://cafthqnagxt1s" path="res://Assets/3D Assets/Layout concinai/MinecraftCD.glb" id="53_ne1it"]
 
 [sub_resource type="Sky" id="Sky_r0dna"]
 
@@ -178,6 +183,44 @@ emission_energy_multiplier = 11.85
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wnv30"]
 size = Vector3(0.463501, 0.744995, 0.573795)
+
+[sub_resource type="Animation" id="Animation_hhume"]
+resource_name = "cube_rotation"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.785398, 0), Vector3(0, 1.5708, 0), Vector3(0, 2.35619, 0), Vector3(0, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_au5ix"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pb8dl"]
+_data = {
+&"RESET": SubResource("Animation_au5ix"),
+&"cube_rotation": SubResource("Animation_hhume")
+}
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l11rc"]
 shader = ExtResource("24_d3ars")
@@ -320,9 +363,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
 
 [node name="Floating chair" parent="Apartamentu" instance=ExtResource("13_rfukx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+visible = false
 
 [node name="Floating table" parent="Apartamentu" instance=ExtResource("14_irs1d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+visible = false
 
 [node name="Floor" parent="Apartamentu" instance=ExtResource("15_ofme6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
@@ -389,7 +434,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
 
 [node name="Shelve" parent="Apartamentu" instance=ExtResource("35_wcwqb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9505, 0, 0.271843)
 
 [node name="Stairs" parent="Apartamentu" instance=ExtResource("36_a60hx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
@@ -901,7 +946,32 @@ shape = SubResource("BoxShape3D_wnv30")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69, 0.1, 0.245)
 
 [node name="Calculator,gaming,Hackathon" parent="Apartamentu" instance=ExtResource("48_rfukx")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+transform = Transform3D(0.11935, 0, 0.127987, 0, 0.175, 0, -0.127987, 0, 0.11935, -5.02143, 0.875227, 2.39582)
+
+[node name="MinecraftCubeHackathon" parent="Apartamentu" instance=ExtResource("49_26nav")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.755582, 1.15645, -2.31669)
+
+[node name="Canapea_" parent="Apartamentu" instance=ExtResource("50_ne1it")]
+transform = Transform3D(-0.235491, 0, -0.18586, 0, 0.4, 0, 0.18586, 0, -0.235491, 4.23355, -0.00252485, -1.52174)
+
+[node name="Canapea_2" parent="Apartamentu" instance=ExtResource("50_ne1it")]
+transform = Transform3D(-0.285914, 0, 0.0908457, 0, 0.4, 0, -0.0908457, 0, -0.285914, 0.494895, 0.180264, 3.99043)
+
+[node name="futuristic_canapea" parent="Apartamentu" instance=ExtResource("51_hhume")]
+transform = Transform3D(-1.49012e-08, 0, -0.25, 0, 0.25, 0, 0.25, 0, -1.49012e-08, 3.3647, 1.65427, 0.258931)
+
+[node name="TastaturaGaming" parent="Apartamentu" instance=ExtResource("52_au5ix")]
+transform = Transform3D(0.175691, 0, 0.132412, 0, 0.22, 0, -0.132412, 0, 0.175691, -3.94261, 0.877973, 3.24893)
+
+[node name="MinecraftCD" parent="Apartamentu" instance=ExtResource("53_ne1it")]
+transform = Transform3D(0.147284, 0, -0.0284132, 0, 0.15, 0, 0.0284132, 0, 0.147284, -4.11672, 0.878363, 3.68895)
+
+[node name="cube_spinning" type="AnimationPlayer" parent="Apartamentu"]
+root_node = NodePath("../MinecraftCubeHackathon")
+libraries = {
+&"": SubResource("AnimationLibrary_pb8dl")
+}
+autoplay = "cube_rotation"
 
 [node name="PauseMenu" type="CanvasLayer" parent="."]
 
