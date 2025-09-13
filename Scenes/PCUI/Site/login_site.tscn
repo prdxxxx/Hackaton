@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://ctxt2mrdrdeet"]
+[gd_scene load_steps=5 format=3 uid="uid://ctxt2mrdrdeet"]
 
 [ext_resource type="Script" uid="uid://bovd04t1t0jrp" path="res://Scenes/PCUI/Site/login_site.gd" id="1_ktf6f"]
 [ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="2_6x7dh"]
 [ext_resource type="Script" uid="uid://ckrb42td6676t" path="res://Scenes/PCUI/Site/accounts_panel.gd" id="3_fekqi"]
-[ext_resource type="Texture2D" uid="uid://bimwtd4ln5ssr" path="res://Scenes/PCUI/Site/Bank.png" id="4_j0mnj"]
-[ext_resource type="FontFile" uid="uid://db16gjjdg8f7x" path="res://Assets/Fonts/VT323-Regular.ttf" id="5_tdvof"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6x7dh"]
 bg_color = Color(0, 0, 0, 1)
@@ -12,9 +10,6 @@ border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ikyvv"]
-texture = ExtResource("4_j0mnj")
 
 [node name="LoginSite" type="Control"]
 layout_mode = 3
@@ -99,55 +94,50 @@ size_flags_vertical = 0
 text = "X"
 
 [node name="AccountsPanel" type="Panel" parent="WindowBase"]
+visible = false
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.1
-anchor_top = 0.126
-anchor_right = 0.567
-anchor_bottom = 0.711
-offset_left = -16.0
-offset_top = -17.08
-offset_right = 0.359985
-offset_bottom = 17.12
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 176.0
+offset_top = 119.0
+offset_right = -831.0
+offset_bottom = -295.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("3_fekqi")
 
-[node name="PanelContainer" type="PanelContainer" parent="WindowBase/AccountsPanel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/AccountsPanel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_ikyvv")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/AccountsPanel/PanelContainer"]
+[node name="HeaderHBox" type="HBoxContainer" parent="WindowBase/AccountsPanel/VBoxContainer"]
 layout_mode = 2
 
-[node name="HeaderHBox" type="HBoxContainer" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TitleLabel" type="Label" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/HeaderHBox"]
+[node name="TitleLabel" type="Label" parent="WindowBase/AccountsPanel/VBoxContainer/HeaderHBox"]
 layout_mode = 2
 size_flags_horizontal = 6
-theme_override_fonts/font = ExtResource("5_tdvof")
-theme_override_font_sizes/font_size = 30
-text = "Victoriabank"
+theme_override_font_sizes/font_size = 40
+text = "Admin Panel"
 
-[node name="LogoutButton" type="Button" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/HeaderHBox"]
+[node name="LogoutButton" type="Button" parent="WindowBase/AccountsPanel/VBoxContainer/HeaderHBox"]
 layout_mode = 2
 text = "Log out"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="WindowBase/AccountsPanel/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/AccountsPanel/VBoxContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="DetailsLabel" type="Label" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+[node name="DetailsLabel" type="Label" parent="WindowBase/AccountsPanel/VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 
 [connection signal="pressed" from="WindowBase/Panel/VBoxContainer/SubmitButton" to="." method="_on_submit_button_pressed"]
 [connection signal="pressed" from="WindowBase/Panel/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/HeaderHBox/LogoutButton" to="WindowBase/AccountsPanel" method="_on_logout_button_pressed"]
+[connection signal="pressed" from="WindowBase/AccountsPanel/VBoxContainer/HeaderHBox/LogoutButton" to="WindowBase/AccountsPanel" method="_on_logout_button_pressed"]

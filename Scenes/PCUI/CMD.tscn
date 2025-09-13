@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://6ianb0jquwg4" path="res://Scenes/PCUI/CommandProcessor.gd" id="2_2nbjq"]
 [ext_resource type="FontFile" uid="uid://db16gjjdg8f7x" path="res://Assets/Fonts/VT323-Regular.ttf" id="2_bdmyf"]
 [ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="3_t0pww"]
-[ext_resource type="Script" uid="uid://bm3iiqhnh42ia" path="res://Scenes/PCUI/input.gd" id="4_aq8rx"]
+[ext_resource type="Script" path="res://Scenes/PCUI/input.gd" id="4_aq8rx"]
 [ext_resource type="Texture2D" uid="uid://b5rbk7fhvw1ky" path="res://Scenes/PCUI/EtterCap/cmd bgs.png" id="4_ccoy8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_186j6"]
