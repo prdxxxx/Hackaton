@@ -56,6 +56,9 @@ func _on_notepad_pressed() -> void:
 
 func _on_discord_pressed() -> void:
 	discord.show()
+	var msg_node = discord.get_node("WindowBase/Chat/Guide/VBoxContainer") 
+	msg_node.show_children()
+
 
 
 func _on_btowser_pressed() -> void:

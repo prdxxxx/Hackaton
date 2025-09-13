@@ -227,7 +227,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
-text = "Test Mesage"
+text = "Hi Player!"
 
 [node name="Message2" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
 layout_mode = 2
@@ -259,7 +259,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
-text = "Test Mesage"
+text = "I’m CyberBot — your sidekick in the digital world."
 
 [node name="Message3" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
 layout_mode = 2
@@ -291,7 +291,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
-text = "Test Mesage"
+text = "Hackers are out there… trying to trick people every day."
 
 [node name="Message4" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
 layout_mode = 2
@@ -323,7 +323,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
-text = "Test Mesage"
+text = "But here, you’ll learn their tricks — and how to beat them."
 
 [node name="Message5" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
 layout_mode = 2
@@ -355,7 +355,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
-text = "Test Mesage"
+text = "🎮 You’ll train like a pro: spot fakes, block scams, protect your gear, stay pro!"
 
 [node name="Message6" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
 layout_mode = 2
@@ -384,6 +384,294 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_qbooq")
 layout_mode = 2
 
 [node name="Message_text" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message6/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
+text = "😮 Oh no! Be careful…"
+
+[node name="Message7" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message7"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 81.0
+offset_bottom = 17.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 20
+text = "Security Guide"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message7"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message7/HBoxContainer"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qbooq")
+
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Guide/VBoxContainer/Message7/HBoxContainer"]
+layout_mode = 2
+
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message7/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
+text = "A stranger is at your digital door — they’re calling you on Discord! 🎧"
+
+[node name="Message8" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message8"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 81.0
+offset_bottom = 17.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 20
+text = "Security Guide"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message8"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message8/HBoxContainer"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qbooq")
+
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Guide/VBoxContainer/Message8/HBoxContainer"]
+layout_mode = 2
+
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message8/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
+text = "Do you open the door and answer, or ignore it?"
+
+[node name="Message9" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message9"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 81.0
+offset_bottom = 17.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 20
+text = "Security Guide"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message9"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message9/HBoxContainer"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qbooq")
+
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Guide/VBoxContainer/Message9/HBoxContainer"]
+layout_mode = 2
+
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message9/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
+text = "😬 Oops! That wasn’t safe…"
+
+[node name="Message10" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message10"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 81.0
+offset_bottom = 17.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 20
+text = "Security Guide"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message10"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message10/HBoxContainer"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qbooq")
+
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Guide/VBoxContainer/Message10/HBoxContainer"]
+layout_mode = 2
+
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message10/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
+text = "Remember: random calls are like strangers at your door 🚪"
+
+[node name="Message11" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message11"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 81.0
+offset_bottom = 17.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 20
+text = "Security Guide"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message11"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message11/HBoxContainer"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qbooq")
+
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Guide/VBoxContainer/Message11/HBoxContainer"]
+layout_mode = 2
+
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message11/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
+text = "You should never answer them!"
+
+[node name="Message12" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message12"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 81.0
+offset_bottom = 17.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 20
+text = "Security Guide"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message12"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message12/HBoxContainer"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qbooq")
+
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Guide/VBoxContainer/Message12/HBoxContainer"]
+layout_mode = 2
+
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message12/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
+text = "Let’s try that again — stay sharp!"
+
+[node name="Message13" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message13"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 81.0
+offset_bottom = 17.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 20
+text = "Security Guide"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message13"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message13/HBoxContainer"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qbooq")
+
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Guide/VBoxContainer/Message13/HBoxContainer"]
+layout_mode = 2
+
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message13/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
+text = "Test Mesage"
+
+[node name="Message14" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message14"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 81.0
+offset_bottom = 17.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 20
+text = "Security Guide"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message14"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message14/HBoxContainer"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qbooq")
+
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Guide/VBoxContainer/Message14/HBoxContainer"]
+layout_mode = 2
+
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message14/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
+text = "Test Mesage"
+
+[node name="Message15" type="Panel" parent="WindowBase/Chat/Guide/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message15"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 81.0
+offset_bottom = 17.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_72yau")
+theme_override_font_sizes/font_size = 20
+text = "Security Guide"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message15"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Guide/VBoxContainer/Message15/HBoxContainer"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qbooq")
+
+[node name="HSeparator" type="HSeparator" parent="WindowBase/Chat/Guide/VBoxContainer/Message15/HBoxContainer"]
+layout_mode = 2
+
+[node name="Message_text" type="Label" parent="WindowBase/Chat/Guide/VBoxContainer/Message15/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
@@ -604,8 +892,16 @@ offset_bottom = 15.0
 grow_horizontal = 0
 
 [node name="Discord_Call" parent="WindowBase" instance=ExtResource("9_xytwj")]
+visible = false
 layout_mode = 1
+offset_left = 388.5
+offset_top = -101.5
+offset_right = 388.5
+offset_bottom = -101.5
 
+[connection signal="visibility_changed" from="." to="WindowBase/Chat/Guide/VBoxContainer" method="_on_discord_visibility_changed"]
 [connection signal="pressed" from="WindowBase/Contacts/ScrollContainer/VBoxContainer/Guide_contact/Guide_Button" to="." method="_on_guide_button_pressed"]
 [connection signal="pressed" from="WindowBase/Contacts/ScrollContainer/VBoxContainer/Anon_contact/Anon_Button" to="." method="_on_anon_button_pressed"]
 [connection signal="pressed" from="WindowBase/Exit" to="." method="_on_exit_pressed"]
+[connection signal="cancel_threat_call" from="WindowBase/Discord_Call" to="WindowBase/Chat/Guide/VBoxContainer" method="_on_discord_call_cancel_threat_call"]
+[connection signal="wrong_choice" from="WindowBase/Discord_Call" to="WindowBase/Chat/Guide/VBoxContainer" method="_on_discord_call_wrong_choice"]

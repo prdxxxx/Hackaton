@@ -5,9 +5,14 @@ extends Control
 @onready var anon_contact: Panel = $WindowBase/Contacts/ScrollContainer/VBoxContainer/Anon_contact
 
 
+@export var discord_open: bool 
+
+
 func _ready() -> void:
 	guide.show()
 	anon.hide()
+	anon_contact.hide()
+
 
 func _on_exit_pressed() -> void:
 	discord.hide()
