@@ -97,5 +97,6 @@ visible = false
 stream = ExtResource("7_si545")
 volume_db = -20.0
 autoplay = true
+parameters/looping = true
 
 [connection signal="start_game_exit" from="Start_game_options" to="Menu" method="_on_start_game_options_start_game_exit"]

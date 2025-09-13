@@ -1,6 +1,7 @@
 extends Node3D
 
 @onready var lights_stairs: Node3D = $"../../ElectricBox/Lights/Lights_Stairs"
+@onready var switch_sfx: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 var onoff = false
 
@@ -18,3 +19,6 @@ func toggle_light() -> void:
 	$on.visible = !onoff
 	lights_stairs.visible = onoff
 	SaveLoad.SaveFileData.lights_stairs = onoff
+	
+	if switch_sfx:
+		switch_sfx.play()

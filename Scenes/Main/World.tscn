@@ -1,6 +1,7 @@
-[gd_scene load_steps=91 format=3 uid="uid://cen4j3rbwlj4u"]
+[gd_scene load_steps=96 format=3 uid="uid://cen4j3rbwlj4u"]
 
 [ext_resource type="PackedScene" uid="uid://cwq4uacj2n3u3" path="res://Scenes/Player.tscn" id="1_5cjrv"]
+[ext_resource type="Texture2D" uid="uid://gqtbfswpf8cb" path="res://Assets/2D Assets/pcui22.png" id="4_7ujmr"]
 [ext_resource type="PackedScene" uid="uid://dseni4k4lehup" path="res://Assets/3D Assets/Layout concinai/Ceiling.glb" id="7_ivbkn"]
 [ext_resource type="PackedScene" uid="uid://b0ha4ubwc1i0k" path="res://Assets/3D Assets/Layout concinai/chair.glb" id="8_0fglf"]
 [ext_resource type="PackedScene" uid="uid://bu07dr4yvg3h1" path="res://Assets/3D Assets/Layout concinai/All.glb" id="9_kn06e"]
@@ -32,6 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://dhjuo0fj6iurq" path="res://Assets/3D Assets/Layout concinai/Server 7.glb" id="32_d533g"]
 [ext_resource type="PackedScene" uid="uid://d1elxmh1hu08h" path="res://Assets/3D Assets/Layout concinai/Server 8.glb" id="33_wnv30"]
 [ext_resource type="PackedScene" uid="uid://655j86h5g5dt" path="res://Assets/3D Assets/Layout concinai/Server.glb" id="34_nfsqp"]
+[ext_resource type="AudioStream" uid="uid://dsc55tbod38bv" path="res://Assets/SFX/light-off.mp3" id="35_4j0uw"]
 [ext_resource type="PackedScene" uid="uid://ch47jhj18emyj" path="res://Assets/3D Assets/Layout concinai/Shelve.glb" id="35_wcwqb"]
 [ext_resource type="PackedScene" uid="uid://l1xeeo7ophi5" path="res://Assets/3D Assets/Layout concinai/Stairs.glb" id="36_a60hx"]
 [ext_resource type="Script" uid="uid://d0ed8cv2gb1jb" path="res://Scripts/Switches/storage_light_switch.gd" id="36_wi82k"]
@@ -51,6 +53,7 @@
 [ext_resource type="PackedScene" uid="uid://crb1uhbn164jn" path="res://Assets/3D Assets/Layout concinai/ElectricBox.glb" id="44_fq1sc"]
 [ext_resource type="PackedScene" uid="uid://dtkq55ti20acl" path="res://Assets/3D Assets/Layout concinai/Lever.glb" id="45_ivbkn"]
 [ext_resource type="PackedScene" uid="uid://rb8nxn3hoa7c" path="res://Assets/3D Assets/Layout concinai/Apartaments.glb" id="46_ivbkn"]
+[ext_resource type="AudioStream" uid="uid://d0fqv4t8xv5ox" path="res://Assets/SFX/lamp-buzz.mp3" id="53_7ujmr"]
 
 [sub_resource type="Sky" id="Sky_r0dna"]
 
@@ -76,6 +79,11 @@ script/source = "extends Node3D
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kn06e"]
 size = Vector3(1.79373, 1.44922, 1.39203)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_artvm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6wuwi"]
+albedo_texture = ExtResource("4_7ujmr")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rfukx"]
 size = Vector3(0.107422, 2.21176, 5.53214)
@@ -242,6 +250,11 @@ text_overrun_behavior = 1
 
 [node name="monitor" parent="Apartamentu" instance=ExtResource("23_dwptd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.711702, -0.00127307, 0.233329)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Apartamentu/monitor"]
+transform = Transform3D(-0.225497, 0.583791, -5.01142e-09, 2.37539e-16, -3.67843e-08, -0.165263, -0.217198, -0.606097, 5.20291e-09, -3.89506, 1.18842, 2.88942)
+mesh = SubResource("PlaneMesh_artvm")
+surface_material_override/0 = SubResource("StandardMaterial3D_6wuwi")
 
 [node name="All" parent="Apartamentu" instance=ExtResource("9_kn06e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
@@ -516,6 +529,9 @@ mesh = SubResource("BoxMesh_l7i8q")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0550256, 0.0889028, 0.0634336)
 shape = SubResource("BoxShape3D_nfsqp")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Apartamentu/Switches/switch_storage"]
+stream = ExtResource("35_4j0uw")
+
 [node name="switch_hall" type="Node3D" parent="Apartamentu/Switches"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.679, 1, 7.705)
 script = ExtResource("37_l7i8q")
@@ -547,6 +563,9 @@ mesh = SubResource("BoxMesh_l7i8q")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0550256, 0.0889028, 0.0634336)
 shape = SubResource("BoxShape3D_nfsqp")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Apartamentu/Switches/switch_hall"]
+stream = ExtResource("35_4j0uw")
+
 [node name="switch_walls" type="Node3D" parent="Apartamentu/Switches"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.241, 1, 2.733)
 script = ExtResource("38_7hrk4")
@@ -576,6 +595,9 @@ mesh = SubResource("BoxMesh_l7i8q")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/Switches/switch_walls/Walls_Switch"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0550256, 0.0889028, 0.0634336)
 shape = SubResource("BoxShape3D_nfsqp")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Apartamentu/Switches/switch_walls"]
+stream = ExtResource("35_4j0uw")
 
 [node name="switch_stairs" type="Node3D" parent="Apartamentu/Switches"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.83768, 1, -2.65827)
@@ -607,6 +629,9 @@ mesh = SubResource("BoxMesh_l7i8q")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0550256, 0.0889028, 0.0634336)
 shape = SubResource("BoxShape3D_nfsqp")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Apartamentu/Switches/switch_stairs"]
+stream = ExtResource("35_4j0uw")
+
 [node name="switch_2_floor" type="Node3D" parent="Apartamentu/Switches"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.389, 3.2, -2.659)
 script = ExtResource("40_irs1d")
@@ -636,6 +661,9 @@ mesh = SubResource("BoxMesh_l7i8q")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/Switches/switch_2_floor/2_Floor_Switch"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0550256, 0.0889028, 0.0634336)
 shape = SubResource("BoxShape3D_nfsqp")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Apartamentu/Switches/switch_2_floor"]
+stream = ExtResource("35_4j0uw")
 
 [node name="ElectricBox" parent="Apartamentu" instance=ExtResource("44_fq1sc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69, 0.1, 0.245)
@@ -757,6 +785,16 @@ light_energy = 10.0
 spot_range = 8.0
 spot_angle = 40.0
 
+[node name="Lights" type="AudioStreamPlayer3D" parent="Apartamentu/ElectricBox/Lights/Lights_2_Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0305797, 5.49659, -0.572119)
+stream = ExtResource("53_7ujmr")
+volume_db = -15.0
+max_db = -10.0
+autoplay = true
+max_distance = 10.0
+bus = &"SFX_Lights"
+parameters/looping = true
+
 [node name="Lights_Hall" parent="Apartamentu/ElectricBox/Lights" instance=ExtResource("19_hhume")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
 
@@ -790,6 +828,15 @@ light_color = Color(0.991743, 0.992142, 0.902525, 1)
 light_energy = 4.0
 light_volumetric_fog_energy = 4.212
 spot_angle = 80.0
+
+[node name="Lights" type="AudioStreamPlayer3D" parent="Apartamentu/ElectricBox/Lights/Lights_Hall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15139, 2.09325, 5.55405)
+stream = ExtResource("53_7ujmr")
+volume_db = -15.0
+max_db = -10.0
+autoplay = true
+max_distance = 10.0
+parameters/looping = true
 
 [node name="Lights_Stairs" parent="Apartamentu/ElectricBox/Lights" instance=ExtResource("20_au5ix")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
@@ -867,6 +914,16 @@ light_color = Color(0.991743, 0.992142, 0.902525, 1)
 light_energy = 4.0
 light_volumetric_fog_energy = 4.212
 spot_angle = 80.0
+
+[node name="Lights" type="AudioStreamPlayer3D" parent="Apartamentu/ElectricBox/Lights/Lights_Storage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.15398, 1.95038, -0.578212)
+stream = ExtResource("53_7ujmr")
+volume_db = -15.0
+max_db = -10.0
+autoplay = true
+max_distance = 10.0
+bus = &"SFX_Lights"
+parameters/looping = true
 
 [node name="Indicator_Light_on" type="Node3D" parent="Apartamentu/ElectricBox"]
 
