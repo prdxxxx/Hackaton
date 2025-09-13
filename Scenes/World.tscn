@@ -1,10 +1,9 @@
-[gd_scene load_steps=101 format=3 uid="uid://cen4j3rbwlj4u"]
+[gd_scene load_steps=95 format=3 uid="uid://cen4j3rbwlj4u"]
 
 [ext_resource type="PackedScene" uid="uid://cwq4uacj2n3u3" path="res://Scenes/Player.tscn" id="1_5cjrv"]
 [ext_resource type="PackedScene" uid="uid://dseni4k4lehup" path="res://Assets/3D Assets/Layout concinai/Ceiling.glb" id="7_ivbkn"]
 [ext_resource type="PackedScene" uid="uid://b0ha4ubwc1i0k" path="res://Assets/3D Assets/Layout concinai/chair.glb" id="8_0fglf"]
 [ext_resource type="PackedScene" uid="uid://bu07dr4yvg3h1" path="res://Assets/3D Assets/Layout concinai/All.glb" id="9_kn06e"]
-[ext_resource type="PackedScene" uid="uid://cn7jl48qt4ibi" path="res://Assets/3D Assets/Layout concinai/Crt Monitor.glb" id="9_qtjmb"]
 [ext_resource type="PackedScene" uid="uid://dve3hp6nlib2n" path="res://Assets/3D Assets/Layout concinai/Door bell.glb" id="10_wi82k"]
 [ext_resource type="PackedScene" uid="uid://d2ilp87eseqsf" path="res://Assets/3D Assets/Layout concinai/Drop.glb" id="11_l7i8q"]
 [ext_resource type="PackedScene" uid="uid://c83vhgdh1hlai" path="res://Assets/3D Assets/Layout concinai/Floating chair.glb" id="13_rfukx"]
@@ -23,15 +22,7 @@
 [ext_resource type="Shader" uid="uid://ddklekowi646o" path="res://Scenes/screenFX.gdshader" id="24_d3ars"]
 [ext_resource type="Script" uid="uid://cuks7kgmc5dbq" path="res://Scripts/Post_fx.gd" id="24_l11rc"]
 [ext_resource type="PackedScene" uid="uid://cxhj2m8i6e21d" path="res://Assets/3D Assets/Layout concinai/PC.glb" id="25_gcpal"]
-[ext_resource type="PackedScene" uid="uid://cpkumf3wmiocy" path="res://Assets/3D Assets/Layout concinai/Server 1.glb" id="26_1c8so"]
-[ext_resource type="PackedScene" uid="uid://dv7swpnaxf83u" path="res://Assets/3D Assets/Layout concinai/Server 2.glb" id="27_8mvdv"]
 [ext_resource type="PackedScene" uid="uid://dhnk85dkhr0fy" path="res://Assets/3D Assets/Layout concinai/Server 3.glb" id="28_lpp4p"]
-[ext_resource type="PackedScene" uid="uid://cm4y5lxsg4bba" path="res://Assets/3D Assets/Layout concinai/Server 4.glb" id="29_k7vvi"]
-[ext_resource type="PackedScene" uid="uid://b0v11k17trp8n" path="res://Assets/3D Assets/Layout concinai/Server 5.glb" id="30_slq5t"]
-[ext_resource type="PackedScene" uid="uid://ci71p671hj5b6" path="res://Assets/3D Assets/Layout concinai/Server 6.glb" id="31_kf4hd"]
-[ext_resource type="PackedScene" uid="uid://dhjuo0fj6iurq" path="res://Assets/3D Assets/Layout concinai/Server 7.glb" id="32_d533g"]
-[ext_resource type="PackedScene" uid="uid://d1elxmh1hu08h" path="res://Assets/3D Assets/Layout concinai/Server 8.glb" id="33_wnv30"]
-[ext_resource type="PackedScene" uid="uid://655j86h5g5dt" path="res://Assets/3D Assets/Layout concinai/Server.glb" id="34_nfsqp"]
 [ext_resource type="PackedScene" uid="uid://ch47jhj18emyj" path="res://Assets/3D Assets/Layout concinai/Shelve.glb" id="35_wcwqb"]
 [ext_resource type="PackedScene" uid="uid://l1xeeo7ophi5" path="res://Assets/3D Assets/Layout concinai/Stairs.glb" id="36_a60hx"]
 [ext_resource type="Script" uid="uid://d0ed8cv2gb1jb" path="res://Scripts/Switches/storage_light_switch.gd" id="36_wi82k"]
@@ -51,6 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://crb1uhbn164jn" path="res://Assets/3D Assets/Layout concinai/ElectricBox.glb" id="44_fq1sc"]
 [ext_resource type="PackedScene" uid="uid://dtkq55ti20acl" path="res://Assets/3D Assets/Layout concinai/Lever.glb" id="45_ivbkn"]
 [ext_resource type="PackedScene" uid="uid://rb8nxn3hoa7c" path="res://Assets/3D Assets/Layout concinai/Apartaments.glb" id="46_ivbkn"]
+[ext_resource type="PackedScene" uid="uid://b732y0mxg28rn" path="res://Assets/3D Assets/coffee_table.tscn" id="47_7hrk4"]
 [ext_resource type="PackedScene" uid="uid://ctd5viwl2al4s" path="res://Assets/3D Assets/Layout concinai/Calculator,gaming,Hackathon.glb" id="48_rfukx"]
 [ext_resource type="PackedScene" uid="uid://c7p643y0r73kk" path="res://Assets/3D Assets/Layout concinai/MinecraftCubeHackathon.glb" id="49_26nav"]
 [ext_resource type="Script" uid="uid://bspgernjejpfw" path="res://Scenes/decor_obj.gd" id="50_hhume"]
@@ -58,6 +50,7 @@
 [ext_resource type="PackedScene" uid="uid://bay236ed2m76p" path="res://Assets/3D Assets/Layout concinai/futuristic.canapea.glb" id="51_hhume"]
 [ext_resource type="PackedScene" uid="uid://dcgq15fmh8ec6" path="res://Assets/3D Assets/Layout concinai/TastaturaGaming.glb" id="52_au5ix"]
 [ext_resource type="PackedScene" uid="uid://cafthqnagxt1s" path="res://Assets/3D Assets/Layout concinai/MinecraftCD.glb" id="53_ne1it"]
+[ext_resource type="PackedScene" uid="uid://dvgs73iy5uanj" path="res://Assets/3D Assets/Layout concinai/mi tv.glb" id="55_au5ix"]
 
 [sub_resource type="Sky" id="Sky_r0dna"]
 
@@ -223,6 +216,9 @@ _data = {
 &"cube_rotation": SubResource("Animation_hhume")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_wcwqb"]
+size = Vector3(2.03319, 1.24621, 0.252874)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l11rc"]
 shader = ExtResource("24_d3ars")
 shader_parameter/enabled = true
@@ -352,9 +348,6 @@ shape = SubResource("BoxShape3D_d533g")
 [node name="Ceiling" parent="Apartamentu" instance=ExtResource("7_ivbkn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
 
-[node name="Crt Monitor" parent="Apartamentu" instance=ExtResource("9_qtjmb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
-
 [node name="Door bell" parent="Apartamentu" instance=ExtResource("10_wi82k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
 visible = false
@@ -407,35 +400,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
 [node name="PC" parent="Apartamentu" instance=ExtResource("25_gcpal")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
 
-[node name="Server 1" parent="Apartamentu" instance=ExtResource("26_1c8so")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+[node name="Server" parent="Apartamentu" instance=ExtResource("28_lpp4p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1.46545, 0, -1, 0, -4.37114e-08, 4.91194, -0.211176, -0.136099)
 
-[node name="Server 2" parent="Apartamentu" instance=ExtResource("27_8mvdv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+[node name="Server2" parent="Apartamentu" instance=ExtResource("28_lpp4p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1.46545, 0, -1, 0, -4.37114e-08, 5.523, -0.211176, -0.136099)
 
-[node name="Server 3" parent="Apartamentu" instance=ExtResource("28_lpp4p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+[node name="Server3" parent="Apartamentu" instance=ExtResource("28_lpp4p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1.46545, 0, -1, 0, -4.37114e-08, 6.12375, -0.211176, -0.136099)
 
-[node name="Server 4" parent="Apartamentu" instance=ExtResource("29_k7vvi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
-
-[node name="Server 5" parent="Apartamentu" instance=ExtResource("30_slq5t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
-
-[node name="Server 6" parent="Apartamentu" instance=ExtResource("31_kf4hd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
-
-[node name="Server 7" parent="Apartamentu" instance=ExtResource("32_d533g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
-
-[node name="Server 8" parent="Apartamentu" instance=ExtResource("33_wnv30")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
-
-[node name="Server" parent="Apartamentu" instance=ExtResource("34_nfsqp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+[node name="Server4" parent="Apartamentu" instance=ExtResource("28_lpp4p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1.46545, 0, -1, 0, -4.37114e-08, 6.73309, -0.211176, -0.136099)
 
 [node name="Shelve" parent="Apartamentu" instance=ExtResource("35_wcwqb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9505, 0, 0.271843)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1.3, 0, 1, 0, -4.37114e-08, -1.9505, 0, -5.08663)
 
 [node name="Stairs" parent="Apartamentu" instance=ExtResource("36_a60hx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
@@ -463,7 +441,7 @@ shape = SubResource("BoxShape3D_au5ix")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
 
 [node name="Wall1" parent="Apartamentu" instance=ExtResource("40_h2nrh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.674877, -0.0079422, 0.276538)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/Wall1"]
 
@@ -963,19 +941,49 @@ autoplay = "cube_rotation"
 script = ExtResource("50_hhume")
 
 [node name="MinecraftCubeHackathon" parent="Apartamentu/decor_obj" instance=ExtResource("49_26nav")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.755582, 1.15645, -2.31669)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.686743, 1.25434, -2.31709)
 
 [node name="Canapea_" parent="Apartamentu/decor_obj" instance=ExtResource("50_ne1it")]
-transform = Transform3D(-0.235491, 0, -0.18586, 0, 0.4, 0, 0.18586, 0, -0.235491, 4.23355, -0.00252485, -1.52174)
+transform = Transform3D(0.296871, 0, 0.043214, 0, 0.4, 0, -0.043214, 0, 0.296871, 3.10886, -0.00252485, -0.776403)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/decor_obj/Canapea_"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/decor_obj/Canapea_/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.196655, 0.624573, 0.0490578)
+shape = SubResource("BoxShape3D_wcwqb")
 
 [node name="Canapea_2" parent="Apartamentu/decor_obj" instance=ExtResource("50_ne1it")]
-transform = Transform3D(-0.285914, 0, 0.0908457, 0, 0.4, 0, -0.0908457, 0, -0.285914, 0.494895, 0.180264, 3.99043)
+transform = Transform3D(-0.285914, 0, 0.0908457, 0, 0.4, 0, -0.0908457, 0, -0.285914, -3.20447, 0.180264, -0.333366)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/decor_obj/Canapea_2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/decor_obj/Canapea_2/StaticBody3D"]
+transform = Transform3D(0.999989, 0, 7.7486e-06, 0, 0.999988, 0, -7.7486e-06, 0, 0.999989, -0.199278, 0.624573, 0.0490582)
+shape = SubResource("BoxShape3D_wcwqb")
 
 [node name="futuristic_canapea" parent="Apartamentu/decor_obj" instance=ExtResource("51_hhume")]
 transform = Transform3D(-1.49012e-08, 0, -0.25, 0, 0.25, 0, 0.25, 0, -1.49012e-08, 3.3647, 1.65427, 0.258931)
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/decor_obj/futuristic_canapea"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/decor_obj/futuristic_canapea/StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0541548, 4.24118, 7.86249)
+shape = SubResource("BoxShape3D_wcwqb")
+
 [node name="MinecraftCD" parent="Apartamentu/decor_obj" instance=ExtResource("53_ne1it")]
 transform = Transform3D(0.147284, 0, -0.0284132, 0, 0.15, 0, 0.0284132, 0, 0.147284, -4.11672, 0.878363, 3.68895)
+
+[node name="mi tv" parent="Apartamentu/decor_obj" instance=ExtResource("55_au5ix")]
+transform = Transform3D(0.30538, 0, 0.952231, 0, 1, 0, -0.952231, 0, 0.30538, -4.841, 0.664866, -0.884326)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/decor_obj/mi tv"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/decor_obj/mi tv/StaticBody3D"]
+transform = Transform3D(0.999999, 0, 3.27826e-07, 0, 1, 0, -3.27826e-07, 0, 0.999999, 0.0162724, 0.729546, -0.39443)
+shape = SubResource("BoxShape3D_wcwqb")
+
+[node name="coffee_table" parent="Apartamentu/decor_obj" instance=ExtResource("47_7hrk4")]
+transform = Transform3D(0.377874, 0, -0.227544, 0, 0.550617, 0, 0.113368, 0, 0.758445, -5.0525, -0.169845, -0.351157)
 
 [node name="PauseMenu" type="CanvasLayer" parent="."]
 

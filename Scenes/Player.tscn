@@ -54,7 +54,6 @@ centered = false
 stream = ExtResource("4_dewec")
 volume_db = -40.0
 pitch_scale = 0.9
-bus = &"SFX"
 
 [node name="GroundCheck" type="RayCast3D" parent="PlayerAudio"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0908592, 0)
