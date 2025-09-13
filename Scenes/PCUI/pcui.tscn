@@ -52,20 +52,19 @@ offset_bottom = 516.0
 layout_mode = 2
 theme_override_constants/separation = 100
 
-[node name="ButtonsContAl" type="VBoxContainer" parent="PCUI/ButtonsCont/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 100
-
-[node name="CMD" type="Button" parent="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl"]
+[node name="CMD" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+z_index = 100
 layout_mode = 2
 toggle_mode = true
 icon = ExtResource("3_xtwrv")
 
-[node name="Aircrack" type="Button" parent="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl"]
+[node name="Aircrack" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+z_index = 100
 layout_mode = 2
 icon = ExtResource("4_l61ky")
 
-[node name="Notepad" type="Button" parent="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl"]
+[node name="Notepad" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+z_index = 100
 layout_mode = 2
 text = "
 
@@ -73,23 +72,18 @@ text = "
 "
 icon = ExtResource("5_qp7xw")
 
-[node name="EtterCap" type="Button" parent="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl"]
+[node name="EtterCap" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+z_index = 100
 layout_mode = 2
 icon = ExtResource("6_nm78k")
 
-[node name="Discord" type="Button" parent="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl"]
+[node name="Discord" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+z_index = 100
 layout_mode = 2
 icon = ExtResource("7_1wrfy")
 
-[node name="Btowser" type="Button" parent="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl"]
-layout_mode = 2
-icon = ExtResource("8_w5hxt")
-
-[node name="ButtonsContAl2" type="VBoxContainer" parent="PCUI/ButtonsCont/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 100
-
-[node name="E-Shop" type="Button" parent="PCUI/ButtonsCont/HBoxContainer/ButtonsContAl2"]
+[node name="Btowser" type="Button" parent="PCUI/ButtonsCont/ButtonsContAl"]
+z_index = 100
 layout_mode = 2
 icon = ExtResource("8_w5hxt")
 
@@ -130,7 +124,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Help_Text" type="Label" parent="PCUI/Help_UI"]
-visible = false
 z_index = 102
 layout_mode = 0
 offset_left = 1580.0
@@ -153,10 +146,10 @@ layout_mode = 1
 [node name="LoginSite" parent="PCUI" instance=ExtResource("16_pbsi7")]
 visible = false
 layout_mode = 1
-offset_left = 1.0
-offset_top = 2.0
-offset_right = -1009.0
-offset_bottom = -496.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -1002.0
+offset_bottom = -490.0
 
 [node name="Shop" parent="PCUI" instance=ExtResource("17_3u63p")]
 visible = false
