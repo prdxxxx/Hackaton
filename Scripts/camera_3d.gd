@@ -8,7 +8,6 @@ extends Camera3D
 @onready var player_mesh = player.get_node("MeshInstance3D")
 @onready var icon = player.get_node("CanvasLayer/E")
 @onready var podskaz = get_node("/root/World/Apartamentu/chair/Looking_at_monitor/Label")
-
 @onready var chair_area = target_position.get_node("/root/World/Apartamentu/chair/Chair/Area3D")
 
 # -------------------- Состояния --------------------
@@ -30,6 +29,7 @@ var pc_instance: Node = null  # login screen или PCUI
 
 # -------------------- Ready --------------------
 func _ready():
+	self.process_mode = Node.PROCESS_MODE_ALWAYS  # Важно, чтобы работало при паузе
 	if podskaz:
 		podskaz.visible = false
 	chair_area.body_entered.connect(_on_chair_body_entered)
@@ -50,16 +50,14 @@ func _on_chair_body_exited(body):
 
 # -------------------- Input --------------------
 func _unhandled_input(event):
-	# ---------------- Блокировка при активном UI ----------------
 	if PcManager.ui_active:
-		return  # блокируем всю камеру и ввод
+		return  # блокируем камеру при активном ПК
 
-	# ---------------- Телепортация ----------------
+	# Телепортация
 	if event.is_action_pressed("Interaction") and can_sit and not is_teleported:
 		teleport_to_target()
 		return
 
-	# ---------------- Ввод при телепортации ----------------
 	if is_animating:
 		return
 
@@ -82,20 +80,25 @@ func _process(delta):
 	if podskaz:
 		podskaz.visible = is_teleported and can_sit
 
+	# Автоматический выход с ПК при выключении света
+	if is_teleported and not Events.main_light_on:
+		if pc_instance and pc_instance.is_inside_tree():
+			print("[!] Свет выключен! Выход с ПК...")
+			return_to_player()
+			close_pc()
+
 # -------------------- PC / Login --------------------
 func toggle_pc_login():
 	if pc_instance and pc_instance.is_inside_tree():
 		close_pc()
 		return
 
-	# ---------------- Проверка глобального флага ----------------
 	PcManager.ui_active = true
 
 	if PcManager.login_completed:
 		open_pcui_direct()
 		return
 
-	# login screen
 	pc_instance = PC_START_SCENE.instantiate()
 	pc_instance.process_mode = Node.PROCESS_MODE_ALWAYS
 	get_tree().current_scene.add_child(pc_instance)
@@ -103,14 +106,12 @@ func toggle_pc_login():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func open_pcui_direct():
-	# закрываем старый экран, если есть
 	if pc_instance and pc_instance.is_inside_tree():
 		pc_instance.queue_free()
-
 	pc_instance = PCUI_SCENE.instantiate()
 	pc_instance.process_mode = Node.PROCESS_MODE_ALWAYS
 	get_tree().current_scene.add_child(pc_instance)
-	PcManager.login_completed = true  # флаг, что пароль введён
+	PcManager.login_completed = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func close_pc():

@@ -8,8 +8,8 @@ var onoff = false
 var random = RandomNumberGenerator.new()
 var timer: Timer
 
-@export var min_interval := 100  # 5 минут
-@export var max_interval := 300  # 10 минут
+@export var min_interval := 10  # 5 минут
+@export var max_interval := 15  # 10 минут
 
 func _ready() -> void:
 	random.randomize()
@@ -17,6 +17,7 @@ func _ready() -> void:
 	onoff = SaveLoad.SaveFileData.main_light_switch
 	_update_indicators()
 	lights.visible = onoff
+	Events.main_light_on = onoff
 	
 	# Создаём таймер для случайного выключения
 	timer = Timer.new()
@@ -30,6 +31,7 @@ func toggle_light() -> void:
 	_update_indicators()
 	lights.visible = onoff
 	SaveLoad.SaveFileData.main_light_switch = onoff
+	Events.main_light_on = onoff
 
 func _update_indicators() -> void:
 	indicator_off.visible = onoff
@@ -49,6 +51,7 @@ func _on_timer_timeout() -> void:
 		_update_indicators()
 		lights.visible = onoff
 		SaveLoad.SaveFileData.main_light_switch = onoff
+		Events.main_light_on = onoff
 		print("[!] Свет выключен автоматически")
 	
 	# Устанавливаем следующий таймер
