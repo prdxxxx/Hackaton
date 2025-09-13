@@ -179,16 +179,17 @@ layout_mode = 2
 text = "Login as client"
 
 [node name="BankClient1" parent="." instance=ExtResource("5_ax3yp")]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.008
 anchor_top = 0.015
 anchor_right = 0.775
-anchor_bottom = 0.963
+anchor_bottom = 0.341
 offset_left = -23.36
 offset_top = -24.2
-offset_right = 15.9999
-offset_bottom = 15.96
+offset_right = 16.0
+offset_bottom = 15.72
 
 [connection signal="pressed" from="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/HeaderHBox/LogoutButton" to="." method="_on_logout_button_pressed"]
 [connection signal="pressed" from="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer/Enter1" to="." method="_on_enter_1_pressed"]

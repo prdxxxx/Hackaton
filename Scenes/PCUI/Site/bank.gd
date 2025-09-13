@@ -8,5 +8,4 @@ func _on_logout_button_pressed() -> void:
 
 
 func _on_enter_1_pressed() -> void:
-	
 	bankclient1.show()
