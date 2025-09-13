@@ -919,6 +919,12 @@ mouse_filter = 2
 [node name="Apartaments2" parent="." instance=ExtResource("46_ivbkn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.931989, 4.56083, -4.78593)
 
+[node name="Music" type="Node" parent="."]
+
+[node name="LightsOn" type="AudioStreamPlayer" parent="Music"]
+
+[node name="LightsOff" type="AudioStreamPlayer" parent="Music"]
+
 [connection signal="_load" from="PauseMenu/pausemenu" to="Player" method="_on_pausemenu__load"]
 [connection signal="_save" from="PauseMenu/pausemenu" to="Player" method="_on_pausemenu__save"]
 
