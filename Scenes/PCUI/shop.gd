@@ -10,6 +10,8 @@ extends Control
 @onready var v_box_container_4: VBoxContainer = $WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer4
 @onready var v_box_container_5: VBoxContainer = $WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer5
 
+@onready var h_box_container: HBoxContainer = $WindowBase/ScrollContainer/VBoxContainer/HBoxContainer
+@onready var h_box_container_2: HBoxContainer = $WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2
 
 
 func _ready() -> void:
@@ -21,10 +23,16 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	balance.text ="Balance: "+ str(SaveLoad.SaveFileData.money) + "$"
+	check()
 	
 func _on_exit_pressed() -> void:
 	shop.hide()
-
+	
+func check() -> void:
+	if SaveLoad.SaveFileData.world_obj["Sofa1"] == true and SaveLoad.SaveFileData.world_obj["Sofa2"] == true and SaveLoad.SaveFileData.world_obj["Sofa3"] == true:
+		h_box_container.hide()
+	elif SaveLoad.SaveFileData.world_obj["Minecraft"] == true and SaveLoad.SaveFileData.world_obj["Roblox"] == true:
+		h_box_container_2.hide()
 
 
 func _on_sofa_1_button_pressed() -> void:
