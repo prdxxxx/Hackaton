@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=3 uid="uid://cen4j3rbwlj4u"]
+[gd_scene load_steps=107 format=3 uid="uid://cen4j3rbwlj4u"]
 
 [ext_resource type="PackedScene" uid="uid://cwq4uacj2n3u3" path="res://Scenes/Player.tscn" id="1_5cjrv"]
 [ext_resource type="Texture2D" uid="uid://gqtbfswpf8cb" path="res://Assets/2D Assets/pcui22.png" id="4_ofme6"]
@@ -50,8 +50,9 @@
 [ext_resource type="PackedScene" uid="uid://c7p643y0r73kk" path="res://Assets/3D Assets/Layout concinai/MinecraftCubeHackathon.glb" id="49_26nav"]
 [ext_resource type="Script" uid="uid://bspgernjejpfw" path="res://Scenes/decor_obj.gd" id="50_hhume"]
 [ext_resource type="PackedScene" uid="uid://csyxmqwsvwppd" path="res://Assets/3D Assets/Layout concinai/Canapea_.glb" id="50_ne1it"]
+[ext_resource type="PackedScene" uid="uid://camnq8ghubeui" path="res://Assets/3D Assets/Layout concinai/Sci-fi antenna.glb" id="51_26nav"]
 [ext_resource type="PackedScene" uid="uid://bay236ed2m76p" path="res://Assets/3D Assets/Layout concinai/futuristic.canapea.glb" id="51_hhume"]
-[ext_resource type="PackedScene" uid="uid://dcgq15fmh8ec6" path="res://Assets/3D Assets/Layout concinai/TastaturaGaming.glb" id="52_au5ix"]
+[ext_resource type="PackedScene" uid="uid://30ndvvg1ots" path="res://Assets/3D Assets/tastatura_gaming.tscn" id="51_ne1it"]
 [ext_resource type="PackedScene" uid="uid://cafthqnagxt1s" path="res://Assets/3D Assets/Layout concinai/MinecraftCD.glb" id="53_ne1it"]
 [ext_resource type="PackedScene" uid="uid://dvgs73iy5uanj" path="res://Assets/3D Assets/Layout concinai/mi tv.glb" id="55_au5ix"]
 [ext_resource type="AudioStream" uid="uid://c82r02jq83am0" path="res://Assets/SFX/busy-street-ambience-195884.mp3" id="55_jdyvg"]
@@ -229,16 +230,19 @@ _data = {
 size = Vector3(2.64233, 3.07315, 3.22073)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wcwqb"]
-size = Vector3(3.40615, 2.11861, 8.32248)
+size = Vector3(3.20261, 2.6931, 8.08352)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a60hx"]
-size = Vector3(2.75681, 2.28564, 8.51877)
+size = Vector3(3.13501, 2.28564, 8.25665)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7cnhw"]
-size = Vector3(1.44507, 0.609253, 1.961)
+size = Vector3(1.44507, 0.152435, 1.961)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n5pd3"]
 size = Vector3(2.03806, 1.30841, 0.348999)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h2nrh"]
+size = Vector3(8.41087, 13.4542, 9.7326)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l11rc"]
 shader = ExtResource("24_d3ars")
@@ -995,9 +999,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69, 0.1, 0.245)
 [node name="Calculator,gaming,Hackathon" parent="Apartamentu" instance=ExtResource("48_rfukx")]
 transform = Transform3D(0.11935, 0, 0.127987, 0, 0.175, 0, -0.127987, 0, 0.11935, -5.02143, 0.875227, 2.39582)
 
-[node name="TastaturaGaming" parent="Apartamentu" instance=ExtResource("52_au5ix")]
-transform = Transform3D(0.175691, 0, 0.132412, 0, 0.22, 0, -0.132412, 0, 0.175691, -3.94261, 0.877973, 3.24893)
-
 [node name="cube_spinning" type="AnimationPlayer" parent="Apartamentu"]
 root_node = NodePath("../decor_obj/MinecraftCubeHackathon")
 libraries = {
@@ -1018,21 +1019,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0562744, -0.0458851, -0.16
 shape = SubResource("BoxShape3D_6ee4w")
 
 [node name="Canapea_" parent="Apartamentu/decor_obj" instance=ExtResource("50_ne1it")]
-transform = Transform3D(0.296871, 0, 0.043214, 0, 0.4, 0, -0.043214, 0, 0.296871, 3.10886, -0.00252485, -0.776403)
+transform = Transform3D(-0.0360117, 0, 0.247393, 0, 0.334, 0, -0.247393, 0, -0.0360117, 3.10886, -0.00252485, -0.776403)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/decor_obj/Canapea_"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/decor_obj/Canapea_/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.196655, 0.624573, 0.0490578)
+transform = Transform3D(-4.47035e-08, 0, 1, 0, 1, 0, -1, 0, -4.47035e-08, -0.601131, 0.911821, 0.904788)
 shape = SubResource("BoxShape3D_wcwqb")
 
 [node name="Canapea_2" parent="Apartamentu/decor_obj" instance=ExtResource("50_ne1it")]
-transform = Transform3D(-0.285914, 0, 0.0908457, 0, 0.4, 0, -0.0908457, 0, -0.285914, -3.46985, 0.180264, -0.333366)
+transform = Transform3D(-0.0908458, 0, -0.214436, 0, 0.3, 0, 0.285914, 0, -0.0681343, -3.27763, 0.180264, -0.119808)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/decor_obj/Canapea_2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/decor_obj/Canapea_2/StaticBody3D"]
-transform = Transform3D(0.999947, 0, 3.56138e-05, 0, 0.999941, 0, -3.56138e-05, 0, 0.999947, 0.04142, 0.6428, -0.149233)
+transform = Transform3D(0.00387447, 0, 0.999939, 0, 0.999941, 0, -0.999932, 0, 0.00387368, -0.603035, 0.6428, 0.851009)
 shape = SubResource("BoxShape3D_a60hx")
 
 [node name="futuristic_canapea" parent="Apartamentu/decor_obj" instance=ExtResource("51_hhume")]
@@ -1045,12 +1046,21 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0181
 shape = SubResource("BoxShape3D_wcwqb")
 
 [node name="MinecraftCD" parent="Apartamentu/decor_obj" instance=ExtResource("53_ne1it")]
-transform = Transform3D(0.147284, 0, -0.0284132, 0, 0.15, 0, 0.0284132, 0, 0.147284, -4.11672, 0.878363, 3.68895)
+transform = Transform3D(0.147284, 0, -0.0284132, 0, 0.15, 0, 0.0284132, 0, 0.147284, -4.11672, 0.966213, 3.68895)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/decor_obj/MinecraftCD"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/decor_obj/MinecraftCD/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0111084, -0.195374, 0.00204086)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0111084, -0.00392294, 0.00204086)
+shape = SubResource("BoxShape3D_7cnhw")
+
+[node name="MinecraftCD2" parent="Apartamentu/decor_obj" instance=ExtResource("53_ne1it")]
+transform = Transform3D(0.110771, 0.0352166, 0.0948122, -0.0104257, 0.14384, -0.0412464, -0.100603, 0.0238697, 0.10867, -3.91908, 0.984701, 3.69021)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/decor_obj/MinecraftCD2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/decor_obj/MinecraftCD2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0111084, -0.00392294, 0.00204086)
 shape = SubResource("BoxShape3D_7cnhw")
 
 [node name="mi tv" parent="Apartamentu/decor_obj" instance=ExtResource("55_au5ix")]
@@ -1064,6 +1074,18 @@ shape = SubResource("BoxShape3D_n5pd3")
 
 [node name="coffee_table" parent="Apartamentu/decor_obj" instance=ExtResource("47_7hrk4")]
 transform = Transform3D(0.377874, 0, -0.227544, 0, 0.550617, 0, 0.113368, 0, 0.758445, -5.0525, -0.169845, -0.351157)
+
+[node name="Sci-fi antenna" parent="Apartamentu/decor_obj" instance=ExtResource("51_26nav")]
+transform = Transform3D(0.106066, 0, 0.106066, 0, 0.15, 0, -0.106066, 0, 0.106066, -0.692507, 0.208264, 5.26953)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/decor_obj/Sci-fi antenna"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/decor_obj/Sci-fi antenna/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85657, 6.22711, -11.5609)
+shape = SubResource("BoxShape3D_h2nrh")
+
+[node name="TastaturaGaming2" parent="Apartamentu" instance=ExtResource("51_ne1it")]
+transform = Transform3D(0.1757, 0, 0.132399, 0, 0.22, 0, -0.132399, 0, 0.1757, -3.943, 0.878, 3.249)
 
 [node name="PauseMenu" type="CanvasLayer" parent="."]
 

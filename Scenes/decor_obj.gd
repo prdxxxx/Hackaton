@@ -7,6 +7,8 @@ extends Node3D
 @onready var futuristic_canapea: Node3D = $futuristic_canapea
 @onready var mi_tv: Node3D = $"mi tv"
 @onready var coffee_table: Node3D = $coffee_table
+@onready var sci_fi_antenna: Node3D = $"Sci-fi antenna"
+
 
 func _ready() -> void:
 	refresh()
@@ -37,6 +39,7 @@ func refresh() -> void:
 	set_node_active(canapea_, SaveLoad.SaveFileData.world_obj["Sofa1"])
 	set_node_active(canapea_2, SaveLoad.SaveFileData.world_obj["Sofa2"])
 	set_node_active(futuristic_canapea, SaveLoad.SaveFileData.world_obj["Sofa3"])
+	set_node_active(sci_fi_antenna, SaveLoad.SaveFileData.world_obj["Antenna"])
 	
 	var tv_active = SaveLoad.SaveFileData.world_obj["tv"]
 	set_node_active(mi_tv, tv_active)

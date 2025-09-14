@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dx6yuj0ej7ic7"]
+[gd_scene load_steps=21 format=3 uid="uid://dx6yuj0ej7ic7"]
 
 [ext_resource type="Script" uid="uid://cya6t0vp8thxs" path="res://Scenes/PCUI/shop.gd" id="1_70wtv"]
 [ext_resource type="Script" uid="uid://dowle5kcyix4l" path="res://Scenes/PCUI/window_base.gd" id="1_jpsmk"]
@@ -8,8 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://cwxgvqjmi2tg" path="res://Assets/2D Assets/Icons/13.png" id="5_f76mj"]
 [ext_resource type="Texture2D" uid="uid://bb6sgwpy7dgqu" path="res://Assets/2D Assets/Icons/14.png" id="6_70wtv"]
 [ext_resource type="Texture2D" uid="uid://cd7m3x1fr01wt" path="res://Assets/2D Assets/Icons/15.png" id="8_by8ki"]
+[ext_resource type="Texture2D" uid="uid://c22wk41srlie5" path="res://Assets/2D Assets/Icons/20.png" id="8_y40eq"]
 [ext_resource type="Texture2D" uid="uid://dsvibfilgniw" path="res://Assets/2D Assets/Icons/roblox.png" id="9_r3jss"]
 [ext_resource type="AudioStream" uid="uid://bdg3aatoba37c" path="res://Assets/SFX/notification.mp3" id="10_r3jss"]
+[ext_resource type="Texture2D" uid="uid://dm8ptrs21v3qp" path="res://Assets/2D Assets/Icons/21.png" id="10_y40eq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8n10j"]
 texture = ExtResource("2_qp7gd")
@@ -23,11 +25,17 @@ texture = ExtResource("5_f76mj")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r3jss"]
 texture = ExtResource("6_70wtv")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y40eq"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2n426"]
 texture = ExtResource("8_by8ki")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_es07h"]
 texture = ExtResource("9_r3jss")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xc2d3"]
+texture = ExtResource("10_y40eq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y40eq"]
+texture = ExtResource("8_y40eq")
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -72,7 +80,6 @@ offset_bottom = -0.196045
 
 [node name="VBoxContainer" type="VBoxContainer" parent="WindowBase/ScrollContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/ScrollContainer/VBoxContainer"]
@@ -142,7 +149,7 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxTexture_y40eq")
+theme_override_styles/panel = SubResource("StyleBoxTexture_2n426")
 
 [node name="Minecraft" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer4" instance=ExtResource("2_yfbn2")]
 layout_mode = 2
@@ -168,18 +175,41 @@ set_price = 5
 set_desc = "Roblox – An online platform where you play, create, and share games with millions of players worldwide."
 
 [node name="VBoxContainer6" type="VBoxContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2"]
-custom_minimum_size = Vector2(298, 0)
 layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer6"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_r3jss")
+theme_override_styles/panel = SubResource("StyleBoxTexture_xc2d3")
 
 [node name="SmartTv" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer6" instance=ExtResource("2_yfbn2")]
+custom_minimum_size = Vector2(298, 300)
 layout_mode = 2
 set_price = 300
 set_desc = "Smart TV – A high-definition television with internet connectivity, apps, and streaming capabilities."
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="WindowBase/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 558)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer7" type="VBoxContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(298, 0)
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer7"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_y40eq")
+
+[node name="Antenna" parent="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer7" instance=ExtResource("2_yfbn2")]
+layout_mode = 2
+size_flags_vertical = 4
+set_price = 1000
+set_desc = "Antenna – Boosts wireless signal strength for faster, more stable internet connectivity."
 
 [node name="Exit" type="Button" parent="WindowBase"]
 layout_mode = 1
@@ -227,4 +257,5 @@ stream = ExtResource("10_r3jss")
 [connection signal="button_pressed" from="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer4/Minecraft" to="." method="_on_minecraft_button_pressed"]
 [connection signal="button_pressed" from="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer5/Roblox" to="." method="_on_roblox_button_pressed"]
 [connection signal="button_pressed" from="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer6/SmartTv" to="." method="_on_smart_tv_button_pressed"]
+[connection signal="button_pressed" from="WindowBase/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer7/Antenna" to="." method="_on_antenna_button_pressed"]
 [connection signal="pressed" from="WindowBase/Exit" to="." method="_on_exit_pressed"]

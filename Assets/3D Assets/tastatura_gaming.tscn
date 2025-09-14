@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://30ndvvg1ots"]
+
+[ext_resource type="PackedScene" uid="uid://dcgq15fmh8ec6" path="res://Assets/3D Assets/Layout concinai/TastaturaGaming.glb" id="1_mgwbi"]
+
+[node name="TastaturaGaming" instance=ExtResource("1_mgwbi")]
+
+[node name="Cube_010" parent="." index="0"]
+visible = false

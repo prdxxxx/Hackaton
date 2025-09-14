@@ -24,5 +24,6 @@ class_name SaveDataResourse
 	"Sofa3" = false,
 	"Minecraft" = false,
 	"Roblox" = false,
-	"tv" = false
+	"tv" = false,
+	"Antenna" = false
 	}
