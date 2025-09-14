@@ -99,7 +99,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("3_ax3yp")
 theme_override_font_sizes/font_size = 50
-text = "Victoriabank"
+text = "VISA"
 
 [node name="LogoutButton" type="Button" parent="WindowBase/AccountsPanel/PanelContainer/VBoxContainer/HeaderHBox"]
 layout_mode = 2

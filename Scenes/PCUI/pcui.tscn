@@ -8,10 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://v643wpg8naa4" path="res://Scenes/PCUI/powerButton.jpeg" id="5_mlvvv"]
 [ext_resource type="Texture2D" uid="uid://cb0rmoutjov5c" path="res://Assets/2D Assets/Icons/3.png" id="5_qp7xw"]
 [ext_resource type="FontFile" uid="uid://db16gjjdg8f7x" path="res://Assets/Fonts/VT323-Regular.ttf" id="6_kmxmb"]
-[ext_resource type="Texture2D" uid="uid://bddwnxiqkex6y" path="res://Assets/2D Assets/Icons/ettercap.png" id="6_nm78k"]
+[ext_resource type="Texture2D" uid="uid://cct8f1bv2y3t" path="res://Assets/2D Assets/Icons/ett.png" id="6_q524b"]
 [ext_resource type="Texture2D" uid="uid://c4bndga47361e" path="res://Assets/2D Assets/Icons/logo.png" id="7_1wrfy"]
 [ext_resource type="PackedScene" uid="uid://dvyuvwdvk0tbj" path="res://AirCreck.tscn" id="7_autvq"]
-[ext_resource type="Texture2D" uid="uid://dvmlijjgrjrxt" path="res://Scenes/PCUI/Icons/Browser.png" id="8_w5hxt"]
+[ext_resource type="Texture2D" uid="uid://2mfk0wo5k6v4" path="res://Assets/2D Assets/Icons/4.png" id="8_5flyb"]
 [ext_resource type="Texture2D" uid="uid://p8ycfnjir1wq" path="res://Assets/2D Assets/Icons/7.png" id="9_q524b"]
 [ext_resource type="PackedScene" uid="uid://da0je3bmb4hp0" path="res://Scenes/PCUI/Notepad.tscn" id="9_qp7xw"]
 [ext_resource type="PackedScene" uid="uid://ctpwqpgosom54" path="res://Scenes/PCUI/etter_cap.tscn" id="11_1wrfy"]
@@ -81,7 +81,7 @@ icon = ExtResource("5_qp7xw")
 
 [node name="etter_cap" type="Button" parent="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("6_nm78k")
+icon = ExtResource("6_q524b")
 
 [node name="discord" type="Button" parent="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -89,7 +89,7 @@ icon = ExtResource("7_1wrfy")
 
 [node name="btowser" type="Button" parent="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("8_w5hxt")
+icon = ExtResource("8_5flyb")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="PCUI/ButtonsCont/VBoxContainer/HBoxContainer"]
 layout_mode = 2
