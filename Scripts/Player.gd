@@ -22,6 +22,8 @@ const fovChange: float = 1.4
 @onready var icon: Sprite2D = $CanvasLayer/E
 @onready var world_environment: WorldEnvironment = $"../WorldEnvironment"
 
+signal exit_pc
+
 # -------------------- FOOTSTEPS --------------------
 @onready var footstep_player: AudioStreamPlayer = $PlayerAudio/Footstep
 @onready var groundcheck: RayCast3D = $PlayerAudio/GroundCheck
@@ -198,3 +200,7 @@ func _on_pausemenu__load() -> void:
 		player_ref.velocity = Vector3.ZERO
 		player_ref.rotation = SaveLoad.SaveFileData.rotation["player_rotation"]
 		camera.rotation = SaveLoad.SaveFileData.rotation["camera_rotation"]
+
+
+func _on_camera_3d_exit_pc() -> void:
+	exit_pc.emit()

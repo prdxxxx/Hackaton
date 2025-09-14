@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://cen4j3rbwlj4u"]
+[gd_scene load_steps=105 format=3 uid="uid://cen4j3rbwlj4u"]
 
 [ext_resource type="PackedScene" uid="uid://cwq4uacj2n3u3" path="res://Scenes/Player.tscn" id="1_5cjrv"]
 [ext_resource type="Texture2D" uid="uid://gqtbfswpf8cb" path="res://Assets/2D Assets/pcui22.png" id="4_ofme6"]
@@ -138,7 +138,7 @@ size = Vector3(0.615356, 0.36467, 5.0184)
 size = Vector3(0.923492, 0.237526, 3.39894)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pb8dl"]
-size = Vector3(3.53362, 0.43335, 1.82411)
+size = Vector3(3.52394, 0.361328, 1.82411)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_au5ix"]
 size = Vector3(1.04724, 0.649292, 2.08813)
@@ -225,8 +225,20 @@ _data = {
 &"cube_rotation": SubResource("Animation_hhume")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_6ee4w"]
+size = Vector3(2.64233, 3.07315, 3.22073)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_wcwqb"]
-size = Vector3(2.03319, 1.24621, 0.252874)
+size = Vector3(3.40615, 2.11861, 8.32248)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a60hx"]
+size = Vector3(2.75681, 2.28564, 8.51877)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7cnhw"]
+size = Vector3(1.44507, 0.609253, 1.961)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n5pd3"]
+size = Vector3(2.03806, 1.30841, 0.348999)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l11rc"]
 shader = ExtResource("24_d3ars")
@@ -436,7 +448,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672916, 0, 0.271843)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.45107)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/Stairs/StaticBody3D"]
-transform = Transform3D(0.788011, -0.615662, 0, 0.615662, 0.788011, 0, 0, 0, 1, -0.251903, 0.953332, -0.620887)
+transform = Transform3D(0.780431, -0.625243, 0, 0.625243, 0.780431, 0, 0, 0, 1, -0.265352, 0.962625, -0.620887)
 shape = SubResource("BoxShape3D_pb8dl")
 
 [node name="Support pillars" parent="Apartamentu" instance=ExtResource("37_n5pd3")]
@@ -999,6 +1011,12 @@ script = ExtResource("50_hhume")
 [node name="MinecraftCubeHackathon" parent="Apartamentu/decor_obj" instance=ExtResource("49_26nav")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.686743, 1.25434, -2.31709)
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/decor_obj/MinecraftCubeHackathon"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/decor_obj/MinecraftCubeHackathon/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0562744, -0.0458851, -0.161057)
+shape = SubResource("BoxShape3D_6ee4w")
+
 [node name="Canapea_" parent="Apartamentu/decor_obj" instance=ExtResource("50_ne1it")]
 transform = Transform3D(0.296871, 0, 0.043214, 0, 0.4, 0, -0.043214, 0, 0.296871, 3.10886, -0.00252485, -0.776403)
 
@@ -1009,13 +1027,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.196655, 0.624573, 0.049057
 shape = SubResource("BoxShape3D_wcwqb")
 
 [node name="Canapea_2" parent="Apartamentu/decor_obj" instance=ExtResource("50_ne1it")]
-transform = Transform3D(-0.285914, 0, 0.0908457, 0, 0.4, 0, -0.0908457, 0, -0.285914, -3.20447, 0.180264, -0.333366)
+transform = Transform3D(-0.285914, 0, 0.0908457, 0, 0.4, 0, -0.0908457, 0, -0.285914, -3.46985, 0.180264, -0.333366)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/decor_obj/Canapea_2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/decor_obj/Canapea_2/StaticBody3D"]
-transform = Transform3D(0.999989, 0, 7.7486e-06, 0, 0.999988, 0, -7.7486e-06, 0, 0.999989, -0.199278, 0.624573, 0.0490582)
-shape = SubResource("BoxShape3D_wcwqb")
+transform = Transform3D(0.999947, 0, 3.56138e-05, 0, 0.999941, 0, -3.56138e-05, 0, 0.999947, 0.04142, 0.6428, -0.149233)
+shape = SubResource("BoxShape3D_a60hx")
 
 [node name="futuristic_canapea" parent="Apartamentu/decor_obj" instance=ExtResource("51_hhume")]
 transform = Transform3D(-1.49012e-08, 0, -0.25, 0, 0.25, 0, 0.25, 0, -1.49012e-08, 3.3647, 1.65427, 0.258931)
@@ -1023,11 +1041,17 @@ transform = Transform3D(-1.49012e-08, 0, -0.25, 0, 0.25, 0, 0.25, 0, -1.49012e-0
 [node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/decor_obj/futuristic_canapea"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/decor_obj/futuristic_canapea/StaticBody3D"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0541548, 4.24118, 7.86249)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0181279, 3.88105, 7.75297)
 shape = SubResource("BoxShape3D_wcwqb")
 
 [node name="MinecraftCD" parent="Apartamentu/decor_obj" instance=ExtResource("53_ne1it")]
 transform = Transform3D(0.147284, 0, -0.0284132, 0, 0.15, 0, 0.0284132, 0, 0.147284, -4.11672, 0.878363, 3.68895)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/decor_obj/MinecraftCD"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/decor_obj/MinecraftCD/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0111084, -0.195374, 0.00204086)
+shape = SubResource("BoxShape3D_7cnhw")
 
 [node name="mi tv" parent="Apartamentu/decor_obj" instance=ExtResource("55_au5ix")]
 transform = Transform3D(0.30538, 0, 0.952231, 0, 1, 0, -0.952231, 0, 0.30538, -4.841, 0.664866, -0.884326)
@@ -1035,8 +1059,8 @@ transform = Transform3D(0.30538, 0, 0.952231, 0, 1, 0, -0.952231, 0, 0.30538, -4
 [node name="StaticBody3D" type="StaticBody3D" parent="Apartamentu/decor_obj/mi tv"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Apartamentu/decor_obj/mi tv/StaticBody3D"]
-transform = Transform3D(0.999999, 0, 3.27826e-07, 0, 1, 0, -3.27826e-07, 0, 0.999999, 0.0162724, 0.729546, -0.39443)
-shape = SubResource("BoxShape3D_wcwqb")
+transform = Transform3D(0.999999, 0, -4.17233e-07, 0, 1, 0, 4.17233e-07, 0, 0.999999, 0.0091722, 0.682587, -0.335389)
+shape = SubResource("BoxShape3D_n5pd3")
 
 [node name="coffee_table" parent="Apartamentu/decor_obj" instance=ExtResource("47_7hrk4")]
 transform = Transform3D(0.377874, 0, -0.227544, 0, 0.550617, 0, 0.113368, 0, 0.758445, -5.0525, -0.169845, -0.351157)
@@ -1068,6 +1092,7 @@ volume_db = -20.0
 max_db = -10.0
 autoplay = true
 
+[connection signal="exit_pc" from="Player" to="Apartamentu/decor_obj" method="_on_player_exit_pc"]
 [connection signal="_load" from="PauseMenu/pausemenu" to="Player" method="_on_pausemenu__load"]
 [connection signal="_save" from="PauseMenu/pausemenu" to="Player" method="_on_pausemenu__save"]
 

@@ -57,3 +57,5 @@ pitch_scale = 0.9
 
 [node name="GroundCheck" type="RayCast3D" parent="PlayerAudio"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0908592, 0)
+
+[connection signal="exit_pc" from="Head/Camera3D" to="." method="_on_camera_3d_exit_pc"]
