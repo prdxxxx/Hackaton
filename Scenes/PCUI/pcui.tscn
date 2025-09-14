@@ -170,11 +170,11 @@ layout_mode = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("19_5flyb")
-volume_db = -30.0
+volume_db = -20.0
 
 [node name="click" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("20_6i0vh")
-volume_db = -20.0
+volume_db = -10.0
 
 [connection signal="pressed" from="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/VBoxContainer/CMD" to="PCUI" method="_on_cmd_pressed"]
 [connection signal="pressed" from="PCUI/ButtonsCont/VBoxContainer/HBoxContainer/VBoxContainer/aircrack" to="PCUI" method="_on_aircrack_pressed"]

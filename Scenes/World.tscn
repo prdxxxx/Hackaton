@@ -826,8 +826,8 @@ spot_angle = 40.0
 [node name="Lights" type="AudioStreamPlayer3D" parent="Apartamentu/ElectricBox/Lights/Lights_2_Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15139, 2.09325, 5.55405)
 stream = ExtResource("35_ofme6")
-volume_db = -15.0
-max_db = -10.0
+volume_db = -10.0
+max_db = -3.0
 autoplay = true
 max_distance = 10.0
 parameters/looping = true
@@ -869,8 +869,8 @@ spot_angle = 80.0
 [node name="Lights" type="AudioStreamPlayer3D" parent="Apartamentu/ElectricBox/Lights/Lights_Hall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15139, 2.09325, 5.55405)
 stream = ExtResource("35_ofme6")
-volume_db = -15.0
-max_db = -10.0
+volume_db = -10.0
+max_db = -3.0
 autoplay = true
 max_distance = 10.0
 parameters/looping = true
@@ -955,8 +955,8 @@ spot_angle = 80.0
 [node name="Lights" type="AudioStreamPlayer3D" parent="Apartamentu/ElectricBox/Lights/Lights_Storage"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15139, 2.09325, 5.55405)
 stream = ExtResource("35_ofme6")
-volume_db = -15.0
-max_db = -10.0
+volume_db = -10.0
+max_db = -3.0
 autoplay = true
 max_distance = 10.0
 parameters/looping = true
@@ -1088,8 +1088,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.931989, 4.56083, -4.78593)
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7062, -1.74361, 8.97924)
 stream = ExtResource("55_jdyvg")
-volume_db = -20.0
-max_db = -10.0
+volume_db = -15.0
+max_db = -5.0
 autoplay = true
 
 [connection signal="exit_pc" from="Player" to="Apartamentu/decor_obj" method="_on_player_exit_pc"]
