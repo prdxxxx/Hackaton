@@ -41,7 +41,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("3_6nn5l")
 theme_override_font_sizes/font_size = 62
-text = "Game Title"
+text = "Hackademy"
 
 [node name="MarginContainer" type="MarginContainer" parent="Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
