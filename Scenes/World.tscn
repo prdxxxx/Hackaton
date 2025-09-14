@@ -828,7 +828,7 @@ spot_range = 8.0
 spot_angle = 40.0
 
 [node name="Lights" type="AudioStreamPlayer3D" parent="Apartamentu/ElectricBox/Lights/Lights_2_Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15139, 2.09325, 5.55405)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15139, 5.48748, -0.736365)
 stream = ExtResource("35_ofme6")
 volume_db = -10.0
 max_db = -3.0
@@ -957,7 +957,7 @@ light_volumetric_fog_energy = 4.212
 spot_angle = 80.0
 
 [node name="Lights" type="AudioStreamPlayer3D" parent="Apartamentu/ElectricBox/Lights/Lights_Storage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15139, 2.09325, 5.55405)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.18561, 2.09325, -0.698747)
 stream = ExtResource("35_ofme6")
 volume_db = -10.0
 max_db = -3.0
