@@ -55,7 +55,6 @@ grow_vertical = 2
 script = ExtResource("2_gm87t")
 
 [node name="WindowBase" type="Control" parent="."]
-layout_mode = 2
 anchors_preset = 0
 offset_right = 1223.0
 offset_bottom = 703.0
@@ -111,7 +110,7 @@ text = "CyberBot"
 
 [node name="PanelContainer" type="PanelContainer" parent="WindowBase/Contacts/ScrollContainer/VBoxContainer/Guide_contact"]
 custom_minimum_size = Vector2(45, 45)
-layout_mode = 2
+layout_mode = 0
 offset_right = 45.0
 offset_bottom = 45.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_hceh1")
@@ -125,17 +124,17 @@ offset_top = -4.0
 offset_bottom = 51.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/focus = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/hover = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_mae1e")
 theme_override_styles/normal = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/focus = SubResource("StyleBoxTexture_mae1e")
 
 [node name="Anon_contact" type="Panel" parent="WindowBase/Contacts/ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -153,7 +152,7 @@ text = "Anonymous"
 
 [node name="PanelContainer" type="PanelContainer" parent="WindowBase/Contacts/ScrollContainer/VBoxContainer/Anon_contact"]
 custom_minimum_size = Vector2(45, 45)
-layout_mode = 2
+layout_mode = 0
 offset_right = 45.0
 offset_bottom = 45.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_xytwj")
@@ -167,17 +166,17 @@ offset_top = -4.0
 offset_bottom = 51.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/focus = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/hover = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_mae1e")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_mae1e")
 theme_override_styles/normal = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_mae1e")
+theme_override_styles/focus = SubResource("StyleBoxTexture_mae1e")
 
 [node name="block_button" type="Button" parent="WindowBase/Contacts/ScrollContainer/VBoxContainer/Anon_contact"]
 layout_mode = 1
@@ -219,6 +218,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Guide" type="ScrollContainer" parent="WindowBase/Chat"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -821,7 +821,6 @@ theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
 text = "Everything needed is already on your descktop"
 
 [node name="Anon" type="ScrollContainer" parent="WindowBase/Chat"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -849,8 +848,8 @@ text = "Anonymous"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="WindowBase/Chat/Anon/VBoxContainer/Message"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 803.0
+offset_bottom = 67.0
 
 [node name="PanelContainer" type="PanelContainer" parent="WindowBase/Chat/Anon/VBoxContainer/Message/HBoxContainer"]
 custom_minimum_size = Vector2(45, 45)
@@ -864,7 +863,8 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
-text = "Hello! Congratulations, you’ve been selected to receive a special gift card! 🎉 "
+text = "Hello! Congratulations, you’ve been selected to receive a special gift card! 
+http://xu3cvoyprkifzgbhmigdupdvf5g4mcscbxgvunmta6uiq4htutpeqpmr.onion🎉 "
 
 [node name="Message2" type="Panel" parent="WindowBase/Chat/Anon/VBoxContainer"]
 layout_mode = 2
